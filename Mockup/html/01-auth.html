@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KraiPai - Authentication Screens</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="mockup-container">
+
+    <!-- Screen 1: Welcome / Splash -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen" style="background: linear-gradient(135deg, #2E7D32 0%, #1B5E20 100%); justify-content: center; align-items: center; padding: 40px;">
+          <div style="text-align: center; color: white;">
+            <div class="logo" style="width: 120px; height: 120px; background: white; margin-bottom: 24px; border-radius: 28px; display:flex; align-items:center; justify-content:center; box-shadow: 0 4px 16px rgba(0,0,0,0.2);">
+              <img src="../logo/logo.png" style="width:100%;height:100%;object-fit:cover;border-radius:28px;" />
+            </div>
+            <h1 style="font-size: 32px; font-weight: 700; margin-bottom: 8px;">KraiPai</h1>
+            <p style="font-size: 16px; opacity: 0.9;">แอปจ้างขนส่งสินค้าเกษตร</p>
+            <p style="font-size: 14px; opacity: 0.7; margin-top: 8px;">อ.แม่แจ่ม จ.เชียงใหม่</p>
+          </div>
+
+          <div style="position: absolute; bottom: 100px; left: 40px; right: 40px;">
+            <button class="btn" style="background: white; color: #2E7D32; margin-bottom: 12px;">เข้าสู่ระบบ</button>
+            <button class="btn btn-outline" style="border-color: white; color: white;">ลงทะเบียน</button>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">1. หน้า Welcome</div>
+    </div>
+
+    <!-- Screen 2: Login -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="header light">
+            <span class="header-icon back-btn">←</span>
+            <span class="header-title">เข้าสู่ระบบ</span>
+            <span class="header-icon"></span>
+          </div>
+
+          <div class="content content-padded">
+            <div style="text-align: center; margin-bottom: 32px; margin-top: 20px;">
+              <div class="logo">
+                <span class="logo-text">🚛</span>
+              </div>
+              <h2 style="font-size: 24px; font-weight: 600; color: #212121;">ยินดีต้อนรับกลับ</h2>
+              <p style="color: #757575; font-size: 14px;">เข้าสู่ระบบด้วยเบอร์โทรศัพท์</p>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">เบอร์โทรศัพท์</label>
+              <input type="tel" class="form-input" placeholder="08X-XXX-XXXX" value="089-555-1234">
+            </div>
+
+            <p style="color: #757575; font-size: 13px; margin-bottom: 24px;">
+              เราจะส่งรหัส OTP ไปยังเบอร์โทรศัพท์ของคุณ
+            </p>
+
+            <button class="btn btn-primary btn-lg">ขอรหัส OTP</button>
+
+            <div class="divider-text" style="margin: 24px 0;">
+              <span>หรือ</span>
+            </div>
+
+            <p style="text-align: center; color: #757575; font-size: 14px;">
+              ยังไม่มีบัญชี? <a href="#" class="link">ลงทะเบียน</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">2. หน้า Login</div>
+    </div>
+
+    <!-- Screen 3: Register - Role Selection -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="header light">
+            <span class="header-icon back-btn">←</span>
+            <span class="header-title">ลงทะเบียน</span>
+            <span class="header-icon"></span>
+          </div>
+
+          <div class="content content-padded">
+            <div style="text-align: center; margin-bottom: 32px; margin-top: 20px;">
+              <h2 style="font-size: 24px; font-weight: 600; color: #212121;">คุณต้องการใช้งานเป็น</h2>
+              <p style="color: #757575; font-size: 14px;">เลือกประเภทผู้ใช้งาน</p>
+            </div>
+
+            <div class="card" style="border: 2px solid #2E7D32; cursor: pointer;">
+              <div style="display: flex; align-items: center; gap: 16px;">
+                <div style="width: 60px; height: 60px; background: #E8F5E9; border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 28px;">
+                  👨‍🌾
+                </div>
+                <div style="flex: 1;">
+                  <h3 style="font-size: 18px; font-weight: 600; color: #2E7D32;">เกษตรกร</h3>
+                  <p style="font-size: 13px; color: #757575;">เกษตรกร / พ่อค้าคนกลาง<br>ต้องการจ้างขนส่งสินค้าเกษตร</p>
+                </div>
+                <span style="color: #2E7D32; font-size: 24px;">✓</span>
+              </div>
+            </div>
+
+            <div class="card" style="cursor: pointer; opacity: 0.7;">
+              <div style="display: flex; align-items: center; gap: 16px;">
+                <div style="width: 60px; height: 60px; background: #FFF3E0; border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 28px;">
+                  🚛
+                </div>
+                <div style="flex: 1;">
+                  <h3 style="font-size: 18px; font-weight: 600; color: #424242;">ผู้รับจ้าง (Contractor)</h3>
+                  <p style="font-size: 13px; color: #757575;">เจ้าของรถบรรทุก<br>รับจ้างขนส่งสินค้า</p>
+                </div>
+                <span style="color: #BDBDBD; font-size: 24px;">○</span>
+              </div>
+            </div>
+
+            <div style="position: absolute; bottom: 40px; left: 20px; right: 20px;">
+              <button class="btn btn-primary btn-lg">ถัดไป</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">3. เลือกประเภทผู้ใช้</div>
+    </div>
+
+    <!-- Screen 4: Register - เกษตรกร Form -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="header light">
+            <span class="header-icon back-btn">←</span>
+            <span class="header-title">ลงทะเบียน - เกษตรกร</span>
+            <span class="header-icon"></span>
+          </div>
+
+          <div class="content content-padded" style="padding-bottom: 100px;">
+            <!-- รูปโปรไฟล์ -->
+            <div class="form-group" style="text-align: center;">
+              <div style="width: 100px; height: 100px; background: #E8F5E9; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 8px; font-size: 40px; border: 3px dashed #2E7D32;">
+                📷
+              </div>
+              <button class="btn-link" style="font-size: 14px;">เพิ่มรูปโปรไฟล์</button>
+            </div>
+
+            <!-- ที่อยู่ Cascading Dropdown -->
+            <div class="form-group">
+              <label class="form-label">รายละเอียดที่อยู่</label>
+              <input type="text" class="form-input" placeholder="บ้านเลขที่ หมู่ ซอย ถนน..." value="123 หมู่ 4">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">จังหวัด *</label>
+              <select class="form-input" id="farmer-province">
+                <option value="">เลือกจังหวัด</option>
+                <option value="50" selected>เชียงใหม่</option>
+                <option value="57">เชียงราย</option>
+                <option value="52">ลำปาง</option>
+                <option value="51">ลำพูน</option>
+                <option value="10">กรุงเทพมหานคร</option>
+                <!-- โหลดครบ 77 จังหวัดจาก Thailand Address Database API -->
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">อำเภอ *</label>
+              <select class="form-input" id="farmer-district">
+                <option value="">เลือกอำเภอ</option>
+                <option value="5006" selected>แม่แจ่ม</option>
+                <option value="5001">เมืองเชียงใหม่</option>
+                <option value="5007">ฮอด</option>
+                <option value="5018">จอมทอง</option>
+                <!-- โหลดอำเภอตามจังหวัดที่เลือก -->
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">ตำบล *</label>
+              <select class="form-input" id="farmer-subdistrict">
+                <option value="">เลือกตำบล</option>
+                <option value="500601" selected>ช่างเคิ่ง</option>
+                <option value="500602">ท่าผา</option>
+                <option value="500603">บ้านทับ</option>
+                <option value="500604">แม่ศึก</option>
+                <option value="500605">ปางหินฝน</option>
+                <!-- โหลดตำบลตามอำเภอที่เลือก -->
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">รหัสไปรษณีย์ *</label>
+              <input type="text" class="form-input" placeholder="XXXXX" value="50270" maxlength="5">
+            </div>
+
+            <!-- ข้อมูลส่วนตัว -->
+            <div class="form-group">
+              <label class="form-label">คำนำหน้า *</label>
+              <select class="form-input">
+                <option value="นาย" selected>นาย</option>
+                <option value="นาง">นาง</option>
+                <option value="นางสาว">นางสาว</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">ชื่อ *</label>
+              <input type="text" class="form-input" placeholder="ชื่อ" value="ศร">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">นามสกุล *</label>
+              <input type="text" class="form-input" placeholder="นามสกุล" value="ผักรวม">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">เบอร์โทรศัพท์ *</label>
+              <input type="tel" class="form-input" placeholder="08X-XXX-XXXX" value="089-555-1234">
+            </div>
+
+            <div style="background: #E8F5E9; padding: 12px; border-radius: 8px; margin-bottom: 24px;">
+              <p style="color: #2E7D32; font-size: 13px; margin: 0;">
+                <strong>💡 หมายเหตุ:</strong> เราจะส่งรหัส OTP เพื่อยืนยันเบอร์โทรศัพท์ในขั้นตอนถัดไป
+              </p>
+            </div>
+
+            <div style="margin-top: 24px;">
+              <button class="btn btn-primary btn-lg">ลงทะเบียน</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">4. ฟอร์มลงทะเบียน เกษตรกร</div>
+    </div>
+
+    <!-- Screen 5: Register - Contractor Form -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="header light">
+            <span class="header-icon back-btn">←</span>
+            <span class="header-title">ลงทะเบียน - ผู้รับจ้าง</span>
+            <span class="header-icon"></span>
+          </div>
+
+          <div class="content content-padded" style="padding-bottom: 100px;">
+            <!-- รูปโปรไฟล์ -->
+            <div class="form-group" style="text-align: center;">
+              <div style="width: 100px; height: 100px; background: #FFF3E0; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 8px; font-size: 40px; border: 3px dashed #FF9800;">
+                📷
+              </div>
+              <button class="btn-link" style="font-size: 14px; color: #FF9800;">เพิ่มรูปโปรไฟล์</button>
+            </div>
+
+            <!-- ที่อยู่ Cascading Dropdown -->
+            <div class="form-group">
+              <label class="form-label">รายละเอียดที่อยู่</label>
+              <input type="text" class="form-input" placeholder="บ้านเลขที่ หมู่ ซอย ถนน..." value="89 หมู่ 2">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">จังหวัด *</label>
+              <select class="form-input" id="contractor-province">
+                <option value="">เลือกจังหวัด</option>
+                <option value="50" selected>เชียงใหม่</option>
+                <option value="57">เชียงราย</option>
+                <option value="52">ลำปาง</option>
+                <option value="51">ลำพูน</option>
+                <option value="10">กรุงเทพมหานคร</option>
+                <!-- โหลดครบ 77 จังหวัดจาก Thailand Address Database API -->
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">อำเภอ *</label>
+              <select class="form-input" id="contractor-district">
+                <option value="">เลือกอำเภอ</option>
+                <option value="5006" selected>แม่แจ่ม</option>
+                <option value="5001">เมืองเชียงใหม่</option>
+                <option value="5007">ฮอด</option>
+                <option value="5018">จอมทอง</option>
+                <!-- โหลดอำเภอตามจังหวัดที่เลือก -->
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">ตำบล *</label>
+              <select class="form-input" id="contractor-subdistrict">
+                <option value="">เลือกตำบล</option>
+                <option value="500601" selected>ช่างเคิ่ง</option>
+                <option value="500602">ท่าผา</option>
+                <option value="500603">บ้านทับ</option>
+                <option value="500604">แม่ศึก</option>
+                <option value="500605">ปางหินฝน</option>
+                <!-- โหลดตำบลตามอำเภอที่เลือก -->
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">รหัสไปรษณีย์ *</label>
+              <input type="text" class="form-input" placeholder="XXXXX" value="50270" maxlength="5">
+            </div>
+
+            <!-- ข้อมูลส่วนตัว -->
+            <div class="form-group">
+              <label class="form-label">คำนำหน้า *</label>
+              <select class="form-input">
+                <option value="นาย" selected>นาย</option>
+                <option value="นาง">นาง</option>
+                <option value="นางสาว">นางสาว</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">ชื่อ *</label>
+              <input type="text" class="form-input" placeholder="ชื่อ" value="สมคิด">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">นามสกุล *</label>
+              <input type="text" class="form-input" placeholder="นามสกุล" value="รถบรรทุก">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">เบอร์โทรศัพท์ *</label>
+              <input type="tel" class="form-input" placeholder="08X-XXX-XXXX" value="086-111-2222">
+            </div>
+
+            <div style="background: #FFF3E0; padding: 12px; border-radius: 8px; margin-bottom: 24px;">
+              <p style="color: #E65100; font-size: 13px; margin: 0;">
+                <strong>💡 หมายเหตุ:</strong> เราจะส่งรหัส OTP เพื่อยืนยันเบอร์โทรศัพท์ในขั้นตอนถัดไป
+              </p>
+            </div>
+
+            <div style="margin-top: 24px;">
+              <button class="btn btn-primary btn-lg" style="background: #FF9800;">ลงทะเบียน</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">5. ฟอร์มลงทะเบียน Contractor</div>
+    </div>
+
+    <!-- Screen 6: OTP Verification -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="header light">
+            <span class="header-icon back-btn">←</span>
+            <span class="header-title">ยืนยัน OTP</span>
+            <span class="header-icon"></span>
+          </div>
+
+          <div class="content content-padded">
+            <div style="text-align: center; margin-top: 40px;">
+              <div style="width: 80px; height: 80px; background: #E8F5E9; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-size: 36px;">
+                📱
+              </div>
+              <h2 style="font-size: 24px; font-weight: 600; color: #212121; margin-bottom: 8px;">ยืนยันเบอร์โทรศัพท์</h2>
+              <p style="color: #757575; font-size: 14px;">
+                เราได้ส่งรหัส OTP 6 หลักไปที่<br>
+                <strong style="color: #212121;">089-555-1234</strong>
+              </p>
+            </div>
+
+            <div class="otp-container">
+              <input type="text" class="otp-input" maxlength="1" value="5">
+              <input type="text" class="otp-input" maxlength="1" value="8">
+              <input type="text" class="otp-input" maxlength="1" value="3">
+              <input type="text" class="otp-input" maxlength="1" value="2">
+              <input type="text" class="otp-input" maxlength="1" value="">
+              <input type="text" class="otp-input" maxlength="1" value="">
+            </div>
+
+            <p style="text-align: center; color: #757575; font-size: 14px; margin-bottom: 24px;">
+              รหัสจะหมดอายุใน <strong style="color: #F44336;">2:45</strong>
+            </p>
+
+            <button class="btn btn-primary btn-lg">ยืนยัน</button>
+
+            <p style="text-align: center; margin-top: 24px; color: #757575; font-size: 14px;">
+              ไม่ได้รับรหัส? <a href="#" class="link">ส่งอีกครั้ง</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">6. ยืนยัน OTP</div>
+    </div>
+
+    <!-- Screen 7: Registration Success (เกษตรกร) -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen" style="justify-content: center; align-items: center; padding: 40px;">
+          <div style="text-align: center;">
+            <div style="width: 120px; height: 120px; background: #E8F5E9; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 32px; font-size: 60px;">
+              ✓
+            </div>
+            <h2 style="font-size: 24px; font-weight: 600; color: #2E7D32; margin-bottom: 12px;">ลงทะเบียนสำเร็จ!</h2>
+            <p style="color: #757575; font-size: 14px; margin-bottom: 40px;">
+              ยินดีต้อนรับสู่ KraiPai<br>
+              คุณพร้อมเริ่มโพสต์งานได้แล้ว
+            </p>
+            <button class="btn btn-primary btn-lg">เริ่มใช้งาน (เกษตรกร)</button>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">7. ลงทะเบียนสำเร็จ (เกษตรกร)</div>
+    </div>
+
+    <!-- Screen 8: OTP Verification (Contractor) -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="header light">
+            <span class="header-icon back-btn">←</span>
+            <span class="header-title">ยืนยัน OTP</span>
+            <span class="header-icon"></span>
+          </div>
+
+          <div class="content content-padded">
+            <div style="text-align: center; margin-top: 40px;">
+              <div style="width: 80px; height: 80px; background: #FFF3E0; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-size: 36px;">
+                📱
+              </div>
+              <h2 style="font-size: 24px; font-weight: 600; color: #212121; margin-bottom: 8px;">ยืนยันเบอร์โทรศัพท์</h2>
+              <p style="color: #757575; font-size: 14px;">
+                เราได้ส่งรหัส OTP 6 หลักไปที่<br>
+                <strong style="color: #212121;">086-111-2222</strong>
+              </p>
+            </div>
+
+            <div class="otp-container">
+              <input type="text" class="otp-input" maxlength="1" value="1">
+              <input type="text" class="otp-input" maxlength="1" value="2">
+              <input type="text" class="otp-input" maxlength="1" value="3">
+              <input type="text" class="otp-input" maxlength="1" value="4">
+              <input type="text" class="otp-input" maxlength="1" value="">
+              <input type="text" class="otp-input" maxlength="1" value="">
+            </div>
+
+            <p style="text-align: center; color: #757575; font-size: 14px; margin-bottom: 24px;">
+              รหัสจะหมดอายุใน <strong style="color: #F44336;">2:30</strong>
+            </p>
+
+            <button class="btn btn-primary btn-lg" style="background: #FF9800;">ยืนยัน</button>
+
+            <p style="text-align: center; margin-top: 24px; color: #757575; font-size: 14px;">
+              ไม่ได้รับรหัส? <a href="#" class="link">ส่งอีกครั้ง</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">8. ยืนยัน OTP (Contractor)</div>
+    </div>
+
+    <!-- Screen 9: Thai ID Verification (Contractor) -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="header light">
+            <span class="header-icon back-btn">←</span>
+            <span class="header-title">ยืนยันตัวตน</span>
+            <span class="header-icon"></span>
+          </div>
+
+          <div class="content content-padded">
+            <div style="text-align: center; margin-top: 20px; margin-bottom: 24px;">
+              <div style="width: 80px; height: 80px; background: #E3F2FD; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 36px;">
+                🪪
+              </div>
+              <h2 style="font-size: 20px; font-weight: 600; color: #212121; margin-bottom: 8px;">ยืนยันตัวตนด้วย Thai ID</h2>
+              <p style="color: #757575; font-size: 13px;">
+                กรุณายืนยันตัวตนเพื่อเริ่มรับงานขนส่ง<br>
+                ข้อมูลของคุณจะถูกเก็บรักษาอย่างปลอดภัย
+              </p>
+            </div>
+
+            <!-- ThaID Logo -->
+            <div style="text-align: center; margin-bottom: 24px;">
+              <div style="display: inline-block; padding: 16px 32px; background: linear-gradient(135deg, #1565C0 0%, #0D47A1 100%); border-radius: 16px;">
+                <span style="color: white; font-size: 24px; font-weight: 700;">ThaID</span>
+              </div>
+            </div>
+
+            <!-- QR Code for ThaID -->
+            <div class="card" style="background: #F5F5F5; text-align: center; padding: 24px;">
+              <p style="color: #424242; font-size: 13px; font-weight: 600; margin-bottom: 16px;">สแกน QR Code ด้วยแอป ThaID</p>
+              <div style="width: 200px; height: 200px; background: white; margin: 0 auto 16px; border-radius: 12px; display: flex; align-items: center; justify-content: center; border: 2px solid #E0E0E0;">
+                <div style="width: 180px; height: 180px; background:
+                repeating-linear-gradient(0deg, #000 0px, #000 10px, transparent 10px, transparent 20px),
+                repeating-linear-gradient(90deg, #000 0px, #000 10px, transparent 10px, transparent 20px);"></div>
+              </div>
+              <p style="color: #757575; font-size: 12px;">
+                หมดอายุใน <strong style="color: #F44336;">4:58</strong>
+              </p>
+            </div>
+
+            <!-- How to use -->
+            <div style="background: #E3F2FD; padding: 16px; border-radius: 12px; margin: 16px 0;">
+              <p style="color: #1565C0; font-size: 13px; font-weight: 600; margin-bottom: 8px;">📱 วิธีใช้งาน</p>
+              <ol style="color: #424242; font-size: 12px; margin: 0; padding-left: 20px;">
+                <li>เปิดแอป <strong>ThaID</strong> บนโทรศัพท์</li>
+                <li>กดปุ่ม "สแกน QR Code"</li>
+                <li>สแกน QR Code ด้านบน</li>
+                <li>ยืนยันข้อมูลในแอป ThaID</li>
+              </ol>
+            </div>
+
+            <!-- Divider -->
+            <div class="divider-text" style="margin: 24px 0;">
+              <span>หรือ</span>
+            </div>
+
+            <!-- Open ThaID App Button -->
+            <button class="btn btn-primary btn-lg" style="background: #1565C0; display: flex; align-items: center; justify-content: center; gap: 8px;">
+              <span style="font-size: 20px;">📱</span>
+              <span>เปิดแอป ThaID</span>
+            </button>
+
+            <!-- Notice -->
+            <div style="background: #FFF3E0; padding: 12px; border-radius: 8px; margin: 16px 0;">
+              <p style="color: #E65100; font-size: 12px; margin: 0;">
+                <strong>💡 ยังไม่มีแอป ThaID?</strong> ดาวน์โหลดได้ที่ App Store หรือ Google Play และลงทะเบียนที่สำนักงานเขตหรือท้องถิ่นใกล้บ้าน
+              </p>
+            </div>
+
+            <button class="btn btn-outline mt-8">ข้ามไปก่อน (รับงานไม่ได้)</button>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">9. ยืนยัน Thai ID (Contractor)</div>
+    </div>
+
+    <!-- Screen 10: Registration Success (Contractor) -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen" style="justify-content: center; align-items: center; padding: 40px;">
+          <div style="text-align: center;">
+            <div style="width: 120px; height: 120px; background: #FFF3E0; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 32px; font-size: 60px;">
+              🚛
+            </div>
+            <h2 style="font-size: 24px; font-weight: 600; color: #FF9800; margin-bottom: 12px;">ลงทะเบียนสำเร็จ!</h2>
+            <p style="color: #757575; font-size: 14px; margin-bottom: 24px;">
+              ยินดีต้อนรับสู่ KraiPai<br>
+              ข้อมูลยืนยันตัวตนอยู่ระหว่างตรวจสอบ
+            </p>
+            <div style="background: #E3F2FD; padding: 16px; border-radius: 12px; margin-bottom: 16px;">
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <span style="font-size: 24px;">⏳</span>
+                <div style="text-align: left;">
+                  <div style="font-weight: 600; color: #1565C0; font-size: 14px;">รอตรวจสอบ Thai ID</div>
+                  <div style="color: #757575; font-size: 12px;">คุณจะได้รับแจ้งเตือนเมื่อผ่านการตรวจสอบ</div>
+                </div>
+              </div>
+            </div>
+            <div style="background: #FFF3E0; padding: 16px; border-radius: 12px; margin-bottom: 24px;">
+              <p style="color: #E65100; font-size: 13px; margin: 0;">
+                <strong>หมายเหตุ:</strong> กรุณาเพิ่มข้อมูลรถของคุณ<br>เพื่อเตรียมพร้อมรับงานขนส่ง
+              </p>
+            </div>
+            <button class="btn btn-primary btn-lg" style="background: #FF9800;">เริ่มใช้งาน (ผู้รับจ้าง)</button>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">10. ลงทะเบียนสำเร็จ (Contractor)</div>
+    </div>
+
+  </div>
+
+  <script>
+    // Navigation helper - scroll to screen or go to page
+    function goTo(target) {
+      if (target.includes('.html')) {
+        window.location.href = target;
+      } else {
+        const el = document.querySelector(target);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+
+    const screens = document.querySelectorAll('.mobile-wrapper');
+
+    // Screen 1: Welcome
+    screens[0].querySelector('.btn:first-of-type').onclick = () => goTo('.mobile-wrapper:nth-child(2)'); // เข้าสู่ระบบ -> Login
+    screens[0].querySelector('.btn-outline').onclick = () => goTo('.mobile-wrapper:nth-child(3)'); // ลงทะเบียน -> Role Selection
+
+    // Screen 2: Login
+    screens[1].querySelector('.back-btn').onclick = () => goTo('.mobile-wrapper:nth-child(1)'); // กลับ Welcome
+    screens[1].querySelector('.btn-primary').onclick = () => goTo('.mobile-wrapper:nth-child(6)'); // ขอรหัส OTP -> OTP Verification (เกษตรกร)
+    screens[1].querySelector('.link:last-of-type').onclick = (e) => { e.preventDefault(); goTo('.mobile-wrapper:nth-child(3)'); }; // ลงทะเบียน
+
+    // Screen 3: Role Selection
+    screens[2].querySelector('.back-btn').onclick = () => goTo('.mobile-wrapper:nth-child(1)'); // กลับ Welcome
+    screens[2].querySelectorAll('.card')[0].onclick = () => goTo('.mobile-wrapper:nth-child(4)'); // เกษตรกร -> เกษตรกร Form
+    screens[2].querySelectorAll('.card')[1].onclick = () => goTo('.mobile-wrapper:nth-child(5)'); // Contractor -> Contractor Form
+    screens[2].querySelector('.btn-primary').onclick = () => goTo('.mobile-wrapper:nth-child(4)'); // ถัดไป -> เกษตรกร Form (default)
+
+    // Screen 4: เกษตรกร Form
+    screens[3].querySelector('.back-btn').onclick = () => goTo('.mobile-wrapper:nth-child(3)'); // กลับ Role Selection
+    screens[3].querySelector('.btn-primary').onclick = () => goTo('.mobile-wrapper:nth-child(6)'); // ลงทะเบียน -> OTP (เกษตรกร)
+
+    // Screen 5: Contractor Form
+    screens[4].querySelector('.back-btn').onclick = () => goTo('.mobile-wrapper:nth-child(3)'); // กลับ Role Selection
+    screens[4].querySelector('.btn-primary').onclick = () => goTo('.mobile-wrapper:nth-child(8)'); // ลงทะเบียน -> OTP (Contractor)
+
+    // Screen 6: OTP (เกษตรกร)
+    screens[5].querySelector('.back-btn').onclick = () => goTo('.mobile-wrapper:nth-child(4)'); // กลับ เกษตรกร Form
+    screens[5].querySelector('.btn-primary').onclick = () => goTo('.mobile-wrapper:nth-child(7)'); // ยืนยัน -> Success (เกษตรกร)
+
+    // Screen 7: Success (เกษตรกร)
+    screens[6].querySelector('.btn-primary').onclick = () => goTo('02-client-jobs.html'); // เริ่มใช้งาน -> เกษตรกร Jobs
+
+    // Screen 8: OTP (Contractor)
+    screens[7].querySelector('.back-btn').onclick = () => goTo('.mobile-wrapper:nth-child(5)'); // กลับ Contractor Form
+    screens[7].querySelector('.btn-primary').onclick = () => goTo('.mobile-wrapper:nth-child(9)'); // ยืนยัน -> Thai ID Verification
+
+    // Screen 9: Thai ID Verification (Contractor)
+    screens[8].querySelector('.back-btn').onclick = () => goTo('.mobile-wrapper:nth-child(8)'); // กลับ OTP
+    screens[8].querySelector('.btn-primary').onclick = () => goTo('.mobile-wrapper:nth-child(10)'); // ส่งข้อมูล -> Success (Contractor)
+    screens[8].querySelector('.btn-outline').onclick = () => goTo('.mobile-wrapper:nth-child(10)'); // ข้ามไปก่อน -> Success (Contractor)
+
+    // Screen 10: Success (Contractor)
+    screens[9].querySelector('.btn-primary').onclick = () => goTo('06-driver-jobs.html'); // เริ่มใช้งาน -> Contractor Jobs
+
+    // ============================================================
+    // Cascading Address Dropdown (จังหวัด → อำเภอ → ตำบล)
+    // ข้อมูลจริงจะโหลดจาก Thailand Address Database API
+    // https://github.com/thailand-geography-data/thailand-geography-json
+    // ตัวอย่างนี้ใช้ข้อมูล demo สำหรับ mockup เท่านั้น
+    // ============================================================
+
+    const addressData = {
+      provinces: {
+        '50': { name: 'เชียงใหม่', districts: ['5001','5006','5007','5018'] },
+        '57': { name: 'เชียงราย', districts: ['5701'] },
+        '52': { name: 'ลำปาง', districts: ['5201'] },
+        '51': { name: 'ลำพูน', districts: ['5101'] },
+        '10': { name: 'กรุงเทพมหานคร', districts: ['1001'] }
+      },
+      districts: {
+        '5001': { name: 'เมืองเชียงใหม่', subdistricts: ['500101','500102'] },
+        '5006': { name: 'แม่แจ่ม', subdistricts: ['500601','500602','500603','500604','500605'] },
+        '5007': { name: 'ฮอด', subdistricts: ['500701'] },
+        '5018': { name: 'จอมทอง', subdistricts: ['501801'] },
+        '5701': { name: 'เมืองเชียงราย', subdistricts: ['570101'] },
+        '5201': { name: 'เมืองลำปาง', subdistricts: ['520101'] },
+        '5101': { name: 'เมืองลำพูน', subdistricts: ['510101'] },
+        '1001': { name: 'พระนคร', subdistricts: ['100101'] }
+      },
+      subdistricts: {
+        '500101': 'ศรีภูมิ', '500102': 'พระสิงห์',
+        '500601': 'ช่างเคิ่ง', '500602': 'ท่าผา', '500603': 'บ้านทับ', '500604': 'แม่ศึก', '500605': 'ปางหินฝน',
+        '500701': 'หางดง', '501801': 'บ้านหลวง',
+        '570101': 'เวียง', '520101': 'เวียงเหนือ', '510101': 'ในเมือง',
+        '100101': 'พระบรมมหาราชวัง'
+      }
+    };
+
+    function setupCascadingAddress(prefix) {
+      const provinceSelect = document.getElementById(prefix + '-province');
+      const districtSelect = document.getElementById(prefix + '-district');
+      const subdistrictSelect = document.getElementById(prefix + '-subdistrict');
+
+      if (!provinceSelect || !districtSelect || !subdistrictSelect) return;
+
+      provinceSelect.addEventListener('change', function() {
+        const provinceId = this.value;
+        districtSelect.innerHTML = '<option value="">เลือกอำเภอ</option>';
+        subdistrictSelect.innerHTML = '<option value="">เลือกตำบล</option>';
+
+        if (provinceId && addressData.provinces[provinceId]) {
+          addressData.provinces[provinceId].districts.forEach(dId => {
+            const d = addressData.districts[dId];
+            if (d) {
+              const opt = document.createElement('option');
+              opt.value = dId;
+              opt.textContent = d.name;
+              districtSelect.appendChild(opt);
+            }
+          });
+        }
+      });
+
+      districtSelect.addEventListener('change', function() {
+        const districtId = this.value;
+        subdistrictSelect.innerHTML = '<option value="">เลือกตำบล</option>';
+
+        if (districtId && addressData.districts[districtId]) {
+          addressData.districts[districtId].subdistricts.forEach(sId => {
+            const name = addressData.subdistricts[sId];
+            if (name) {
+              const opt = document.createElement('option');
+              opt.value = sId;
+              opt.textContent = name;
+              subdistrictSelect.appendChild(opt);
+            }
+          });
+        }
+      });
+    }
+
+    // เปิดใช้งาน Cascading Address สำหรับทั้ง 2 ฟอร์ม
+    setupCascadingAddress('farmer');
+    setupCascadingAddress('contractor');
+  </script>
+</body>
+</html>

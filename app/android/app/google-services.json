@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "333020362164",
+    "project_id": "kasethaul",
+    "storage_bucket": "kasethaul.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:333020362164:android:dab408f41a59ecddbd2ee1",
+        "android_client_info": {
+          "package_name": "com.kasethaul.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAggQu4dMEp8-lRRdaT91tA8hZbUqN8cG8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

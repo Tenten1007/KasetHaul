@@ -1,0 +1,17 @@
+# build artifacts
+app/build/
+app/.dart_tool/
+app/android/.gradle/
+app/android/app/build/
+app/ios/Pods/
+build/
+*.iml
+
+# secrets — Maps API key อยู่ในไฟล์นี้ ห้ามขึ้น git
+app/android/local.properties
+.env
+*.keystore
+*.jks
+
+.DS_Store
+Thumbs.db

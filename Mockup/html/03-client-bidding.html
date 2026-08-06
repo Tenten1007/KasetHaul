@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KraiPai - Client Bidding Mockup</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="mockup-container">
+
+    <!-- Screen 1: View All Biddings for a Job -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar">
+            <span>9:41</span>
+            <span>100%</span>
+          </div>
+
+          <div class="header">
+            <div class="header-icon back-btn">←</div>
+            <div class="header-title">ข้อเสนอราคา</div>
+            <div class="header-icon"></div>
+          </div>
+
+          <!-- Job Summary -->
+          <div style="background: var(--primary); color: white; padding: 16px 20px;">
+            <div class="font-bold" style="font-size:15px;">ขนส่งกะหล่ำปลี 6 ตัน ไปตลาดเมืองใหม่</div>
+            <div class="flex gap-16 mt-8" style="font-size:13px; opacity:0.9;">
+              <span>120 กม.</span>
+              <span>17 ม.ค. 69</span>
+              <span>งบ: ฿3,500</span>
+            </div>
+          </div>
+
+          <!-- Tabs -->
+          <div class="tabs">
+            <div class="tab active">ทั้งหมด (3)</div>
+            <div class="tab">รอพิจารณา (3)</div>
+            <div class="tab">ปฏิเสธ (0)</div>
+          </div>
+
+          <div class="content content-padded">
+            <!-- Bidding Card 1 - Recommended -->
+            <div class="bidding-card" style="border: 2px solid var(--primary);">
+              <div style="background: var(--primary); color: white; padding: 4px 12px; border-radius: 12px; font-size: 11px; display: inline-block; margin-bottom: 12px;">
+                แนะนำ
+              </div>
+              <div class="bidding-header">
+                <div class="avatar-sm" style="background: var(--primary-light); color: white;">ส</div>
+                <div style="flex:1;">
+                  <div class="font-bold">นายสมคิด รถบรรทุก</div>
+                  <div class="flex gap-8" style="font-size:13px;">
+                    <span class="rating">★★★★★</span>
+                    <span class="text-muted">(24 รีวิว)</span>
+                  </div>
+                </div>
+                <div class="text-right">
+                  <div class="bidding-price">2,880฿</div>
+                </div>
+              </div>
+
+              <!-- Truck Info -->
+              <div class="card" style="background: var(--gray-50); padding: 12px; margin-bottom: 12px;">
+                <div class="flex gap-8">
+                  <span style="font-size: 24px;">🚛</span>
+                  <div>
+                    <div class="font-bold text-sm">รถบรรทุก 6 ล้อ ISUZU</div>
+                    <div class="text-sm text-muted">ทะเบียน: 80-1234 เชียงใหม่ • บรรทุกได้ 8 ตัน</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bidding-message">
+                "พร้อมรับงานครับ รถ 6 ล้อ มีผ้าใบคลุม ส่งถึงก่อนตี 4 แน่นอน เคยวิ่งเส้นนี้ประจำ"
+              </div>
+
+              <div class="flex gap-8 text-sm text-muted mb-16">
+                <span>เสนอเมื่อ 2 ชม.ที่แล้ว</span>
+                <span>•</span>
+                <span>ตอบกลับเร็ว</span>
+              </div>
+
+              <div class="bidding-actions">
+                <button class="btn btn-outline btn-sm" style="flex:1;">ดูโปรไฟล์</button>
+                <button class="btn btn-primary btn-sm" style="flex:1;">เลือกผู้รับจ้างนี้</button>
+              </div>
+            </div>
+
+            <!-- Bidding Card 2 -->
+            <div class="bidding-card">
+              <div class="bidding-header">
+                <div class="avatar-sm" style="background: var(--secondary); color: white;">ว</div>
+                <div style="flex:1;">
+                  <div class="font-bold">นายวิชัย หกล้อเชียงใหม่</div>
+                  <div class="flex gap-8" style="font-size:13px;">
+                    <span class="rating">★★★★★</span>
+                    <span class="text-muted">(18 รีวิว)</span>
+                  </div>
+                </div>
+                <div class="text-right">
+                  <div class="bidding-price">3,500฿</div>
+                </div>
+              </div>
+
+              <div class="card" style="background: var(--gray-50); padding: 12px; margin-bottom: 12px;">
+                <div class="flex gap-8">
+                  <span style="font-size: 24px;">🚛</span>
+                  <div>
+                    <div class="font-bold text-sm">รถบรรทุก 6 ล้อ HINO</div>
+                    <div class="text-sm text-muted">ทะเบียน: 81-5678 เชียงใหม่ • บรรทุกได้ 7 ตัน</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bidding-message">
+                "รับงานได้ครับ รถสภาพดี มีประสบการณ์ขนผักมากกว่า 5 ปี"
+              </div>
+
+              <div class="flex gap-8 text-sm text-muted mb-16">
+                <span>เสนอเมื่อ 5 ชม.ที่แล้ว</span>
+              </div>
+
+              <div class="bidding-actions">
+                <button class="btn btn-outline btn-sm" style="flex:1;">ดูโปรไฟล์</button>
+                <button class="btn btn-primary btn-sm" style="flex:1;">เลือกผู้รับจ้างนี้</button>
+              </div>
+            </div>
+
+            <!-- Bidding Card 3 -->
+            <div class="bidding-card">
+              <div class="bidding-header">
+                <div class="avatar-sm" style="background: var(--info); color: white;">ป</div>
+                <div style="flex:1;">
+                  <div class="font-bold">นายประเสริฐ หกล้อ</div>
+                  <div class="flex gap-8" style="font-size:13px;">
+                    <span class="rating">★★★★☆</span>
+                    <span class="text-muted">(12 รีวิว)</span>
+                  </div>
+                </div>
+                <div class="text-right">
+                  <div class="bidding-price">3,700฿</div>
+                </div>
+              </div>
+
+              <div class="card" style="background: var(--gray-50); padding: 12px; margin-bottom: 12px;">
+                <div class="flex gap-8">
+                  <span style="font-size: 24px;">🚛</span>
+                  <div>
+                    <div class="font-bold text-sm">รถบรรทุก 6 ล้อ FUSO</div>
+                    <div class="text-sm text-muted">ทะเบียน: 82-9012 เชียงใหม่ • บรรทุกได้ 8 ตัน</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bidding-message">
+                "พร้อมรับงาน รถใหม่ มีห้องเย็นติดตั้งได้ถ้าต้องการ"
+              </div>
+
+              <div class="flex gap-8 text-sm text-muted mb-16">
+                <span>เสนอเมื่อ 8 ชม.ที่แล้ว</span>
+              </div>
+
+              <div class="bidding-actions">
+                <button class="btn btn-outline btn-sm" style="flex:1;">ดูโปรไฟล์</button>
+                <button class="btn btn-primary btn-sm" style="flex:1;">เลือกผู้รับจ้างนี้</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">1. ดูข้อเสนอทั้งหมด</div>
+    </div>
+
+    <!-- Screen 2: Contractor Profile -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar">
+            <span>9:41</span>
+            <span>100%</span>
+          </div>
+
+          <div class="header">
+            <div class="header-icon back-btn">←</div>
+            <div class="header-title">โปรไฟล์ผู้รับจ้าง</div>
+            <div class="header-icon"></div>
+          </div>
+
+          <div class="content">
+            <!-- Profile Header -->
+            <div class="profile-header">
+              <div class="avatar avatar-lg" style="background: white; color: var(--primary);">ส</div>
+              <div class="profile-name">นายสมคิด รถบรรทุก</div>
+              <div class="profile-role">ผู้รับจ้างขนส่ง</div>
+              <div class="flex-center gap-8 mt-8">
+                <span class="rating" style="font-size:20px;">★★★★★</span>
+                <span style="opacity:0.9;">4.9 (24 รีวิว)</span>
+              </div>
+            </div>
+
+            <div class="content-padded">
+              <!-- Stats -->
+              <div class="stats-grid mb-16">
+                <div class="stat-card">
+                  <div class="stat-value">156</div>
+                  <div class="stat-label">งานสำเร็จ</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-value">98%</div>
+                  <div class="stat-label">อัตราสำเร็จ</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-value">2 ปี</div>
+                  <div class="stat-label">สมาชิกมา</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-value">< 1 ชม.</div>
+                  <div class="stat-label">ตอบกลับเฉลี่ย</div>
+                </div>
+              </div>
+
+              <!-- Trucks -->
+              <div class="section-title">รถที่ให้บริการ</div>
+              <div class="truck-card">
+                <div class="truck-image">🚛</div>
+                <div class="truck-info">
+                  <div class="truck-name">ISUZU FRR 6 ล้อ</div>
+                  <div class="truck-plate">ทะเบียน: 80-1234 เชียงใหม่</div>
+                  <div class="truck-capacity">บรรทุกได้ 8 ตัน</div>
+                  <span class="badge badge-success" style="margin-top:4px;">พร้อมใช้งาน</span>
+                </div>
+              </div>
+
+              <div class="truck-card">
+                <div class="truck-image">🚚</div>
+                <div class="truck-info">
+                  <div class="truck-name">ISUZU NMR รถกระบะบรรทุก</div>
+                  <div class="truck-plate">ทะเบียน: กข-5678 เชียงใหม่</div>
+                  <div class="truck-capacity">บรรทุกได้ 4 ตัน</div>
+                  <span class="badge badge-success" style="margin-top:4px;">พร้อมใช้งาน</span>
+                </div>
+              </div>
+
+              <!-- Reviews -->
+              <div class="section-title mt-16">รีวิวล่าสุด</div>
+              <div class="card mb-8">
+                <div class="flex gap-8 mb-8">
+                  <div class="avatar-sm">จ</div>
+                  <div style="flex:1;">
+                    <div class="font-bold text-sm">นายจ่าว ผักรวม</div>
+                    <span class="rating" style="font-size:12px;">★★★★★</span>
+                  </div>
+                  <span class="text-sm text-muted">16 ม.ค. 69</span>
+                </div>
+                <p class="text-sm" style="margin:0;">พี่สมคิดขับดีมาก ผักถึงตลาดสดกรอบ ขายได้ราคาดี ขอบคุณครับ</p>
+              </div>
+
+              <div class="card mb-8">
+                <div class="flex gap-8 mb-8">
+                  <div class="avatar-sm">ช</div>
+                  <div style="flex:1;">
+                    <div class="font-bold text-sm">นางสาวชนิกานต์</div>
+                    <span class="rating" style="font-size:12px;">★★★★★</span>
+                  </div>
+                  <span class="text-sm text-muted">10 ม.ค. 69</span>
+                </div>
+                <p class="text-sm" style="margin:0;">ขนส่งรวดเร็วมาก ถึงก่อนเวลา ผักไม่ช้ำเลย ขอบคุณครับ</p>
+              </div>
+
+              <button class="btn btn-outline mb-16">ดูรีวิวทั้งหมด</button>
+
+              <!-- Action Button -->
+              <button class="btn btn-primary">เลือกผู้รับจ้างนี้</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">2. โปรไฟล์ผู้รับจ้าง</div>
+    </div>
+
+    <!-- Screen 3: Confirm Assign Contractor -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar">
+            <span>9:41</span>
+            <span>100%</span>
+          </div>
+
+          <div class="header">
+            <div class="header-icon back-btn">←</div>
+            <div class="header-title">ยืนยันการมอบหมาย</div>
+            <div class="header-icon"></div>
+          </div>
+
+          <div class="content content-padded">
+            <div class="text-center mb-24">
+              <div class="avatar avatar-lg" style="margin: 0 auto 16px; background: var(--primary-light); color: white;">ส</div>
+              <div class="page-title" style="font-size:20px;">นายสมคิด รถบรรทุก</div>
+              <div class="flex-center gap-8">
+                <span class="rating">★★★★★</span>
+                <span class="text-muted">4.9 (24 รีวิว)</span>
+              </div>
+            </div>
+
+            <!-- Job Summary -->
+            <div class="card mb-16">
+              <div class="section-title" style="margin-bottom:8px;">รายละเอียดงาน</div>
+              <div class="job-title">ขนส่งกะหล่ำปลี 6 ตัน ไปตลาดเมืองใหม่</div>
+              <div class="job-route mt-8">
+                <span class="job-route-dot start"></span>
+                <span>ต.ช่างเคิ่ง</span>
+                <div class="job-route-line"></div>
+                <span>ตลาดเมืองใหม่</span>
+                <span class="job-route-dot end"></span>
+              </div>
+              <div class="flex gap-16 mt-12 text-sm text-muted">
+                <span>17 ม.ค. 69</span>
+                <span>00:00-01:00 น.</span>
+                <span>120 กม.</span>
+              </div>
+            </div>
+
+            <!-- Truck Info -->
+            <div class="card mb-16">
+              <div class="section-title" style="margin-bottom:8px;">รถที่ใช้</div>
+              <div class="flex gap-12">
+                <span style="font-size:32px;">🚛</span>
+                <div>
+                  <div class="font-bold">ISUZU FRR 6 ล้อ</div>
+                  <div class="text-sm text-muted">ทะเบียน: 80-1234 เชียงใหม่</div>
+                  <div class="text-sm" style="color: var(--primary);">บรรทุกได้ 8 ตัน</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Price Summary -->
+            <div class="card mb-16" style="background: #E8F5E9;">
+              <div class="section-title" style="margin-bottom:12px;">สรุปค่าใช้จ่าย</div>
+              <div class="flex-between mb-8">
+                <span>ราคาที่เสนอ</span>
+                <span class="font-bold">2,880.00 บาท</span>
+              </div>
+              <div class="flex-between mb-8" style="color: var(--danger);">
+                <span>ค่าธรรมเนียม (1.5%)</span>
+                <span>-43.20 บาท</span>
+              </div>
+              <div class="divider" style="margin: 12px 0;"></div>
+              <div class="flex-between">
+                <span class="font-bold">ยอดที่ต้องชำระ</span>
+                <span class="font-bold" style="font-size:20px; color: var(--primary);">2,923.20 บาท</span>
+              </div>
+            </div>
+
+            <!-- Wallet Balance -->
+            <div class="card mb-16">
+              <div class="flex-between">
+                <div>
+                  <div class="text-sm text-muted">ยอดเงินในกระเป๋า</div>
+                  <div class="font-bold" style="font-size:18px; color: var(--primary);">45,000.00 บาท</div>
+                </div>
+                <span class="badge badge-success">เพียงพอ</span>
+              </div>
+            </div>
+
+            <!-- Notice -->
+            <div class="card" style="background: #FFF3E0; margin-bottom: 24px;">
+              <div class="flex gap-8">
+                <span style="font-size:20px;">ℹ️</span>
+                <div class="text-sm">
+                  <div class="font-bold" style="color: #E65100;">หมายเหตุ</div>
+                  <div class="text-muted">เงินจะถูกกันไว้ในระบบจนกว่างานจะเสร็จสิ้น หากยกเลิกงาน จะได้รับเงินคืนตามเงื่อนไข</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex gap-16">
+              <button class="btn btn-outline" style="flex:1;">ยกเลิก</button>
+              <button class="btn btn-primary" style="flex:1;">ยืนยัน</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">3. ยืนยันมอบหมายงาน</div>
+    </div>
+
+    <!-- Screen 4: Assignment Success -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar light">
+            <span>9:41</span>
+            <span>100%</span>
+          </div>
+
+          <div class="content flex-center" style="background: var(--white);">
+            <div class="text-center" style="padding:40px;">
+              <div style="width:100px; height:100px; background:#E8F5E9; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 24px; font-size:48px;">
+                ✓
+              </div>
+              <div class="page-title">มอบหมายงานสำเร็จ!</div>
+              <div class="page-subtitle">ผู้รับจ้างได้รับการแจ้งเตือนแล้ว และจะติดต่อกลับเร็วๆ นี้</div>
+
+              <!-- Contractor Info -->
+              <div class="card" style="text-align:left; margin:24px 0;">
+                <div class="flex gap-12 mb-12">
+                  <div class="avatar-sm" style="background: var(--primary-light); color: white;">ส</div>
+                  <div>
+                    <div class="font-bold">นายสมคิด รถบรรทุก</div>
+                    <div class="text-sm text-muted">089-123-4567</div>
+                  </div>
+                </div>
+                <div class="divider" style="margin: 12px 0;"></div>
+                <div class="job-route">
+                  <span class="job-route-dot start"></span>
+                  <span>ต.ช่างเคิ่ง</span>
+                  <div class="job-route-line"></div>
+                  <span>ตลาดเมืองใหม่</span>
+                  <span class="job-route-dot end"></span>
+                </div>
+                <div class="flex-between mt-12">
+                  <span class="text-muted">วันรับสินค้า</span>
+                  <span class="font-bold">17 ม.ค. 69 | 00:00-01:00</span>
+                </div>
+                <div class="flex-between mt-8">
+                  <span class="text-muted">ราคาตกลง</span>
+                  <span class="font-bold" style="color:var(--primary);">2,880 บาท</span>
+                </div>
+              </div>
+
+              <!-- Next Steps -->
+              <div class="card" style="background: #E3F2FD; text-align:left;">
+                <div class="font-bold mb-8" style="color: var(--info);">ขั้นตอนต่อไป</div>
+                <div class="text-sm">
+                  <div class="flex gap-8 mb-8">
+                    <span>1.</span>
+                    <span>รอผู้รับจ้างยืนยันรับงาน</span>
+                  </div>
+                  <div class="flex gap-8 mb-8">
+                    <span>2.</span>
+                    <span>โทรติดต่อนัดหมายรายละเอียด</span>
+                  </div>
+                  <div class="flex gap-8">
+                    <span>3.</span>
+                    <span>ติดตาม GPS เมื่อเริ่มขนส่ง</span>
+                  </div>
+                </div>
+              </div>
+
+              <button class="btn btn-primary mt-24">📞 โทรหาผู้รับจ้าง</button>
+              <button class="btn btn-outline mt-8">กลับหน้าหลัก</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">4. มอบหมายสำเร็จ</div>
+    </div>
+
+
+  </div>
+
+  <script>
+    function goTo(target) {
+      if (target.includes('.html')) {
+        window.location.href = target;
+      } else {
+        const el = document.querySelector(target);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+
+    const screens = document.querySelectorAll('.mobile-wrapper');
+
+    // Screen 1: View All Biddings
+    screens[0].querySelector('.back-btn').onclick = () => goTo('02-client-jobs.html');
+    screens[0].querySelectorAll('.bidding-card').forEach(card => {
+      const btns = card.querySelectorAll('.btn');
+      btns[0].onclick = () => goTo('.mobile-wrapper:nth-child(2)'); // ดูโปรไฟล์ -> Screen 2 (โปรไฟล์ผู้รับจ้าง ในไฟล์นี้)
+      btns[1].onclick = () => goTo('.mobile-wrapper:nth-child(3)'); // เลือกผู้รับจ้างนี้
+    });
+
+    // Screen 2: Contractor Profile (Quick View - ยังคงไว้)
+    screens[1].querySelector('.back-btn').onclick = () => goTo('.mobile-wrapper:nth-child(1)');
+    screens[1].querySelector('.btn-primary').onclick = () => goTo('.mobile-wrapper:nth-child(3)'); // เลือกผู้รับจ้างนี้
+
+    // Screen 3: Confirm Assign
+    screens[2].querySelector('.back-btn').onclick = () => goTo('.mobile-wrapper:nth-child(1)');
+    screens[2].querySelector('.btn-outline').onclick = () => goTo('.mobile-wrapper:nth-child(1)'); // ยกเลิก
+    screens[2].querySelector('.btn-primary').onclick = () => goTo('.mobile-wrapper:nth-child(4)'); // ยืนยัน
+
+    // Screen 4: Assignment Success
+    screens[3].querySelector('.btn-outline').onclick = () => goTo('02-client-jobs.html'); // กลับหน้าหลัก
+  </script>
+</body>
+</html>

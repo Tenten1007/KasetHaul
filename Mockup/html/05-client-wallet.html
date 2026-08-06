@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KraiPai - Client Wallet & Statistics Mockup</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="mockup-container">
+
+    <!-- Screen 1: Wallet Main -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar">
+            <span>9:41</span>
+            <span>100%</span>
+          </div>
+
+          <div class="header">
+            <div class="header-title">กระเป๋าเงิน</div>
+            <div class="header-icon">⚙️</div>
+          </div>
+
+          <div class="content content-padded">
+            <!-- Wallet Balance Card -->
+            <div class="wallet-balance">
+              <div class="wallet-label">ยอดที่ใช้ได้</div>
+              <div class="wallet-amount">฿45,000.00</div>
+              <div style="display:flex; justify-content:center; align-items:center; gap:6px; margin-top:6px; margin-bottom:8px;">
+                <span style="font-size:13px; color:rgba(255,255,255,0.75);">ยอดมัดจำที่ถูกกัน</span>
+                <span style="font-size:13px; font-weight:600; color:#FFD54F;">฿22,000.00</span>
+              </div>
+              <div class="wallet-actions">
+                <button class="wallet-action-btn">+ เติมเงิน</button>
+                <button class="wallet-action-btn">ถอนเงิน</button>
+              </div>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="stats-grid mb-16">
+              <div class="stat-card">
+                <div class="stat-value" style="color:var(--danger);">฿6,489</div>
+                <div class="stat-label">จ่ายเดือนนี้</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value" style="color:var(--warning);">฿67,000</div>
+                <div class="stat-label">ยอดรวมทั้งหมด</div>
+              </div>
+            </div>
+
+            <!-- Pending Holds -->
+            <div class="section-title">เงินที่ถูกกันไว้</div>
+            <div class="card mb-16" style="border-left: 4px solid var(--warning);">
+              <div class="flex-between mb-8">
+                <div>
+                  <div class="font-bold">ขนส่งสตรอว์เบอร์รี่</div>
+                  <div class="text-sm text-muted">รอส่งมอบสำเร็จ</div>
+                </div>
+                <div class="text-right">
+                  <div class="font-bold" style="color:var(--warning);">-฿6,000</div>
+                  <span class="badge badge-warning">กำลังขนส่ง</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Recent Transactions -->
+            <div class="section-title">ประวัติล่าสุด</div>
+
+            <div class="transaction-item">
+              <div class="transaction-icon expense">📤</div>
+              <div class="transaction-details">
+                <div class="transaction-title">ชำระค่าขนส่ง JOB008</div>
+                <div class="transaction-date">16 ม.ค. 69 | 05:00 น.</div>
+              </div>
+              <div class="transaction-amount expense">-฿3,605</div>
+            </div>
+
+            <div class="transaction-item">
+              <div class="transaction-icon income">📥</div>
+              <div class="transaction-details">
+                <div class="transaction-title">เติมเงินเข้าระบบ</div>
+                <div class="transaction-date">15 ม.ค. 69 | 10:30 น.</div>
+              </div>
+              <div class="transaction-amount income">+฿50,000</div>
+            </div>
+
+            <div class="transaction-item">
+              <div class="transaction-icon expense">📤</div>
+              <div class="transaction-details">
+                <div class="transaction-title">ชำระค่าขนส่ง JOB011</div>
+                <div class="transaction-date">10 ม.ค. 69 | 06:00 น.</div>
+              </div>
+              <div class="transaction-amount expense">-฿2,884</div>
+            </div>
+
+            <button class="btn btn-outline mt-16">ดูประวัติทั้งหมด</button>
+          </div>
+
+          <!-- Bottom Navigation -->
+          <div class="bottom-nav">
+            <div class="nav-item">
+              <span class="icon">📦</span>
+              <span>งานของฉัน</span>
+            </div>
+            <div class="nav-item">
+              <span class="icon">➕</span>
+              <span>โพสต์งาน</span>
+            </div>
+            <div class="nav-item active">
+              <span class="icon">💰</span>
+              <span>กระเป๋าเงิน</span>
+            </div>
+            <div class="nav-item">
+              <span class="icon">👤</span>
+              <span>โปรไฟล์</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">1. กระเป๋าเงิน</div>
+    </div>
+
+    <!-- Screen 2: Top Up / Deposit -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar">
+            <span>9:41</span>
+            <span>100%</span>
+          </div>
+
+          <div class="header">
+            <div class="header-icon back-btn">←</div>
+            <div class="header-title">เติมเงิน</div>
+            <div class="header-icon"></div>
+          </div>
+
+          <div class="content content-padded">
+            <!-- Amount Input -->
+            <div class="text-center mb-24">
+              <div class="text-muted mb-8">ระบุจำนวนเงินที่ต้องการเติม</div>
+              <div class="form-group" style="margin-top: 16px;">
+                <div style="display: flex; align-items: center; justify-content: center; gap: 8px;">
+                  <span style="font-size: 32px; font-weight: 700; color: var(--primary);">฿</span>
+                  <input type="number" class="form-input" placeholder="0.00" style="font-size: 32px; font-weight: 700; text-align: center; width: 200px; color: var(--primary);">
+                </div>
+              </div>
+              <div class="text-sm text-muted" style="margin-top: 8px;">ขั้นต่ำ ฿100 | สูงสุด ฿100,000</div>
+            </div>
+
+            <!-- Payment Method (Bank Transfer Only) -->
+            <div class="section-title">ช่องทางการชำระเงิน</div>
+
+            <div class="card mb-24" style="border: 2px solid var(--primary);">
+              <div class="flex gap-12">
+                <div style="font-size:32px;">🏦</div>
+                <div style="flex:1;">
+                  <div class="font-bold">โอนผ่านธนาคาร</div>
+                  <div class="text-sm text-muted">ฟรีค่าธรรมเนียม</div>
+                </div>
+                <div style="color:var(--primary); font-size:20px;">✓</div>
+              </div>
+            </div>
+
+            <button class="btn btn-primary">ดำเนินการเติมเงิน</button>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">2. เติมเงิน</div>
+    </div>
+
+    <!-- Screen 3: Bank Transfer Details -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar">
+            <span>9:41</span>
+            <span>100%</span>
+          </div>
+
+          <div class="header">
+            <div class="header-icon back-btn">←</div>
+            <div class="header-title">โอนผ่านธนาคาร</div>
+            <div class="header-icon"></div>
+          </div>
+
+          <div class="content content-padded">
+            <!-- Amount Summary -->
+            <div class="card mb-16" style="background: var(--gray-50);">
+              <div class="flex-between">
+                <span class="text-muted">จำนวนที่ต้องโอน</span>
+                <span class="font-bold" style="font-size:24px; color:var(--primary);">฿10,000.00</span>
+              </div>
+            </div>
+
+            <!-- Bank Account Info -->
+            <div class="section-title">โอนเงินไปยังบัญชี</div>
+            <div class="card mb-16">
+              <div class="flex gap-12 mb-12">
+                <div style="width:48px; height:48px; background:var(--primary); border-radius:8px; display:flex; align-items:center; justify-content:center; color:white; font-weight:700;">
+                  K
+                </div>
+                <div>
+                  <div class="font-bold">ธนาคารกสิกรไทย</div>
+                  <div class="text-sm text-muted">บัญชีออมทรัพย์</div>
+                </div>
+              </div>
+
+              <div class="flex-between mb-8" style="padding:12px; background:var(--gray-50); border-radius:8px;">
+                <div>
+                  <div class="text-sm text-muted">เลขบัญชี</div>
+                  <div class="font-bold" style="font-size:18px; letter-spacing:1px;">123-4-56789-0</div>
+                </div>
+                <button style="background:var(--primary); color:white; border:none; padding:8px 12px; border-radius:8px; font-size:13px;">คัดลอก</button>
+              </div>
+
+              <div class="flex-between" style="padding:12px; background:var(--gray-50); border-radius:8px;">
+                <div>
+                  <div class="text-sm text-muted">ชื่อบัญชี</div>
+                  <div class="font-bold">บจก. เกษตรฮอล</div>
+                </div>
+                <button style="background:var(--primary); color:white; border:none; padding:8px 12px; border-radius:8px; font-size:13px;">คัดลอก</button>
+              </div>
+            </div>
+
+            <!-- Reference Number -->
+            <div class="card mb-16" style="background:#FFF3E0; border:1px solid var(--secondary);">
+              <div class="flex gap-8">
+                <span style="font-size:24px;">⚠️</span>
+                <div>
+                  <div class="font-bold" style="color:#E65100;">สำคัญ: ระบุรหัสอ้างอิง</div>
+                  <div class="text-sm text-muted">กรุณาใส่รหัสนี้ในช่องหมายเหตุการโอน</div>
+                  <div style="background:white; padding:8px 12px; border-radius:8px; margin-top:8px; display:flex; justify-content:space-between; align-items:center;">
+                    <span class="font-bold" style="font-size:18px; letter-spacing:2px;">DEP26011701</span>
+                    <button style="background:var(--secondary); color:white; border:none; padding:6px 10px; border-radius:6px; font-size:12px;">คัดลอก</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Upload Slip -->
+            <div class="section-title">อัพโหลดสลิปโอนเงิน</div>
+            <div class="card mb-24" style="border: 2px dashed var(--gray-300); text-align:center; padding:32px;">
+              <div style="font-size:48px; margin-bottom:12px;">📷</div>
+              <div class="font-bold">แตะเพื่ออัพโหลดสลิป</div>
+              <div class="text-sm text-muted">หรือถ่ายรูปสลิปโอนเงิน</div>
+            </div>
+
+            <button class="btn btn-primary">ยืนยันการโอนเงิน</button>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">3. รายละเอียดโอนเงิน</div>
+    </div>
+
+    <!-- Screen 4: Top Up Success -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar light">
+            <span>9:41</span>
+            <span>100%</span>
+          </div>
+
+          <div class="content flex-center" style="background:var(--white);">
+            <div class="text-center" style="padding:40px;">
+              <div style="width:100px; height:100px; background:#E8F5E9; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 24px; font-size:48px;">
+                ✓
+              </div>
+              <div class="page-title">เติมเงินสำเร็จ!</div>
+              <div class="page-subtitle">ยอดเงินได้รับการอัพเดทเรียบร้อยแล้ว</div>
+
+              <div class="card" style="text-align:left; margin:24px 0;">
+                <div class="flex-between mb-8">
+                  <span class="text-muted">จำนวนเงินที่เติม</span>
+                  <span class="font-bold" style="color:var(--success);">+฿10,000.00</span>
+                </div>
+                <div class="flex-between mb-8">
+                  <span class="text-muted">รหัสอ้างอิง</span>
+                  <span class="font-bold">DEP26011701</span>
+                </div>
+                <div class="flex-between mb-8">
+                  <span class="text-muted">วันที่</span>
+                  <span class="font-bold">17 ม.ค. 69 | 09:41 น.</span>
+                </div>
+                <div class="divider"></div>
+                <div class="flex-between">
+                  <span class="text-muted">ยอดเงินคงเหลือใหม่</span>
+                  <span class="font-bold" style="font-size:20px; color:var(--primary);">฿55,000.00</span>
+                </div>
+              </div>
+
+              <button class="btn btn-primary">กลับหน้ากระเป๋าเงิน</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">4. เติมเงินสำเร็จ</div>
+    </div>
+
+    <!-- Screen 5: Transaction History -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar">
+            <span>9:41</span>
+            <span>100%</span>
+          </div>
+
+          <div class="header">
+            <div class="header-icon back-btn">←</div>
+            <div class="header-title">ประวัติธุรกรรม</div>
+            <div class="header-icon">🔍</div>
+          </div>
+
+          <!-- Filter Tabs -->
+          <div class="tabs">
+            <div class="tab active">ทั้งหมด</div>
+            <div class="tab">เติมเงิน</div>
+            <div class="tab">ชำระเงิน</div>
+            <div class="tab">คืนเงิน</div>
+          </div>
+
+          <!-- Month Filter -->
+          <div style="padding:12px 20px; background:var(--gray-50); border-bottom:1px solid var(--gray-200);">
+            <div class="flex-between">
+              <span class="font-bold">มกราคม 2569</span>
+              <span style="color:var(--primary);">เปลี่ยนเดือน ▼</span>
+            </div>
+          </div>
+
+          <div class="content">
+            <!-- Date Group -->
+            <div style="padding:8px 20px; background:var(--gray-100); font-size:13px; font-weight:500; color:var(--gray-600);">
+              17 มกราคม 2569
+            </div>
+
+            <div class="transaction-item">
+              <div class="transaction-icon income">📥</div>
+              <div class="transaction-details">
+                <div class="transaction-title">เติมเงินเข้าระบบ</div>
+                <div class="transaction-date">09:41 น. | โอนผ่านธนาคาร</div>
+              </div>
+              <div class="transaction-amount income">+฿10,000</div>
+            </div>
+
+            <div style="padding:8px 20px; background:var(--gray-100); font-size:13px; font-weight:500; color:var(--gray-600);">
+              16 มกราคม 2569
+            </div>
+
+            <div class="transaction-item">
+              <div class="transaction-icon expense">📤</div>
+              <div class="transaction-details">
+                <div class="transaction-title">ชำระค่าขนส่ง JOB008</div>
+                <div class="transaction-date">05:00 น. | ผักกาดขาว 5 ตัน</div>
+              </div>
+              <div class="transaction-amount expense">-฿3,605</div>
+            </div>
+
+            <div style="padding:8px 20px; background:var(--gray-100); font-size:13px; font-weight:500; color:var(--gray-600);">
+              15 มกราคม 2569
+            </div>
+
+            <div class="transaction-item">
+              <div class="transaction-icon" style="background:#FFF3E0; color:var(--warning);">🔒</div>
+              <div class="transaction-details">
+                <div class="transaction-title">กันเงินค่าขนส่ง JOB005</div>
+                <div class="transaction-date">16:00 น. | สตรอว์เบอร์รี่</div>
+              </div>
+              <div class="transaction-amount expense">-฿6,000</div>
+            </div>
+
+            <div class="transaction-item">
+              <div class="transaction-icon income">📥</div>
+              <div class="transaction-details">
+                <div class="transaction-title">เติมเงินผ่าน PromptPay</div>
+                <div class="transaction-date">08:00 น.</div>
+              </div>
+              <div class="transaction-amount income">+฿20,000</div>
+            </div>
+
+            <div style="padding:8px 20px; background:var(--gray-100); font-size:13px; font-weight:500; color:var(--gray-600);">
+              10 มกราคม 2569
+            </div>
+
+            <div class="transaction-item">
+              <div class="transaction-icon expense">📤</div>
+              <div class="transaction-details">
+                <div class="transaction-title">ชำระค่าขนส่ง JOB011</div>
+                <div class="transaction-date">06:00 น. | กะหล่ำปลี 4 ตัน</div>
+              </div>
+              <div class="transaction-amount expense">-฿2,884</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">5. ประวัติธุรกรรม</div>
+    </div>
+
+    <!-- Screen 6: Statistics / Dashboard -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar">
+            <span>9:41</span>
+            <span>100%</span>
+          </div>
+
+          <div class="header">
+            <div class="header-icon back-btn">←</div>
+            <div class="header-title">สถิติการใช้งาน</div>
+            <div class="header-icon"></div>
+          </div>
+
+          <!-- Period Selector -->
+          <div style="padding:12px 20px; background:var(--white); border-bottom:1px solid var(--gray-200);">
+            <div class="flex gap-8">
+              <button class="chip">7 วัน</button>
+              <button class="chip active">เดือนนี้</button>
+              <button class="chip">3 เดือน</button>
+              <button class="chip">ปีนี้</button>
+            </div>
+          </div>
+
+          <div class="content content-padded">
+            <!-- Summary Cards -->
+            <div class="stats-grid mb-16">
+              <div class="stat-card">
+                <div class="stat-value">8</div>
+                <div class="stat-label">งานทั้งหมด</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value" style="color:var(--success);">7</div>
+                <div class="stat-label">สำเร็จ</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value">฿18,978</div>
+                <div class="stat-label">ค่าขนส่งรวม</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value">32 ตัน</div>
+                <div class="stat-label">น้ำหนักรวม</div>
+              </div>
+            </div>
+
+            <!-- Chart Placeholder -->
+            <div class="section-title">ค่าใช้จ่ายรายสัปดาห์</div>
+            <div class="card mb-16" style="height:150px; display:flex; align-items:flex-end; justify-content:space-around; padding-bottom:20px;">
+              <div class="text-center">
+                <div style="width:30px; height:40px; background:var(--primary-light); border-radius:4px;"></div>
+                <div class="text-sm text-muted mt-4">ส.1</div>
+              </div>
+              <div class="text-center">
+                <div style="width:30px; height:60px; background:var(--primary-light); border-radius:4px;"></div>
+                <div class="text-sm text-muted mt-4">ส.2</div>
+              </div>
+              <div class="text-center">
+                <div style="width:30px; height:80px; background:var(--primary); border-radius:4px;"></div>
+                <div class="text-sm text-muted mt-4">ส.3</div>
+              </div>
+              <div class="text-center">
+                <div style="width:30px; height:50px; background:var(--primary-light); border-radius:4px;"></div>
+                <div class="text-sm text-muted mt-4">ส.4</div>
+              </div>
+            </div>
+
+            <!-- Top Products -->
+            <div class="section-title">สินค้าที่ขนส่งบ่อย</div>
+            <div class="card mb-16">
+              <div class="flex-between mb-12">
+                <div class="flex gap-8">
+                  <span>🥬</span>
+                  <span>กะหล่ำปลี</span>
+                </div>
+                <span class="font-bold">15 ตัน</span>
+              </div>
+              <div style="height:8px; background:var(--gray-200); border-radius:4px; overflow:hidden;">
+                <div style="width:70%; height:100%; background:var(--primary);"></div>
+              </div>
+
+              <div class="flex-between mb-12 mt-16">
+                <div class="flex gap-8">
+                  <span>🌽</span>
+                  <span>ข้าวโพด</span>
+                </div>
+                <span class="font-bold">9 ตัน</span>
+              </div>
+              <div style="height:8px; background:var(--gray-200); border-radius:4px; overflow:hidden;">
+                <div style="width:45%; height:100%; background:var(--secondary);"></div>
+              </div>
+
+              <div class="flex-between mb-12 mt-16">
+                <div class="flex gap-8">
+                  <span>🥬</span>
+                  <span>ผักกาดขาว</span>
+                </div>
+                <span class="font-bold">5 ตัน</span>
+              </div>
+              <div style="height:8px; background:var(--gray-200); border-radius:4px; overflow:hidden;">
+                <div style="width:25%; height:100%; background:var(--info);"></div>
+              </div>
+            </div>
+
+            <!-- Top Contractors -->
+            <div class="section-title">ผู้รับจ้างที่ใช้บ่อย</div>
+            <div class="card">
+              <div class="flex gap-12 mb-12">
+                <div class="avatar-sm" style="background:var(--primary); color:white;">ส</div>
+                <div style="flex:1;">
+                  <div class="font-bold">นายสมคิด รถบรรทุก</div>
+                  <div class="text-sm text-muted">4 งาน • ★4.9</div>
+                </div>
+              </div>
+              <div class="flex gap-12 mb-12">
+                <div class="avatar-sm" style="background:var(--secondary); color:white;">ว</div>
+                <div style="flex:1;">
+                  <div class="font-bold">นายวิชัย หกล้อเชียงใหม่</div>
+                  <div class="text-sm text-muted">2 งาน • ★4.8</div>
+                </div>
+              </div>
+              <div class="flex gap-12">
+                <div class="avatar-sm" style="background:var(--info); color:white;">ป</div>
+                <div style="flex:1;">
+                  <div class="font-bold">นายประเสริฐ หกล้อ</div>
+                  <div class="text-sm text-muted">1 งาน • ★4.5</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">6. สถิติการใช้งาน</div>
+    </div>
+
+  </div>
+
+  <script>
+    function goTo(target) {
+      if (target.includes('.html')) {
+        window.location.href = target;
+      } else {
+        const el = document.querySelector(target);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+
+    const screens = document.querySelectorAll('.mobile-wrapper');
+
+    // Screen 1: Wallet Main
+    screens[0].querySelectorAll('.wallet-action-btn')[0].onclick = () => goTo('.mobile-wrapper:nth-child(2)'); // เติมเงิน
+    screens[0].querySelector('.btn-outline').onclick = () => goTo('.mobile-wrapper:nth-child(5)'); // ดูประวัติทั้งหมด
+    // Bottom Nav
+    screens[0].querySelectorAll('.nav-item')[0].onclick = () => goTo('02-client-jobs.html'); // งานของฉัน
+    screens[0].querySelectorAll('.nav-item')[1].onclick = () => goTo('02-client-jobs.html#post'); // โพสต์งาน
+    screens[0].querySelectorAll('.nav-item')[3].onclick = () => goTo('10-client-profile.html'); // โปรไฟล์
+
+    // Screen 2: Top Up
+    screens[1].querySelector('.back-btn').onclick = () => goTo('.mobile-wrapper:nth-child(1)');
+    screens[1].querySelector('.btn-primary').onclick = () => goTo('.mobile-wrapper:nth-child(3)'); // ดำเนินการเติมเงิน
+
+    // Screen 3: Bank Transfer Details
+    screens[2].querySelector('.back-btn').onclick = () => goTo('.mobile-wrapper:nth-child(2)');
+    screens[2].querySelector('.btn-primary').onclick = () => goTo('.mobile-wrapper:nth-child(4)'); // ยืนยันการโอนเงิน
+
+    // Screen 4: Top Up Success
+    screens[3].querySelector('.btn-primary').onclick = () => goTo('.mobile-wrapper:nth-child(1)'); // กลับหน้ากระเป๋าเงิน
+
+    // Screen 5: Transaction History
+    screens[4].querySelector('.back-btn').onclick = () => goTo('.mobile-wrapper:nth-child(1)');
+
+    // Screen 6: Statistics
+    screens[5].querySelector('.back-btn').onclick = () => goTo('.mobile-wrapper:nth-child(1)');
+  </script>
+</body>
+</html>

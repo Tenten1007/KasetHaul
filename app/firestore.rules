@@ -1,0 +1,136 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ── Helper ────────────────────────────────────────────────────────────
+    // ต้องล็อกอิน (Firebase Auth phone-OTP) ก่อนอ่าน/เขียนเกือบทุกอย่าง
+    function isAuth() { return request.auth != null; }
+
+    // NOTE (Scope A hardening):
+    // - แอปเก็บ doc key เป็น uuid.v4() ไม่ใช่ Firebase UID และไม่ได้เก็บ firebaseUid
+    //   บน doc → ยัง enforce "เจ้าของเท่านั้น" ด้วย request.auth.uid ไม่ได้
+    //   (ต้องทำ Scope B: เพิ่ม firebaseUid + ย้าย admin ไป Firebase Auth ก่อน)
+    // - ระดับนี้จึงใช้ "ต้องล็อกอิน" เป็นเส้นป้องกันหลัก + ปิดจุดที่รั่วชัดเจน
+    //   (admin password, PII อ่านโดยไม่ล็อกอิน) + เพิ่ม rule ให้ collection ที่ขาด
+
+    // ── Members ───────────────────────────────────────────────────────────
+    // เดิม uid()==memberId เป็นกฎตาย (uid ไม่เคยเท่ากับ uuid) → registration ถูกปฏิเสธ
+    match /members/{memberId} {
+      allow read: if isAuth();
+      allow create, update: if isAuth();
+      allow delete: if false;
+    }
+
+    // ── Clients ───────────────────────────────────────────────────────────
+    // อ่าน: ต้องล็อกอิน (ปิด PII เบอร์/ที่อยู่ไม่ให้คนนอกดัมพ์)
+    // การ lookup ตอน login เกิด "หลัง" signInWithCredential แล้ว จึง auth ผ่าน
+    match /clients/{clientId} {
+      allow read: if isAuth();
+      allow create, update: if isAuth();
+      allow delete: if false;
+    }
+
+    // ── Contractors ───────────────────────────────────────────────────────
+    match /contractors/{contractorId} {
+      allow read: if isAuth();
+      allow create, update: if isAuth();
+      allow delete: if false;
+    }
+
+    // ── Jobs ──────────────────────────────────────────────────────────────
+    match /jobs/{jobId} {
+      allow read: if isAuth();
+      allow create, update: if isAuth();
+      allow delete: if false;
+    }
+
+    // ── Biddings ──────────────────────────────────────────────────────────
+    match /biddings/{biddingId} {
+      allow read: if isAuth();
+      allow create, update: if isAuth();
+      allow delete: if false;
+    }
+
+    // ── Transactions ──────────────────────────────────────────────────────
+    // สร้างได้ตอน auth, แก้/ลบไม่ได้ (immutable ledger)
+    match /transactions/{transactionId} {
+      allow read: if isAuth();
+      allow create: if isAuth();
+      allow update, delete: if false;
+    }
+
+    // ── Trucks ────────────────────────────────────────────────────────────
+    match /trucks/{truckId} {
+      allow read: if isAuth();
+      allow create, update: if isAuth();
+      allow delete: if false;
+    }
+
+    // ── Truck types ───────────────────────────────────────────────────────
+    // client-side seed เขียนตอน collection ว่าง → ต้องอนุญาต authed write
+    // (Scope B: ล็อกให้เฉพาะ admin)
+    match /truck_types/{truckTypeId} {
+      allow read: if isAuth();
+      allow write: if isAuth();
+    }
+
+    // ── Truck schedules ───────────────────────────────────────────────────
+    // ไม่มีโค้ดใช้งานเลย → ปิดสนิท
+    match /truck_schedules/{docId} {
+      allow read, write: if false;
+    }
+
+    // ── Reviews ───────────────────────────────────────────────────────────
+    // (เพิ่มใหม่ — เดิมไม่มี rule) สร้าง/อ่านตอน auth, รีวิวห้ามแก้/ลบ
+    match /reviews/{reviewId} {
+      allow read: if isAuth();
+      allow create: if isAuth();
+      allow update, delete: if false;
+    }
+
+    // ── Bank accounts ─────────────────────────────────────────────────────
+    // (เพิ่มใหม่ — เดิมไม่มี rule → ฟีเจอร์ถอนเงินพังบน production)
+    match /bank_accounts/{bankAccountId} {
+      allow read: if isAuth();
+      allow create, update: if isAuth();
+      allow delete: if false;
+    }
+
+    // ── Notifications ─────────────────────────────────────────────────────
+    // (เพิ่มใหม่ — เดิมไม่มี rule → ฟีเจอร์แจ้งเตือนพังบน production)
+    // สร้างข้ามผู้รับได้ (client assign งาน/admin อนุมัติรถ สร้างให้ contractor)
+    match /notifications/{notificationId} {
+      allow read: if isAuth();
+      allow create: if isAuth();
+      allow update: if isAuth();   // markAsRead
+      allow delete: if false;
+    }
+
+    // ── Location tracking ─────────────────────────────────────────────────
+    match /location_tracking/{docId} {
+      allow read: if isAuth();
+      allow write: if isAuth();
+    }
+
+    // ── Administrators (login credentials) ────────────────────────────────
+    // ⚠️ Scope B: ต้องย้าย admin ไป Firebase Auth + custom claim และเลิกเก็บ
+    //    password ใน Firestore. ระหว่างนี้ปิด read ไม่ให้ใครดัมพ์รหัสผ่าน
+    //    (demo ใช้ debug bypass admin/admin123 ใน kDebugMode ไม่ต้องอ่าน collection นี้)
+    match /administrators/{adminId} {
+      allow read: if false;
+      allow create: if isAuth();   // seeder สร้าง test admin
+      allow update, delete: if false;
+    }
+
+    // ── Admins (custom-claim gated — เตรียมไว้สำหรับ Scope B) ─────────────
+    match /admins/{adminId} {
+      allow read: if request.auth.token.admin == true;
+      allow write: if false;
+    }
+
+    // ── Default deny ──────────────────────────────────────────────────────
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

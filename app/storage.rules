@@ -1,0 +1,52 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+
+    // ── Helpers ───────────────────────────────────────────────────────────
+    function isAuth() { return request.auth != null; }
+    // จำกัดขนาด ≤ 5MB (ตรงกับ storage_repository.dart) + ต้องเป็นรูป
+    function validImage() {
+      return request.resource.size < 5 * 1024 * 1024
+        && request.resource.contentType.matches('image/.*');
+    }
+    // เอกสารรถ: รับรูปหรือ PDF
+    function validDoc() {
+      return request.resource.size < 5 * 1024 * 1024
+        && (request.resource.contentType.matches('image/.*')
+            || request.resource.contentType == 'application/pdf');
+    }
+
+    // NOTE: download URL จาก getDownloadURL() มี token ในตัว → Image.network
+    // ยังโหลดได้แม้ read จะ require auth (token bypass rule). read rule นี้จึงเป็น
+    // defense-in-depth สำหรับ path ที่ไม่มี token. การควบคุมจริงอยู่ที่ write.
+
+    // ── เอกสาร/รูปรถ (ทะเบียน/ประกัน/รูป) — contractor อัปโหลด, admin+เจ้าของดู
+    match /trucks/{truckId}/{fileName} {
+      allow read: if isAuth();
+      allow write: if isAuth() && validDoc();
+    }
+
+    // ── รูปโปรไฟล์ (แก้โปรไฟล์ + ตอนสมัคร) ────────────────────────────────
+    match /profiles/{allPaths=**} {
+      allow read: if isAuth();
+      allow write: if isAuth() && validImage();
+    }
+
+    // ── สลิปเติมเงิน — ข้อมูลการเงินอ่อนไหว: ห้าม public read ────────────
+    match /payment_slips/{clientId}/{fileName} {
+      allow read: if isAuth();
+      allow write: if isAuth() && validImage();
+    }
+
+    // ── หลักฐานส่งมอบ + ลายเซ็น — contractor อัปโหลด, client+admin ดู ────
+    match /delivery_proofs/{jobId}/{fileName} {
+      allow read: if isAuth();
+      allow write: if isAuth() && validImage();
+    }
+
+    // ── Default deny ──────────────────────────────────────────────────────
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}

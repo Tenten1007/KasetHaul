@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KraiPai - Driver Jobs & Bidding Mockup</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="mockup-container">
+
+    <!-- Screen 1: Driver Home / Browse Jobs -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar">
+            <span>9:41</span>
+            <span>100%</span>
+          </div>
+
+          <div class="header">
+            <div class="header-title">ค้นหางาน</div>
+            <div class="header-icon">🔔</div>
+          </div>
+
+          <div class="content content-padded">
+            <!-- Search Bar -->
+            <div class="search-bar">
+              <span class="icon">🔍</span>
+              <input type="text" placeholder="ค้นหางาน, สินค้า, สถานที่...">
+              <span class="icon">⚙️</span>
+            </div>
+
+            <!-- Filter Chips -->
+            <div class="filter-chips">
+              <button class="chip">ทั้งหมด</button>
+              <button class="chip active">ใกล้ฉัน</button>
+              <button class="chip">6 ล้อ</button>
+              <button class="chip">10 ล้อ</button>
+              <button class="chip">ห้องเย็น</button>
+              <button class="chip">ระยะไกล</button>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="card mb-16" style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color:white;">
+              <div class="flex-between">
+                <div>
+                  <div style="opacity:0.9; font-size:13px;">งานที่เปิดรับ</div>
+                  <div style="font-size:28px; font-weight:700;">12 งาน</div>
+                </div>
+                <div class="text-right">
+                  <div style="opacity:0.9; font-size:13px;">รายได้สัปดาห์นี้</div>
+                  <div style="font-size:28px; font-weight:700;">฿15,200</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Job List -->
+            <div class="section-title">งานแนะนำสำหรับคุณ</div>
+
+            <!-- Job Card 1: ตรงกับรถคุณ = แนะนำให้เสนอราคา -->
+            <div class="job-card" style="cursor:pointer;">
+              <div class="job-card-header">
+                <div>
+                  <div class="job-title">ขนส่งกะหล่ำปลี 6 ตัน</div>
+                  <div class="job-product">กะหล่ำปลี • รถ 6 ล้อ</div>
+                </div>
+                <span class="badge badge-success">✓ ตรงกับรถคุณ</span>
+              </div>
+              <div class="job-route">
+                <span class="job-route-dot start"></span>
+                <span>ต.ช่างเคิ่ง</span>
+                <div class="job-route-line"></div>
+                <span>ตลาดเมืองใหม่</span>
+                <span class="job-route-dot end"></span>
+              </div>
+              <div class="job-details">
+                <div class="job-detail-item">📏 120 กม.</div>
+                <div class="job-detail-item">📅 17 ม.ค. 69</div>
+                <div class="job-detail-item">👥 3 คนเสนอ</div>
+              </div>
+              <div class="flex-between">
+                <div>
+                  <div class="job-price-label">งบประมาณ</div>
+                  <div class="job-price">฿4,460</div>
+                </div>
+                <button class="btn btn-outline btn-sm job-detail-btn" style="width: auto;">ดูรายละเอียด</button>
+              </div>
+            </div>
+
+            <!-- Job Card 2: ระยะไกล = แจ้งเตือนว่าไกล -->
+            <div class="job-card" style="cursor:pointer;">
+              <div class="job-card-header">
+                <div>
+                  <div class="job-title">ขนผักรวม 8 ตัน ไปตลาดไท</div>
+                  <div class="job-product">ผักรวม • รถ 6 ล้อ</div>
+                </div>
+                <span class="badge badge-warning">⚠️ ระยะไกล</span>
+              </div>
+              <div class="job-route">
+                <span class="job-route-dot start"></span>
+                <span>ต.ช่างเคิ่ง</span>
+                <div class="job-route-line"></div>
+                <span>ตลาดไท ปทุมธานี</span>
+                <span class="job-route-dot end"></span>
+              </div>
+              <div class="job-details">
+                <div class="job-detail-item">📏 700 กม.</div>
+                <div class="job-detail-item">📅 18 ม.ค. 69</div>
+                <div class="job-detail-item">👥 5 คนเสนอ</div>
+              </div>
+              <div class="flex-between">
+                <div>
+                  <div class="job-price-label">งบประมาณ</div>
+                  <div class="job-price">฿13,000</div>
+                </div>
+                <button class="btn btn-outline btn-sm job-detail-btn" style="width: auto;">ดูรายละเอียด</button>
+              </div>
+            </div>
+
+            <!-- Job Card 3: รถไม่ตรง = ต้องดูรายละเอียดก่อน -->
+            <div class="job-card" style="cursor:pointer; opacity:0.85;">
+              <div class="job-card-header">
+                <div>
+                  <div class="job-title">ขนกาแฟอาราบิก้า 500 กก.</div>
+                  <div class="job-product">กาแฟ • รถกระบะ 4 ล้อ</div>
+                </div>
+                <span class="badge badge-danger">✗ รถไม่ตรง</span>
+              </div>
+              <div class="job-route">
+                <span class="job-route-dot start"></span>
+                <span>ต.ปางหินฝน</span>
+                <div class="job-route-line"></div>
+                <span>นิมมานเหมินทร์</span>
+                <span class="job-route-dot end"></span>
+              </div>
+              <div class="job-details">
+                <div class="job-detail-item">📏 140 กม.</div>
+                <div class="job-detail-item">📅 18 ม.ค. 69</div>
+                <div class="job-detail-item">👥 4 คนเสนอ</div>
+              </div>
+              <div class="flex-between">
+                <div>
+                  <div class="job-price-label">งบประมาณ</div>
+                  <div class="job-price">฿2,800</div>
+                </div>
+                <span class="text-sm text-muted">ต้องการรถ 4 ล้อ</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Bottom Navigation -->
+          <div class="bottom-nav">
+            <div class="nav-item active">
+              <span class="icon">🔍</span>
+              <span>ค้นหางาน</span>
+            </div>
+            <div class="nav-item">
+              <span class="icon">📋</span>
+              <span>งานของฉัน</span>
+            </div>
+            <div class="nav-item">
+              <span class="icon">💰</span>
+              <span>รายได้</span>
+            </div>
+            <div class="nav-item">
+              <span class="icon">👤</span>
+              <span>โปรไฟล์</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">1. ค้นหางาน (ผู้รับจ้าง)</div>
+    </div>
+
+    <!-- Screen 2: Job Detail (Driver View) -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar">
+            <span>9:41</span>
+            <span>100%</span>
+          </div>
+
+          <div class="header">
+            <div class="header-icon back-btn">←</div>
+            <div class="header-title">รายละเอียดงาน</div>
+            <div class="header-icon">♡</div>
+          </div>
+
+          <div class="content">
+            <!-- Map -->
+            <div class="map-placeholder" style="border-radius:0; height:180px;">
+              🗺️
+            </div>
+
+            <div class="content-padded">
+              <!-- Job Info -->
+              <div class="flex-between mb-8">
+                <div>
+                  <div class="job-title" style="font-size:18px;">ขนส่งกะหล่ำปลี 6 ตัน</div>
+                  <div class="job-product">กะหล่ำปลี • รถบรรทุก 6 ล้อ</div>
+                </div>
+                <span class="badge badge-info">เปิดรับข้อเสนอ</span>
+              </div>
+
+              <!-- เกษตรกร Info -->
+              <div class="card mb-16">
+                <div class="flex gap-12">
+                  <div class="avatar-sm">จ</div>
+                  <div style="flex:1;">
+                    <div class="font-bold">นายศร ผักรวม</div>
+                    <div class="flex gap-8 text-sm">
+                      <span class="rating" style="font-size:12px;">★★★★★</span>
+                      <span class="text-muted">(18 รีวิว)</span>
+                    </div>
+                  </div>
+                  <button style="background:var(--gray-100); border:none; padding:8px 12px; border-radius:8px; font-size:13px;">ดูโปรไฟล์</button>
+                </div>
+              </div>
+
+              <!-- Route Details -->
+              <div class="card mb-16">
+                <div class="timeline">
+                  <div class="timeline-item">
+                    <div class="timeline-dot completed">📍</div>
+                    <div class="timeline-content">
+                      <div class="timeline-title">ไร่กะหล่ำปลี หมู่ 4 ต.ช่างเคิ่ง</div>
+                      <div class="timeline-time">17 ม.ค. 69 | 00:00-01:00 น.</div>
+                    </div>
+                  </div>
+                  <div class="timeline-item">
+                    <div class="timeline-dot">🏁</div>
+                    <div class="timeline-content">
+                      <div class="timeline-title">ตลาดเมืองใหม่ อ.เมือง จ.เชียงใหม่</div>
+                      <div class="timeline-time">ส่งถึงก่อน 04:00 น.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quick Info -->
+              <div class="flex gap-8 mb-16">
+                <div class="card" style="flex:1; text-align:center; padding:12px;">
+                  <div class="text-sm text-muted">น้ำหนัก</div>
+                  <div class="font-bold">6 ตัน</div>
+                </div>
+                <div class="card" style="flex:1; text-align:center; padding:12px;">
+                  <div class="text-sm text-muted">ระยะทาง</div>
+                  <div class="font-bold">120 กม.</div>
+                </div>
+                <div class="card" style="flex:1; text-align:center; padding:12px;">
+                  <div class="text-sm text-muted">ข้อเสนอ</div>
+                  <div class="font-bold" style="color:var(--primary);">3</div>
+                </div>
+              </div>
+
+              <!-- Description -->
+              <div class="section-title">รายละเอียดงาน</div>
+              <div class="card mb-16">
+                <p class="text-sm" style="margin:0;">ต้องการขนส่งกะหล่ำปลีสด 6 ตัน จากไร่ที่บ้านช่างเคิ่ง ไปส่งตลาดเมืองใหม่เชียงใหม่ ต้องถึงก่อนตี 4 เพื่อให้ทันขายรอบเช้า</p>
+              </div>
+
+              <!-- Budget -->
+              <div class="card mb-16" style="background:#E8F5E9; border:1px solid var(--primary);">
+                <div class="flex-between">
+                  <div>
+                    <div class="text-sm text-muted">งบประมาณ</div>
+                    <div class="job-price" style="font-size:24px;">฿4,460</div>
+                  </div>
+                  <div class="text-right">
+                    <div class="text-sm text-muted">ราคาแนะนำ</div>
+                    <div class="font-bold" style="color:var(--primary);">฿4,460</div>
+                  </div>
+                </div>
+              </div>
+
+              <button class="btn btn-primary">เสนอราคา</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">2. รายละเอียดงาน (ผู้รับจ้าง)</div>
+    </div>
+
+    <!-- Screen 3: Submit Bidding -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar">
+            <span>9:41</span>
+            <span>100%</span>
+          </div>
+
+          <div class="header">
+            <div class="header-icon back-btn">←</div>
+            <div class="header-title">เสนอราคา</div>
+            <div class="header-icon"></div>
+          </div>
+
+          <div class="content content-padded">
+            <!-- Job Summary -->
+            <div class="card mb-16" style="background:var(--gray-50);">
+              <div class="job-title">ขนส่งกะหล่ำปลี 6 ตัน ไปตลาดเมืองใหม่</div>
+              <div class="job-route mt-8">
+                <span class="job-route-dot start"></span>
+                <span>ต.ช่างเคิ่ง</span>
+                <div class="job-route-line"></div>
+                <span>ตลาดเมืองใหม่</span>
+                <span class="job-route-dot end"></span>
+              </div>
+              <div class="flex gap-16 mt-8 text-sm text-muted">
+                <span>120 กม.</span>
+                <span>6 ตัน</span>
+                <span>งบ: ฿4,460</span>
+              </div>
+            </div>
+
+            <!-- Select Truck -->
+            <div class="section-title">เลือกรถที่จะใช้</div>
+            <div class="truck-card" style="border:2px solid var(--primary);">
+              <div class="truck-image">🚛</div>
+              <div class="truck-info">
+                <div class="truck-name">ISUZU FRR 6 ล้อ</div>
+                <div class="truck-plate">ทะเบียน: 80-1234 เชียงใหม่</div>
+                <div class="truck-capacity">บรรทุกได้ 8 ตัน</div>
+                <span class="badge badge-success" style="margin-top:4px;">พร้อมใช้งาน</span>
+              </div>
+              <div style="color:var(--primary); font-size:24px;">✓</div>
+            </div>
+
+            <div class="truck-card" style="opacity:0.6;">
+              <div class="truck-image">🚚</div>
+              <div class="truck-info">
+                <div class="truck-name">ISUZU NMR รถกระบะบรรทุก</div>
+                <div class="truck-plate">ทะเบียน: กข-5678 เชียงใหม่</div>
+                <div class="truck-capacity">บรรทุกได้ 4 ตัน</div>
+                <span class="badge badge-danger" style="margin-top:4px;">น้ำหนักไม่พอ</span>
+              </div>
+            </div>
+
+            <!-- Price Input -->
+            <div class="section-title mt-16">ราคาที่เสนอ</div>
+            <div class="form-group">
+              <div class="text-center mb-8">
+                <input type="number" class="form-input" style="font-size:32px; font-weight:700; text-align:center; color:var(--primary);" value="4460">
+                <div class="text-muted">บาท</div>
+              </div>
+            </div>
+
+
+            <!-- Profit Analysis -->
+            <div class="section-title mt-16">วิเคราะห์ความคุ้มค่า</div>
+            <div class="card mb-16" style="background: #E8F5E9; border: 1px solid var(--success);">
+              <div class="text-sm" style="line-height: 1.6;">
+                <div class="flex-between mb-4">
+                  <span class="text-muted">ราคาที่คุณเสนอ</span>
+                  <span class="font-bold">฿4,460</span>
+                </div>
+                <div class="flex-between mb-4">
+                  <span class="text-muted">หัก ค่าระยะทาง (120 กม. × ฿8)</span>
+                  <span>-฿960</span>
+                </div>
+                <div class="flex-between mb-4">
+                  <span class="text-muted">หัก ค่าน้ำหนัก (6,000 กก. × ฿0.25)</span>
+                  <span>-฿1,500</span>
+                </div>
+                <div class="divider" style="margin: 8px 0;"></div>
+                <div class="flex-between font-bold">
+                  <span>💵 เงินเหลือสุทธิ (ค่าแรง)</span>
+                  <span style="color: var(--success);">฿2,000</span>
+                </div>
+                <div class="text-sm" style="color: var(--success); margin-top: 8px;">
+                  ✅ คุ้มค่าสำหรับระยะทางนี้
+                </div>
+              </div>
+            </div>
+
+            <!-- Message -->
+            <div class="section-title">ข้อความถึงลูกค้า</div>
+            <div class="form-group">
+              <textarea class="form-input form-textarea" placeholder="แนะนำตัว หรือระบุข้อมูลเพิ่มเติม...">พร้อมรับงานครับ รถ 6 ล้อ มีผ้าใบคลุม ส่งถึงก่อนตี 4 แน่นอน เคยวิ่งเส้นนี้ประจำ</textarea>
+            </div>
+
+            <button class="btn btn-primary">ส่งข้อเสนอ</button>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">3. เสนอราคา</div>
+    </div>
+
+    <!-- Screen 4: Bidding Success -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar light">
+            <span>9:41</span>
+            <span>100%</span>
+          </div>
+
+          <div class="content flex-center" style="background:var(--white);">
+            <div class="text-center" style="padding:40px;">
+              <div style="width:100px; height:100px; background:#E8F5E9; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 24px; font-size:48px;">
+                ✓
+              </div>
+              <div class="page-title">ส่งข้อเสนอสำเร็จ!</div>
+              <div class="page-subtitle">รอลูกค้าพิจารณา คุณจะได้รับการแจ้งเตือนเมื่อมีการตอบกลับ</div>
+
+              <div class="card" style="text-align:left; margin:24px 0;">
+                <div class="job-title">ขนส่งกะหล่ำปลี 6 ตัน ไปตลาดเมืองใหม่</div>
+                <div class="divider" style="margin:12px 0;"></div>
+                <div class="flex-between mb-8">
+                  <span class="text-muted">ราคาที่เสนอ</span>
+                  <span class="font-bold" style="color:var(--primary);">฿4,460</span>
+                </div>
+                <div class="flex-between mb-8">
+                  <span class="text-muted">รถที่ใช้</span>
+                  <span class="font-bold">ISUZU FRR 6 ล้อ</span>
+                </div>
+                <div class="flex-between">
+                  <span class="text-muted">วันรับสินค้า</span>
+                  <span class="font-bold">17 ม.ค. 69</span>
+                </div>
+              </div>
+
+              <div class="card" style="background:#E3F2FD;">
+                <div class="flex gap-8">
+                  <span style="font-size:24px;">🔔</span>
+                  <div class="text-left">
+                    <div class="font-bold" style="color:var(--info);">การแจ้งเตือน</div>
+                    <div class="text-sm text-muted">คุณจะได้รับแจ้งเตือนเมื่อลูกค้าเลือกคุณ หรือต้องการเจรจาต่อ</div>
+                  </div>
+                </div>
+              </div>
+
+              <button class="btn btn-primary mt-24">ดูข้อเสนอของฉัน</button>
+              <button class="btn btn-outline mt-8">ค้นหางานอื่น</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">4. ส่งข้อเสนอสำเร็จ</div>
+    </div>
+
+    <!-- Screen 5: My Biddings List -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar">
+            <span>9:41</span>
+            <span>100%</span>
+          </div>
+
+          <div class="header">
+            <div class="header-icon back-btn">←</div>
+            <div class="header-title">ข้อเสนอของฉัน</div>
+            <div class="header-icon"></div>
+          </div>
+
+          <!-- Tabs -->
+          <div class="tabs">
+            <div class="tab active">รอพิจารณา (3)</div>
+            <div class="tab">ได้รับเลือก (1)</div>
+            <div class="tab">ถูกปฏิเสธ (0)</div>
+          </div>
+
+          <div class="content content-padded">
+            <!-- Bidding Item 1 -->
+            <div class="card mb-12">
+              <div class="flex-between mb-8">
+                <span class="badge badge-warning">รอพิจารณา</span>
+                <span class="text-sm text-muted">2 ชม.ที่แล้ว</span>
+              </div>
+              <div class="job-title">ขนส่งกะหล่ำปลี 6 ตัน ไปตลาดเมืองใหม่</div>
+              <div class="job-route mt-8">
+                <span class="job-route-dot start"></span>
+                <span>ต.ช่างเคิ่ง</span>
+                <div class="job-route-line"></div>
+                <span>ตลาดเมืองใหม่</span>
+                <span class="job-route-dot end"></span>
+              </div>
+              <div class="flex-between mt-12">
+                <div>
+                  <div class="text-sm text-muted">ราคาที่เสนอ</div>
+                  <div class="font-bold" style="color:var(--primary);">฿4,460</div>
+                </div>
+                <div class="text-right">
+                  <div class="text-sm text-muted">งบลูกค้า</div>
+                  <div class="font-bold">฿4,460</div>
+                </div>
+              </div>
+              <div class="flex gap-8 mt-12">
+                <button class="btn btn-outline btn-sm" style="flex:1;">แก้ไขราคา</button>
+                <button class="btn btn-danger btn-sm" style="flex:1; background:transparent; color:var(--danger); border:1px solid var(--danger);">ถอนข้อเสนอ</button>
+              </div>
+            </div>
+
+            <!-- Bidding Item 2 -->
+            <div class="card mb-12">
+              <div class="flex-between mb-8">
+                <span class="badge badge-warning">รอพิจารณา</span>
+                <span class="text-sm text-muted">5 ชม.ที่แล้ว</span>
+              </div>
+              <div class="job-title">ขนผักรวม 8 ตัน ไปตลาดไท</div>
+              <div class="job-route mt-8">
+                <span class="job-route-dot start"></span>
+                <span>ต.ช่างเคิ่ง</span>
+                <div class="job-route-line"></div>
+                <span>ตลาดไท ปทุมธานี</span>
+                <span class="job-route-dot end"></span>
+              </div>
+              <div class="flex-between mt-12">
+                <div>
+                  <div class="text-sm text-muted">ราคาที่เสนอ</div>
+                  <div class="font-bold" style="color:var(--primary);">฿13,500</div>
+                </div>
+                <div class="text-right">
+                  <div class="text-sm text-muted">งบลูกค้า</div>
+                  <div class="font-bold">฿13,000</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bidding Item 3 - Selected -->
+            <div class="card mb-12" style="border:2px solid var(--success);">
+              <div class="flex-between mb-8">
+                <span class="badge badge-success">ได้รับเลือก!</span>
+                <span class="text-sm text-muted">เมื่อวาน</span>
+              </div>
+              <div class="job-title">ขนสตรอว์เบอร์รี่ 800 กก.</div>
+              <div class="job-route mt-8">
+                <span class="job-route-dot start"></span>
+                <span>ต.กองแขก</span>
+                <div class="job-route-line"></div>
+                <span>ห้องเย็นเชียงใหม่</span>
+                <span class="job-route-dot end"></span>
+              </div>
+              <div class="flex-between mt-12">
+                <div>
+                  <div class="text-sm text-muted">ราคาตกลง</div>
+                  <div class="font-bold" style="color:var(--success);">฿6,000</div>
+                </div>
+                <div class="text-right">
+                  <div class="text-sm text-muted">วันรับสินค้า</div>
+                  <div class="font-bold">17 ม.ค. 69</div>
+                </div>
+              </div>
+              <button class="btn btn-primary btn-sm mt-12">ดูรายละเอียดงาน</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">5. ข้อเสนอของฉัน</div>
+    </div>
+
+    <!-- Screen 6: Edit Bidding -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar">
+            <span>9:41</span>
+            <span>100%</span>
+          </div>
+
+          <div class="header">
+            <div class="header-icon back-btn">←</div>
+            <div class="header-title">แก้ไขข้อเสนอ</div>
+            <div class="header-icon"></div>
+          </div>
+
+          <div class="content content-padded">
+            <!-- Job Summary -->
+            <div class="card mb-16" style="background:var(--gray-50);">
+              <div class="job-title">ขนส่งกะหล่ำปลี 6 ตัน ไปตลาดเมืองใหม่</div>
+              <div class="job-route mt-8">
+                <span class="job-route-dot start"></span>
+                <span>ต.ช่างเคิ่ง</span>
+                <div class="job-route-line"></div>
+                <span>ตลาดเมืองใหม่</span>
+                <span class="job-route-dot end"></span>
+              </div>
+              <div class="flex gap-16 mt-8 text-sm text-muted">
+                <span>120 กม.</span>
+                <span>6 ตัน</span>
+                <span>งบ: ฿4,460</span>
+              </div>
+            </div>
+
+            <!-- Current Bid Info -->
+            <div class="card mb-16" style="background:#E3F2FD;">
+              <div class="flex gap-8">
+                <span style="font-size:20px;">ℹ️</span>
+                <div class="text-sm">
+                  <div class="font-bold" style="color:var(--info);">ข้อเสนอปัจจุบัน</div>
+                  <div class="text-muted">ราคา ฿4,460 • เสนอเมื่อ 2 ชม.ที่แล้ว</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Truck Used -->
+            <div class="section-title">รถที่ใช้</div>
+            <div class="truck-card mb-16" style="border:2px solid var(--primary);">
+              <div class="truck-image">🚛</div>
+              <div class="truck-info">
+                <div class="truck-name">ISUZU FRR 6 ล้อ</div>
+                <div class="truck-plate">ทะเบียน: 80-1234 เชียงใหม่</div>
+                <div class="truck-capacity">บรรทุกได้ 8 ตัน</div>
+              </div>
+              <div style="color:var(--primary); font-size:24px;">✓</div>
+            </div>
+
+            <!-- New Price Input -->
+            <div class="section-title">ราคาที่ต้องการแก้ไข</div>
+            <div class="form-group">
+              <div class="text-center mb-8">
+                <input type="number" class="form-input" style="font-size:32px; font-weight:700; text-align:center; color:var(--primary);" value="4200">
+                <div class="text-muted">บาท</div>
+              </div>
+            </div>
+
+            <!-- Price Change Indicator -->
+            <div class="card mb-16" style="background:#FFF3E0;">
+              <div class="flex-between text-sm">
+                <span class="text-muted">ราคาเดิม</span>
+                <span style="text-decoration:line-through;">฿4,460</span>
+              </div>
+              <div class="flex-between text-sm mt-4">
+                <span class="text-muted">ราคาใหม่</span>
+                <span class="font-bold" style="color:var(--primary);">฿4,200</span>
+              </div>
+              <div class="flex-between text-sm mt-4">
+                <span class="text-muted">ส่วนต่าง</span>
+                <span style="color:var(--success);">-฿260 (ลดลง 5.8%)</span>
+              </div>
+            </div>
+
+            <!-- Message -->
+            <div class="section-title">ข้อความถึงลูกค้า</div>
+            <div class="form-group">
+              <textarea class="form-input form-textarea" placeholder="แนะนำตัว หรือระบุข้อมูลเพิ่มเติม...">พร้อมรับงานครับ รถ 6 ล้อ มีผ้าใบคลุม ส่งถึงก่อนตี 4 แน่นอน เคยวิ่งเส้นนี้ประจำ ปรับราคาให้ครับ</textarea>
+            </div>
+
+            <button class="btn btn-primary">บันทึกการแก้ไข</button>
+            <button class="btn btn-outline mt-8">ยกเลิก</button>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">6. แก้ไขข้อเสนอ</div>
+    </div>
+
+    <!-- Screen 7: Confirm Cancel Bidding -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar">
+            <span>9:41</span>
+            <span>100%</span>
+          </div>
+
+          <div class="header">
+            <div class="header-icon back-btn">←</div>
+            <div class="header-title">ถอนข้อเสนอ</div>
+            <div class="header-icon"></div>
+          </div>
+
+          <div class="content content-padded">
+            <div style="text-align:center; margin-top:32px;">
+              <div style="width:90px; height:90px; background:#FFF3E0; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 20px; font-size:44px;">
+                ⚠️
+              </div>
+              <h2 style="font-size:20px; font-weight:700; color:#E65100; margin-bottom:8px;">ต้องการถอนข้อเสนอนี้?</h2>
+              <p style="color:#757575; font-size:14px;">การถอนข้อเสนอจะไม่สามารถกู้คืนได้</p>
+            </div>
+
+            <!-- Bid Summary Card -->
+            <div class="card mb-16" style="background:var(--gray-50); margin-top:24px;">
+              <div class="flex-between mb-8">
+                <span class="badge badge-warning">รอพิจารณา</span>
+                <span class="text-sm text-muted">เสนอเมื่อ 2 ชม.ที่แล้ว</span>
+              </div>
+              <div class="job-title mb-8">ขนส่งกะหล่ำปลี 6 ตัน ไปตลาดเมืองใหม่</div>
+              <div class="job-route mb-8">
+                <span class="job-route-dot start"></span>
+                <span>ต.ช่างเคิ่ง</span>
+                <div class="job-route-line"></div>
+                <span>ตลาดเมืองใหม่</span>
+                <span class="job-route-dot end"></span>
+              </div>
+              <div class="flex-between">
+                <span class="text-muted">ราคาที่เสนอ</span>
+                <span class="font-bold" style="color:var(--primary);">฿4,460</span>
+              </div>
+            </div>
+
+            <!-- Warning -->
+            <div class="card mb-24" style="background:#FFF3E0;">
+              <div class="flex gap-8">
+                <span style="font-size:20px;">ℹ️</span>
+                <div class="text-sm">
+                  <div class="font-bold" style="color:#E65100;">ผลกระทบจากการถอน</div>
+                  <ul style="color:#424242; margin:4px 0 0; padding-left:16px;">
+                    <li style="margin-bottom:2px;">ข้อเสนอของคุณจะถูกลบออกจากงานนี้</li>
+                    <li>ลูกค้าจะไม่เห็นข้อเสนอของคุณอีกต่อไป</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <button class="btn w-full mb-8 cancel-confirm-btn" style="background:var(--danger); color:white; font-weight:600;">ยืนยันถอนข้อเสนอ</button>
+            <button class="btn btn-outline w-full cancel-abort-btn">ไม่ถอน กลับไป</button>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">7. ยืนยันถอนข้อเสนอ</div>
+    </div>
+
+    <!-- Screen 8: Cancel Bidding Success -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar light">
+            <span>9:41</span>
+            <span>100%</span>
+          </div>
+
+          <div class="content flex-center" style="background:var(--white);">
+            <div class="text-center" style="padding:40px;">
+              <div style="width:100px; height:100px; background:#E8F5E9; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 24px; font-size:48px;">
+                ✓
+              </div>
+              <div class="page-title">ถอนข้อเสนอสำเร็จ</div>
+              <div class="page-subtitle">ข้อเสนอของคุณถูกยกเลิกเรียบร้อยแล้ว</div>
+
+              <div class="card" style="text-align:left; margin:24px 0;">
+                <div class="job-title mb-12">ขนส่งกะหล่ำปลี 6 ตัน ไปตลาดเมืองใหม่</div>
+                <div class="divider" style="margin:0 0 12px;"></div>
+                <div class="flex-between mb-8">
+                  <span class="text-muted">ราคาที่เคยเสนอ</span>
+                  <span style="text-decoration:line-through; color:var(--gray-500);">฿4,460</span>
+                </div>
+                <div class="flex-between">
+                  <span class="text-muted">สถานะ</span>
+                  <span class="badge badge-danger">ถอนข้อเสนอแล้ว</span>
+                </div>
+              </div>
+
+              <button class="btn btn-primary cancel-success-back-btn">กลับดูข้อเสนอของฉัน</button>
+              <button class="btn btn-outline mt-8 cancel-success-search-btn">ค้นหางานอื่น</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">8. ถอนข้อเสนอสำเร็จ</div>
+    </div>
+
+    <!-- Screen 9: Cancel Bidding Blocked (Alternate Flow - Job Already Assigned) -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar">
+            <span>9:41</span>
+            <span>100%</span>
+          </div>
+
+          <div class="header">
+            <div class="header-icon back-btn">←</div>
+            <div class="header-title">ถอนข้อเสนอ</div>
+            <div class="header-icon"></div>
+          </div>
+
+          <div class="content content-padded">
+            <div style="text-align:center; margin-top:40px;">
+              <div style="width:90px; height:90px; background:#FFEBEE; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 20px; font-size:44px;">
+                🚫
+              </div>
+              <h2 style="font-size:20px; font-weight:700; color:var(--danger); margin-bottom:8px;">ไม่สามารถถอนข้อเสนอได้</h2>
+              <p style="color:#757575; font-size:14px; line-height:1.6;">งานนี้ถูกปิดรับข้อเสนอแล้ว<br>เนื่องจากลูกค้าเลือกผู้รับจ้างไปแล้ว</p>
+            </div>
+
+            <!-- Job Info -->
+            <div class="card mb-16" style="margin-top:24px; background:var(--gray-50);">
+              <div class="flex-between mb-8">
+                <span class="badge badge-danger">ปิดรับข้อเสนอ</span>
+                <span class="text-sm text-muted">มีผู้รับงานแล้ว</span>
+              </div>
+              <div class="job-title mb-8">ขนผักรวม 8 ตัน ไปตลาดไท</div>
+              <div class="job-route">
+                <span class="job-route-dot start"></span>
+                <span>ต.ช่างเคิ่ง</span>
+                <div class="job-route-line"></div>
+                <span>ตลาดไท ปทุมธานี</span>
+                <span class="job-route-dot end"></span>
+              </div>
+            </div>
+
+            <!-- Explanation -->
+            <div class="card mb-32" style="background:#FFEBEE;">
+              <div class="flex gap-8">
+                <span style="font-size:20px;">ℹ️</span>
+                <div class="text-sm">
+                  <div class="font-bold" style="color:var(--danger);">เหตุผลที่ถอนไม่ได้</div>
+                  <div class="text-muted mt-4">ลูกค้าได้เลือกผู้รับจ้างรายอื่นไปแล้ว งานนี้จึงปิดรับข้อเสนอแล้ว ระบบไม่อนุญาตให้ถอนข้อเสนอหลังจากงานปิด</div>
+                </div>
+              </div>
+            </div>
+
+            <button class="btn btn-primary blocked-back-btn">รับทราบ กลับไป</button>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">9. ถอนข้อเสนอไม่ได้ (งานปิดแล้ว)</div>
+    </div>
+
+    <!-- Screen 10: เกษตรกร Profile (ผู้รับจ้าง View) -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar">
+            <span>9:41</span>
+            <span>100%</span>
+          </div>
+
+          <div class="header">
+            <div class="header-icon back-btn">←</div>
+            <div class="header-title">โปรไฟล์ผู้ว่าจ้าง</div>
+            <div class="header-icon"></div>
+          </div>
+
+          <div class="content content-padded">
+            <!-- Profile Card -->
+            <div class="text-center mb-24">
+              <div class="avatar-lg" style="margin:0 auto 12px; background:var(--primary); color:white; font-size:32px;">
+                ศ
+              </div>
+              <div style="font-size:20px; font-weight:700;">นายศร ผักรวม</div>
+              <div class="text-muted">เกษตรกร • แม่แจ่ม, เชียงใหม่</div>
+              <div class="flex gap-8 justify-center mt-12">
+                <span class="badge badge-success">ยืนยันตัวตนแล้ว</span>
+              </div>
+            </div>
+
+            <!-- Rating & Stats -->
+            <div class="card mb-16" style="text-align:center;">
+              <div style="font-size:36px; font-weight:700; color:var(--warning);">⭐ 4.8</div>
+              <div class="text-muted mb-12">จาก 18 รีวิว</div>
+              <div class="flex-between text-center" style="border-top:1px solid var(--gray-200); padding-top:12px;">
+                <div style="flex:1;">
+                  <div class="font-bold">45</div>
+                  <div class="text-sm text-muted">งานทั้งหมด</div>
+                </div>
+                <div style="flex:1; border-left:1px solid var(--gray-200); border-right:1px solid var(--gray-200);">
+                  <div class="font-bold" style="color:var(--success);">98%</div>
+                  <div class="text-sm text-muted">สำเร็จ</div>
+                </div>
+                <div style="flex:1;">
+                  <div class="font-bold">3 ปี</div>
+                  <div class="text-sm text-muted">เป็นสมาชิก</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- About -->
+            <div class="section-title">เกี่ยวกับผู้ว่าจ้าง</div>
+            <div class="card mb-16">
+              <div class="text-sm">"เกษตรกรปลูกผักบนดอยแม่แจ่มมากว่า 15 ปี มีพื้นที่ปลูกกะหล่ำปลีและผักรวม รวม 20 ไร่ ส่งผักให้ตลาดเป็นประจำ"</div>
+              <div class="flex gap-8 mt-12" style="flex-wrap:wrap;">
+                <span class="chip">กะหล่ำปลี</span>
+                <span class="chip">ผักรวม</span>
+                <span class="chip">ผักกาด</span>
+              </div>
+            </div>
+
+            <!-- Reviews from ผู้รับจ้าง -->
+            <div class="flex-between mb-8">
+              <div class="section-title" style="margin:0;">รีวิวจากคนขับ</div>
+              <button class="btn-link">ดูทั้งหมด</button>
+            </div>
+
+            <div class="card mb-8">
+              <div class="flex gap-12 mb-8">
+                <div class="avatar-sm" style="background:var(--secondary); color:white;">ว</div>
+                <div style="flex:1;">
+                  <div class="flex-between">
+                    <span class="font-bold">นายวิชัย หกล้อเชียงใหม่</span>
+                    <span class="text-warning">⭐ 5.0</span>
+                  </div>
+                  <div class="text-sm text-muted">15 ม.ค. 69</div>
+                </div>
+              </div>
+              <div class="text-sm">"ลูกค้าดีมาก จัดเตรียมสินค้าพร้อมให้โหลด ชำระเงินตรงเวลา"</div>
+            </div>
+
+            <div class="card mb-16">
+              <div class="flex gap-12 mb-8">
+                <div class="avatar-sm" style="background:var(--primary); color:white;">ส</div>
+                <div style="flex:1;">
+                  <div class="flex-between">
+                    <span class="font-bold">นายสมคิด รถบรรทุก</span>
+                    <span class="text-warning">⭐ 4.5</span>
+                  </div>
+                  <div class="text-sm text-muted">10 ม.ค. 69</div>
+                </div>
+              </div>
+              <div class="text-sm">"ลูกค้าสุภาพ สินค้าจัดเรียงดี ช่วยโหลดด้วย ขอบคุณครับ"</div>
+            </div>
+
+            <!-- Action Buttons -->
+            <button class="btn btn-primary w-full">📞 โทรหา</button>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">6. โปรไฟล์ เกษตรกร (มุมมอง ผู้รับจ้าง)</div>
+    </div>
+
+    <!-- Screen 7: Filter Jobs -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar">
+            <span>9:41</span>
+            <span>100%</span>
+          </div>
+
+          <div class="header">
+            <div class="header-icon back-btn">←</div>
+            <div class="header-title">กรองงาน</div>
+            <div class="header-icon" style="color:var(--primary);">รีเซ็ต</div>
+          </div>
+
+          <div class="content content-padded">
+            <!-- Distance Range -->
+            <div class="section-title">ระยะทาง</div>
+            <div class="card mb-16">
+              <div class="flex-between mb-8">
+                <span>ระยะทางสูงสุด</span>
+                <span class="font-bold" style="color:var(--primary);">500 กม.</span>
+              </div>
+              <input type="range" style="width:100%;" min="50" max="1000" value="500">
+              <div class="flex-between text-sm text-muted mt-4">
+                <span>50 กม.</span>
+                <span>1,000 กม.</span>
+              </div>
+            </div>
+
+            <!-- Truck Type -->
+            <div class="section-title">ประเภทรถ</div>
+            <div class="flex gap-8 mb-16" style="flex-wrap:wrap;">
+              <button class="chip active">รถกระบะบรรทุก</button>
+              <button class="chip active">รถ 6 ล้อ</button>
+              <button class="chip">รถ 10 ล้อ</button>
+              <button class="chip">รถห้องเย็น</button>
+            </div>
+
+            <!-- Weight Range -->
+            <div class="section-title">น้ำหนักสินค้า</div>
+            <div class="card mb-16">
+              <div class="flex gap-16">
+                <div class="form-group" style="flex:1; margin:0;">
+                  <label class="form-label">ต่ำสุด (ตัน)</label>
+                  <input type="number" class="form-input" value="1">
+                </div>
+                <div class="form-group" style="flex:1; margin:0;">
+                  <label class="form-label">สูงสุด (ตัน)</label>
+                  <input type="number" class="form-input" value="8">
+                </div>
+              </div>
+            </div>
+
+            <!-- Budget Range -->
+            <div class="section-title">งบประมาณ</div>
+            <div class="card mb-16">
+              <div class="flex gap-16">
+                <div class="form-group" style="flex:1; margin:0;">
+                  <label class="form-label">ต่ำสุด (บาท)</label>
+                  <input type="number" class="form-input" value="1000">
+                </div>
+                <div class="form-group" style="flex:1; margin:0;">
+                  <label class="form-label">สูงสุด (บาท)</label>
+                  <input type="number" class="form-input" value="20000">
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Type -->
+            <div class="section-title">ประเภทสินค้า</div>
+            <div class="flex gap-8 mb-24" style="flex-wrap:wrap;">
+              <button class="chip active">ผักสด</button>
+              <button class="chip active">ผลไม้</button>
+              <button class="chip">ธัญพืช</button>
+              <button class="chip">กาแฟ</button>
+              <button class="chip">สินค้าแช่เย็น</button>
+            </div>
+
+            <button class="btn btn-primary">แสดงผลลัพธ์ (8 งาน)</button>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">7. กรองงาน</div>
+    </div>
+
+  </div>
+
+  <script>
+    function goTo(target) {
+      if (target.includes('.html')) {
+        window.location.href = target;
+      } else {
+        const el = document.querySelector(target);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+
+    const screens = document.querySelectorAll('.mobile-wrapper');
+
+    // Screen 1: Browse Jobs
+    screens[0].querySelectorAll('.job-card')[0].onclick = (e) => {
+      if (!e.target.classList.contains('btn')) goTo('.mobile-wrapper:nth-child(2)');
+    };
+    screens[0].querySelectorAll('.job-card')[1].onclick = (e) => {
+      if (!e.target.classList.contains('btn')) goTo('.mobile-wrapper:nth-child(2)');
+    };
+    screens[0].querySelectorAll('.job-card')[2].onclick = (e) => {
+      if (!e.target.classList.contains('btn')) goTo('.mobile-wrapper:nth-child(2)');
+    };
+    screens[0].querySelectorAll('.job-detail-btn').forEach(btn => {
+      btn.onclick = (e) => { e.stopPropagation(); goTo('.mobile-wrapper:nth-child(2)'); };
+    });
+    screens[0].querySelector('.search-bar .icon:last-child').onclick = () => goTo('.mobile-wrapper:nth-child(11)'); // Filter
+    // Bottom Nav
+    screens[0].querySelectorAll('.nav-item')[1].onclick = () => goTo('07-driver-myjobs.html');
+    screens[0].querySelectorAll('.nav-item')[2].onclick = () => goTo('08-driver-truck-earnings.html');
+    screens[0].querySelectorAll('.nav-item')[3].onclick = () => goTo('11-driver-profile.html');
+
+    // Screen 2: Job Detail
+    screens[1].querySelector('.back-btn').onclick = () => goTo('.mobile-wrapper:nth-child(1)');
+    screens[1].querySelector('.card button').onclick = () => goTo('.mobile-wrapper:nth-child(10)'); // ดูโปรไฟล์ เกษตรกร
+    screens[1].querySelector('.btn-primary').onclick = () => goTo('.mobile-wrapper:nth-child(3)'); // เสนอราคา
+
+    // Screen 3: Submit Bidding
+    screens[2].querySelector('.back-btn').onclick = () => goTo('.mobile-wrapper:nth-child(2)');
+    screens[2].querySelector('.btn-primary').onclick = () => goTo('.mobile-wrapper:nth-child(4)');
+
+    // Screen 4: Bidding Success
+    screens[3].querySelector('.btn-primary').onclick = () => goTo('.mobile-wrapper:nth-child(5)'); // ดูข้อเสนอของฉัน
+    screens[3].querySelector('.btn-outline').onclick = () => goTo('.mobile-wrapper:nth-child(1)'); // ค้นหางานอื่น
+
+    // Screen 5: My Biddings
+    screens[4].querySelector('.back-btn').onclick = () => goTo('.mobile-wrapper:nth-child(1)');
+    screens[4].querySelectorAll('.card')[0].querySelector('.btn-outline').onclick = () => goTo('.mobile-wrapper:nth-child(6)'); // แก้ไขราคา → Edit Bidding
+    screens[4].querySelectorAll('.card')[0].querySelector('.btn-danger').onclick = () => goTo('.mobile-wrapper:nth-child(7)'); // ถอนข้อเสนอ (รอพิจารณา) → Confirm Cancel
+    screens[4].querySelectorAll('.card')[2].querySelector('.btn-primary').onclick = () => goTo('07-driver-myjobs.html'); // ดูรายละเอียดงาน
+
+    // Screen 6: Edit Bidding
+    screens[5].querySelector('.back-btn').onclick = () => goTo('.mobile-wrapper:nth-child(5)');
+    screens[5].querySelector('.btn-primary').onclick = () => goTo('.mobile-wrapper:nth-child(5)'); // บันทึก
+    screens[5].querySelector('.btn-outline').onclick = () => goTo('.mobile-wrapper:nth-child(5)'); // ยกเลิก
+
+    // Screen 7: Confirm Cancel Bidding (NEW)
+    screens[6].querySelector('.back-btn').onclick = () => goTo('.mobile-wrapper:nth-child(5)');
+    screens[6].querySelector('.cancel-confirm-btn').onclick = () => goTo('.mobile-wrapper:nth-child(8)'); // ยืนยันถอน → Success
+    screens[6].querySelector('.cancel-abort-btn').onclick = () => goTo('.mobile-wrapper:nth-child(5)'); // ไม่ถอน → กลับ
+
+    // Screen 8: Cancel Bidding Success (NEW)
+    screens[7].querySelector('.cancel-success-back-btn').onclick = () => goTo('.mobile-wrapper:nth-child(5)'); // กลับข้อเสนอ
+    screens[7].querySelector('.cancel-success-search-btn').onclick = () => goTo('.mobile-wrapper:nth-child(1)'); // ค้นหางาน
+
+    // Screen 9: Cancel Bidding Blocked (NEW)
+    screens[8].querySelector('.back-btn').onclick = () => goTo('.mobile-wrapper:nth-child(5)');
+    screens[8].querySelector('.blocked-back-btn').onclick = () => goTo('.mobile-wrapper:nth-child(5)'); // กลับข้อเสนอ
+
+    // Screen 10: เกษตรกร Profile (was screens[6])
+    screens[9].querySelector('.back-btn').onclick = () => goTo('.mobile-wrapper:nth-child(2)');
+
+    // Screen 11: Filter (was screens[7])
+    screens[10].querySelector('.back-btn').onclick = () => goTo('.mobile-wrapper:nth-child(1)');
+    screens[10].querySelector('.btn-primary').onclick = () => goTo('.mobile-wrapper:nth-child(1)');
+  </script>
+</body>
+</html>

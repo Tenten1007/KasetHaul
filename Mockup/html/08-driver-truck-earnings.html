@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KraiPai - Driver Truck Management & Earnings Mockup</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="mockup-container">
+
+    <!-- Screen 1: Driver Profile / Truck List -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar">
+            <span>9:41</span>
+            <span>100%</span>
+          </div>
+
+          <div class="content">
+            <!-- Profile Header -->
+            <div class="profile-header">
+              <div class="avatar avatar-lg" style="background:white; color:var(--primary);">ส</div>
+              <div class="profile-name">นายสมคิด รถบรรทุก</div>
+              <div class="profile-role">ผู้รับจ้างขนส่ง</div>
+              <div class="flex-center gap-8 mt-8">
+                <span class="rating" style="font-size:18px;">★★★★★</span>
+                <span style="opacity:0.9;">4.9 (24 รีวิว)</span>
+              </div>
+            </div>
+
+            <div class="content-padded">
+              <!-- Quick Stats -->
+              <div class="stats-grid mb-16">
+                <div class="stat-card">
+                  <div class="stat-value">156</div>
+                  <div class="stat-label">งานสำเร็จ</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-value">98%</div>
+                  <div class="stat-label">อัตราสำเร็จ</div>
+                </div>
+              </div>
+
+              <!-- My Trucks -->
+              <div class="flex-between mb-12">
+                <div class="section-title" style="margin:0;">รถของฉัน</div>
+                <button style="background:var(--primary); color:white; border:none; padding:8px 16px; border-radius:8px; font-size:13px;">+ เพิ่มรถ</button>
+              </div>
+
+              <div class="truck-card" style="border:2px solid var(--success);">
+                <div class="truck-image">🚛</div>
+                <div class="truck-info">
+                  <div class="truck-name">ISUZU FRR 6 ล้อ</div>
+                  <div class="truck-plate">ทะเบียน: 80-1234 เชียงใหม่</div>
+                  <div class="truck-capacity">บรรทุกได้ 8 ตัน</div>
+                  <span class="badge badge-success" style="margin-top:4px;">อนุมัติแล้ว</span>
+                </div>
+                <div class="header-icon">⋮</div>
+              </div>
+
+              <div class="truck-card" style="border:2px solid var(--success);">
+                <div class="truck-image">🚚</div>
+                <div class="truck-info">
+                  <div class="truck-name">ISUZU NMR รถกระบะบรรทุก</div>
+                  <div class="truck-plate">ทะเบียน: กข-5678 เชียงใหม่</div>
+                  <div class="truck-capacity">บรรทุกได้ 4 ตัน</div>
+                  <span class="badge badge-success" style="margin-top:4px;">อนุมัติแล้ว</span>
+                </div>
+                <div class="header-icon">⋮</div>
+              </div>
+
+              <div class="truck-card" style="border:2px solid var(--warning);">
+                <div class="truck-image">🚛</div>
+                <div class="truck-info">
+                  <div class="truck-name">HINO 500 6 ล้อ</div>
+                  <div class="truck-plate">ทะเบียน: 82-9999 เชียงใหม่</div>
+                  <div class="truck-capacity">บรรทุกได้ 10 ตัน</div>
+                  <span class="badge badge-warning" style="margin-top:4px;">รออนุมัติ</span>
+                </div>
+                <div class="header-icon">⋮</div>
+              </div>
+
+              <!-- Menu Items -->
+              <div class="section-title mt-24">เมนู</div>
+              <div class="list-item" style="border-radius:12px 12px 0 0;">
+                <span style="font-size:20px;">📊</span>
+                <div class="list-item-content">
+                  <div class="list-item-title">สถิติการทำงาน</div>
+                </div>
+                <span>›</span>
+              </div>
+              <div class="list-item">
+                <span style="font-size:20px;">⚙️</span>
+                <div class="list-item-content">
+                  <div class="list-item-title">ตั้งค่าบัญชี</div>
+                </div>
+                <span>›</span>
+              </div>
+              <div class="list-item" style="border-radius:0 0 12px 12px;">
+                <span style="font-size:20px;">🚪</span>
+                <div class="list-item-content">
+                  <div class="list-item-title" style="color:var(--danger);">ออกจากระบบ</div>
+                </div>
+                <span>›</span>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Bottom Navigation -->
+          <div class="bottom-nav">
+            <div class="nav-item">
+              <span class="icon">🔍</span>
+              <span>ค้นหางาน</span>
+            </div>
+            <div class="nav-item">
+              <span class="icon">📋</span>
+              <span>งานของฉัน</span>
+            </div>
+            <div class="nav-item">
+              <span class="icon">💰</span>
+              <span>รายได้</span>
+            </div>
+            <div class="nav-item active">
+              <span class="icon">👤</span>
+              <span>โปรไฟล์</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">1. โปรไฟล์และรถของฉัน</div>
+    </div>
+
+    <!-- Screen 2: Add New Truck -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar">
+            <span>9:41</span>
+            <span>100%</span>
+          </div>
+
+          <div class="header">
+            <div class="header-icon back-btn">←</div>
+            <div class="header-title">เพิ่มรถใหม่</div>
+            <div class="header-icon"></div>
+          </div>
+
+          <div class="content content-padded">
+            <!-- Progress -->
+            <div class="flex gap-8 mb-24">
+              <div style="flex:1; height:4px; background:var(--primary); border-radius:2px;"></div>
+              <div style="flex:1; height:4px; background:var(--gray-300); border-radius:2px;"></div>
+            </div>
+
+            <div class="page-title" style="font-size:20px;">ข้อมูลรถ</div>
+            <div class="page-subtitle">กรอกรายละเอียดรถของคุณ</div>
+
+            <!-- Truck Type -->
+            <div class="section-title">ประเภทรถ</div>
+            <div class="flex gap-8 mb-16" style="flex-wrap:wrap;">
+              <button class="chip active">รถกระบะบรรทุก</button>
+              <button class="chip">รถ 6 ล้อ</button>
+              <button class="chip">รถ 10 ล้อ</button>
+              <button class="chip">รถห้องเย็น</button>
+            </div>
+
+            <!-- Truck Details -->
+            <div class="form-group">
+              <label class="form-label">ยี่ห้อรถ</label>
+              <select class="form-input">
+                <option value="">เลือกยี่ห้อ</option>
+                <option value="isuzu" selected>ISUZU</option>
+                <option value="hino">HINO</option>
+                <option value="fuso">FUSO</option>
+                <option value="toyota">TOYOTA</option>
+                <option value="other">อื่นๆ</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">รุ่น</label>
+              <input type="text" class="form-input" placeholder="เช่น FRR, NMR, 500" value="NMR">
+            </div>
+
+            <div class="flex gap-16">
+              <div class="form-group" style="flex:1;">
+                <label class="form-label">ทะเบียนรถ</label>
+                <input type="text" class="form-input" placeholder="เช่น 80-1234" value="82-9999">
+              </div>
+              <div class="form-group" style="flex:1;">
+                <label class="form-label">จังหวัด</label>
+                <select class="form-input">
+                  <option value="chiangmai" selected>เชียงใหม่</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">น้ำหนักบรรทุกสูงสุด (ตัน)</label>
+              <input type="number" class="form-input" placeholder="เช่น 8" value="10">
+            </div>
+
+            <!-- Features -->
+            <div class="section-title">คุณสมบัติเพิ่มเติม</div>
+            <div class="flex gap-8 mb-16" style="flex-wrap:wrap;">
+              <button class="chip active">มีผ้าใบคลุม</button>
+              <button class="chip">ตู้ทึบ</button>
+              <button class="chip">ห้องเย็น</button>
+            </div>
+
+            <button class="btn btn-primary">ถัดไป - อัพโหลดเอกสาร</button>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">2. เพิ่มรถใหม่ - ข้อมูลรถ</div>
+    </div>
+
+    <!-- Screen 3: Upload Truck Documents -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar">
+            <span>9:41</span>
+            <span>100%</span>
+          </div>
+
+          <div class="header">
+            <div class="header-icon back-btn">←</div>
+            <div class="header-title">อัพโหลดเอกสาร</div>
+            <div class="header-icon"></div>
+          </div>
+
+          <div class="content content-padded">
+            <!-- Progress -->
+            <div class="flex gap-8 mb-24">
+              <div style="flex:1; height:4px; background:var(--primary); border-radius:2px;"></div>
+              <div style="flex:1; height:4px; background:var(--primary); border-radius:2px;"></div>
+            </div>
+
+            <div class="page-title" style="font-size:20px;">อัพโหลดเอกสาร</div>
+            <div class="page-subtitle">กรุณาอัพโหลดเอกสารเพื่อยืนยันความเป็นเจ้าของรถ</div>
+
+            <!-- Document 1: Truck Registration -->
+            <div class="section-title">สำเนาทะเบียนรถ (พ.ร.บ.)</div>
+            <div class="card mb-16" style="border:2px solid var(--success);">
+              <div class="flex gap-12">
+                <div style="width:80px; height:80px; background:var(--gray-200); border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:32px;">📄</div>
+                <div style="flex:1;">
+                  <div class="font-bold">truck_registration.jpg</div>
+                  <div class="text-sm text-muted">อัพโหลดแล้ว</div>
+                  <span class="badge badge-success" style="margin-top:4px;">✓ สำเร็จ</span>
+                </div>
+                <button style="background:none; border:none; color:var(--danger); font-size:20px;">✕</button>
+              </div>
+            </div>
+
+            <!-- Document 2: Insurance -->
+            <div class="section-title">ประกันภัยรถ (ถ้ามี)</div>
+            <div class="card mb-16" style="border:2px dashed var(--gray-300); text-align:center; padding:24px;">
+              <div style="font-size:32px; margin-bottom:8px;">📷</div>
+              <div class="font-bold">แตะเพื่ออัพโหลด</div>
+              <div class="text-sm text-muted">หรือถ่ายรูปเอกสาร</div>
+            </div>
+
+            <!-- Document 3: Truck Photos -->
+            <div class="section-title">รูปถ่ายรถ (ด้านหน้า, ด้านข้าง, ด้านหลัง)</div>
+            <div class="flex gap-8 mb-16">
+              <div style="flex:1; height:80px; background:var(--gray-200); border-radius:8px; display:flex; align-items:center; justify-content:center;">
+                <div class="text-center">
+                  <div style="font-size:20px;">📷</div>
+                  <div class="text-sm text-muted">ด้านหน้า</div>
+                </div>
+              </div>
+              <div style="flex:1; height:80px; background:var(--gray-200); border-radius:8px; display:flex; align-items:center; justify-content:center;">
+                <div class="text-center">
+                  <div style="font-size:20px;">📷</div>
+                  <div class="text-sm text-muted">ด้านข้าง</div>
+                </div>
+              </div>
+              <div style="flex:1; height:80px; background:var(--gray-200); border-radius:8px; display:flex; align-items:center; justify-content:center;">
+                <div class="text-center">
+                  <div style="font-size:20px;">📷</div>
+                  <div class="text-sm text-muted">ด้านหลัง</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Notice -->
+            <div class="card mb-24" style="background:#FFF3E0;">
+              <div class="flex gap-8">
+                <span style="font-size:20px;">ℹ️</span>
+                <div class="text-sm">
+                  <div class="font-bold" style="color:#E65100;">หมายเหตุ</div>
+                  <div class="text-muted">เอกสารจะถูกตรวจสอบโดยทีมงาน ใช้เวลาประมาณ 1-2 วันทำการ</div>
+                </div>
+              </div>
+            </div>
+
+            <button class="btn btn-primary">ส่งเอกสารเพื่ออนุมัติ</button>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">3. อัพโหลดเอกสารรถ</div>
+    </div>
+
+    <!-- Screen 3.5: Truck Options Menu (กดปุ่ม ⋮ บนการ์ดรถ) -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar">
+            <span>9:41</span>
+            <span>100%</span>
+          </div>
+
+          <div class="header">
+            <div class="header-icon back-btn">←</div>
+            <div class="header-title">จัดการรถ</div>
+            <div class="header-icon"></div>
+          </div>
+
+          <div class="content content-padded">
+            <!-- Truck Info -->
+            <div class="card mb-24" style="border:2px solid var(--success);">
+              <div class="flex gap-12" style="align-items:center;">
+                <div style="width:60px; height:60px; background:var(--gray-100); border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:32px;">🚛</div>
+                <div style="flex:1;">
+                  <div class="font-bold" style="font-size:16px;">ISUZU FRR 6 ล้อ</div>
+                  <div class="text-sm text-muted">ทะเบียน: 80-1234 เชียงใหม่</div>
+                  <div class="text-sm text-muted">บรรทุกได้ 8 ตัน</div>
+                  <span class="badge badge-success" style="margin-top:4px;">อนุมัติแล้ว</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Menu Options -->
+            <div class="section-title">ตัวเลือก</div>
+
+            <div class="list-item" style="border-radius:12px 12px 0 0; cursor:pointer;">
+              <span style="font-size:20px;">👁️</span>
+              <div class="list-item-content">
+                <div class="list-item-title">ดูรายละเอียดรถ</div>
+                <div class="list-item-subtitle">ดูข้อมูลรถและเอกสาร</div>
+              </div>
+              <span>›</span>
+            </div>
+
+            <div class="list-item" style="cursor:pointer;">
+              <span style="font-size:20px;">✏️</span>
+              <div class="list-item-content">
+                <div class="list-item-title">แก้ไขข้อมูลรถ</div>
+                <div class="list-item-subtitle">แก้ไขรายละเอียดหรืออัปเดตเอกสาร</div>
+              </div>
+              <span>›</span>
+            </div>
+
+            <div class="list-item" style="border-radius:0 0 12px 12px; cursor:pointer;">
+              <span style="font-size:20px;">🗑️</span>
+              <div class="list-item-content">
+                <div class="list-item-title" style="color:var(--danger);">ลบรถคันนี้</div>
+                <div class="list-item-subtitle">ลบรถออกจากระบบถาวร</div>
+              </div>
+              <span>›</span>
+            </div>
+
+            <!-- Warning -->
+            <div class="card mt-24" style="background:#FFF3E0;">
+              <div class="flex gap-8">
+                <span style="font-size:20px;">⚠️</span>
+                <div class="text-sm">
+                  <div class="font-bold" style="color:#E65100;">หมายเหตุ</div>
+                  <div class="text-muted">หากรถมีงานที่กำลังดำเนินการอยู่ จะไม่สามารถลบได้จนกว่างานจะเสร็จสิ้น</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">3.5 เมนูจัดการรถ</div>
+    </div>
+
+    <!-- Screen 3.55: View Truck Detail -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar">
+            <span>9:41</span>
+            <span>100%</span>
+          </div>
+
+          <div class="header">
+            <div class="header-icon back-btn">←</div>
+            <div class="header-title">รายละเอียดรถ</div>
+            <div class="header-icon edit-btn" style="cursor:pointer;">✏️</div>
+          </div>
+
+          <div class="content content-padded" style="padding-bottom:100px;">
+            <!-- Truck Hero -->
+            <div class="card mb-16" style="padding:0; overflow:hidden;">
+              <div style="background:var(--gray-100); height:160px; display:flex; align-items:center; justify-content:center; font-size:80px;">🚛</div>
+              <div style="padding:16px;">
+                <div class="flex-between" style="align-items:flex-start;">
+                  <div>
+                    <div class="font-bold" style="font-size:20px;">ISUZU FRR 6 ล้อ</div>
+                    <div class="text-muted" style="font-size:14px; margin-top:2px;">ทะเบียน: 80-1234 เชียงใหม่</div>
+                  </div>
+                  <span class="badge badge-success" style="font-size:13px; padding:6px 12px;">อนุมัติแล้ว</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Truck Details -->
+            <div class="section-title">ข้อมูลรถ</div>
+            <div class="card mb-16">
+              <div class="flex-between mb-12">
+                <span class="text-muted">ประเภทรถ</span>
+                <span class="font-bold">รถ 6 ล้อ</span>
+              </div>
+              <div class="divider" style="margin:0 0 12px;"></div>
+              <div class="flex-between mb-12">
+                <span class="text-muted">ยี่ห้อ</span>
+                <span class="font-bold">ISUZU</span>
+              </div>
+              <div class="divider" style="margin:0 0 12px;"></div>
+              <div class="flex-between mb-12">
+                <span class="text-muted">รุ่น</span>
+                <span class="font-bold">FRR</span>
+              </div>
+              <div class="divider" style="margin:0 0 12px;"></div>
+              <div class="flex-between mb-12">
+                <span class="text-muted">ทะเบียน</span>
+                <span class="font-bold">80-1234 เชียงใหม่</span>
+              </div>
+              <div class="divider" style="margin:0 0 12px;"></div>
+              <div class="flex-between">
+                <span class="text-muted">น้ำหนักบรรทุกสูงสุด</span>
+                <span class="font-bold">8 ตัน</span>
+              </div>
+            </div>
+
+            <!-- Features -->
+            <div class="section-title">คุณสมบัติเพิ่มเติม</div>
+            <div class="flex gap-8 mb-16" style="flex-wrap:wrap;">
+              <span class="chip active" style="pointer-events:none;">มีผ้าใบคลุม</span>
+            </div>
+
+            <!-- Truck Photos -->
+            <div class="section-title">รูปถ่ายรถ</div>
+            <div class="flex gap-8 mb-16">
+              <div style="flex:1; height:90px; background:var(--gray-200); border-radius:8px; display:flex; align-items:center; justify-content:center;">
+                <div class="text-center">
+                  <div style="font-size:24px;">🖼️</div>
+                  <div class="text-sm text-muted">ด้านหน้า</div>
+                </div>
+              </div>
+              <div style="flex:1; height:90px; background:var(--gray-200); border-radius:8px; display:flex; align-items:center; justify-content:center;">
+                <div class="text-center">
+                  <div style="font-size:24px;">🖼️</div>
+                  <div class="text-sm text-muted">ด้านข้าง</div>
+                </div>
+              </div>
+              <div style="flex:1; height:90px; background:var(--gray-200); border-radius:8px; display:flex; align-items:center; justify-content:center;">
+                <div class="text-center">
+                  <div style="font-size:24px;">🖼️</div>
+                  <div class="text-sm text-muted">ด้านหลัง</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Documents -->
+            <div class="section-title">เอกสาร</div>
+            <div class="card mb-8" style="border:2px solid var(--success);">
+              <div class="flex gap-12" style="align-items:center;">
+                <div style="width:44px; height:44px; background:var(--gray-100); border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:22px;">📄</div>
+                <div style="flex:1;">
+                  <div class="font-bold" style="font-size:14px;">สำเนาทะเบียนรถ (พ.ร.บ.)</div>
+                  <span class="badge badge-success" style="margin-top:4px;">✓ อัพโหลดแล้ว</span>
+                </div>
+                <button style="background:none; border:none; color:var(--primary); font-size:13px; font-weight:600;">ดู</button>
+              </div>
+            </div>
+            <div class="card mb-24" style="border:2px solid var(--gray-300);">
+              <div class="flex gap-12" style="align-items:center;">
+                <div style="width:44px; height:44px; background:var(--gray-100); border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:22px;">📄</div>
+                <div style="flex:1;">
+                  <div class="font-bold" style="font-size:14px;">ประกันภัยรถ</div>
+                  <span class="badge" style="background:var(--gray-200); color:var(--gray-600); margin-top:4px;">ไม่มีเอกสาร</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Approval Info -->
+            <div class="card mb-24" style="background:#E8F5E9;">
+              <div class="flex gap-8">
+                <span style="font-size:20px;">✅</span>
+                <div class="text-sm">
+                  <div class="font-bold" style="color:#2E7D32;">ผ่านการอนุมัติแล้ว</div>
+                  <div class="text-muted">อนุมัติโดยผู้ดูแลระบบเมื่อ 10 ม.ค. 69</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <button class="btn btn-primary edit-btn-bottom">แก้ไขข้อมูลรถ</button>
+            <button class="btn btn-outline mt-8 delete-btn-bottom" style="color:var(--danger); border-color:var(--danger);">ลบรถคันนี้</button>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">3.55 ดูรายละเอียดรถ</div>
+    </div>
+
+    <!-- Screen 3.6: Edit Truck -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar">
+            <span>9:41</span>
+            <span>100%</span>
+          </div>
+
+          <div class="header">
+            <div class="header-icon back-btn">←</div>
+            <div class="header-title">แก้ไขข้อมูลรถ</div>
+            <div class="header-icon"></div>
+          </div>
+
+          <div class="content content-padded" style="padding-bottom:100px;">
+            <!-- Truck Type -->
+            <div class="section-title">ประเภทรถ</div>
+            <div class="flex gap-8 mb-16" style="flex-wrap:wrap;">
+              <button class="chip">รถกระบะบรรทุก</button>
+              <button class="chip active">รถ 6 ล้อ</button>
+              <button class="chip">รถ 10 ล้อ</button>
+              <button class="chip">รถห้องเย็น</button>
+            </div>
+
+            <!-- Truck Details -->
+            <div class="form-group">
+              <label class="form-label">ยี่ห้อรถ</label>
+              <select class="form-input">
+                <option value="">เลือกยี่ห้อ</option>
+                <option value="isuzu" selected>ISUZU</option>
+                <option value="hino">HINO</option>
+                <option value="fuso">FUSO</option>
+                <option value="toyota">TOYOTA</option>
+                <option value="other">อื่นๆ</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">รุ่น</label>
+              <input type="text" class="form-input" value="FRR">
+            </div>
+
+            <div class="flex gap-16">
+              <div class="form-group" style="flex:1;">
+                <label class="form-label">ทะเบียนรถ</label>
+                <input type="text" class="form-input" value="80-1234">
+              </div>
+              <div class="form-group" style="flex:1;">
+                <label class="form-label">จังหวัด</label>
+                <select class="form-input">
+                  <option value="chiangmai" selected>เชียงใหม่</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">น้ำหนักบรรทุกสูงสุด (ตัน)</label>
+              <input type="number" class="form-input" value="8">
+            </div>
+
+            <!-- Features -->
+            <div class="section-title">คุณสมบัติเพิ่มเติม</div>
+            <div class="flex gap-8 mb-16" style="flex-wrap:wrap;">
+              <button class="chip active">มีผ้าใบคลุม</button>
+              <button class="chip">ตู้ทึบ</button>
+              <button class="chip">ห้องเย็น</button>
+            </div>
+
+            <!-- Truck Photos -->
+            <div class="section-title">รูปถ่ายรถ</div>
+            <div class="flex gap-8 mb-16">
+              <div style="flex:1; height:80px; background:var(--gray-200); border-radius:8px; display:flex; align-items:center; justify-content:center;">
+                <div class="text-center">
+                  <div style="font-size:20px;">📷</div>
+                  <div class="text-sm text-muted">ด้านหน้า</div>
+                </div>
+              </div>
+              <div style="flex:1; height:80px; background:var(--gray-200); border-radius:8px; display:flex; align-items:center; justify-content:center;">
+                <div class="text-center">
+                  <div style="font-size:20px;">📷</div>
+                  <div class="text-sm text-muted">ด้านข้าง</div>
+                </div>
+              </div>
+              <div style="flex:1; height:80px; background:var(--gray-200); border-radius:8px; display:flex; align-items:center; justify-content:center;">
+                <div class="text-center">
+                  <div style="font-size:20px;">📷</div>
+                  <div class="text-sm text-muted">ด้านหลัง</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Documents -->
+            <div class="section-title">เอกสาร</div>
+            <div class="card mb-16" style="border:2px solid var(--success);">
+              <div class="flex gap-12">
+                <div style="width:48px; height:48px; background:var(--gray-200); border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:24px;">📄</div>
+                <div style="flex:1;">
+                  <div class="font-bold text-sm">สำเนาทะเบียนรถ</div>
+                  <span class="badge badge-success">อัพโหลดแล้ว</span>
+                </div>
+                <button style="background:none; border:none; color:var(--primary); font-size:13px;">เปลี่ยน</button>
+              </div>
+            </div>
+
+            <button class="btn btn-primary">บันทึกการแก้ไข</button>
+            <button class="btn btn-outline mt-8">ยกเลิก</button>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">3.6 แก้ไขข้อมูลรถ</div>
+    </div>
+
+    <!-- Screen 3.7: Confirm Remove Truck -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar">
+            <span>9:41</span>
+            <span>100%</span>
+          </div>
+
+          <div class="header">
+            <div class="header-icon back-btn">←</div>
+            <div class="header-title">ยืนยันลบรถ</div>
+            <div class="header-icon"></div>
+          </div>
+
+          <div class="content content-padded">
+            <div style="text-align:center; margin-top:32px;">
+              <div style="width:100px; height:100px; background:#FFEBEE; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 24px; font-size:48px;">
+                🗑️
+              </div>
+              <h2 style="font-size:22px; font-weight:700; color:var(--danger); margin-bottom:8px;">ต้องการลบรถคันนี้?</h2>
+              <p style="color:#757575; font-size:14px;">การลบรถจะไม่สามารถกู้คืนได้</p>
+            </div>
+
+            <!-- Truck Info Card -->
+            <div class="card mb-24" style="background:var(--gray-50); margin-top:24px;">
+              <div class="flex gap-12" style="align-items:center;">
+                <div style="width:60px; height:60px; background:var(--gray-200); border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:32px;">🚛</div>
+                <div style="flex:1;">
+                  <div class="font-bold">ISUZU FRR 6 ล้อ</div>
+                  <div class="text-sm text-muted">ทะเบียน: 80-1234 เชียงใหม่</div>
+                  <div class="text-sm text-muted">บรรทุกได้ 8 ตัน</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Impact Info -->
+            <div class="card mb-24" style="background:#FFEBEE;">
+              <div class="font-bold" style="color:var(--danger); margin-bottom:8px;">ผลกระทบจากการลบ</div>
+              <ul style="color:#424242; font-size:13px; margin:0; padding-left:20px;">
+                <li style="margin-bottom:4px;">รถจะถูกลบออกจากรายการรถของคุณ</li>
+                <li style="margin-bottom:4px;">ไม่สามารถใช้รถคันนี้รับงานได้อีก</li>
+                <li>ประวัติงานเดิมจะยังคงอยู่ในระบบ</li>
+              </ul>
+            </div>
+
+            <!-- Buttons -->
+            <button class="btn w-full mb-12" style="background:var(--danger); color:white; font-weight:600;">ยืนยันลบรถ</button>
+            <button class="btn btn-outline w-full">ยกเลิก</button>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">3.6 ยืนยันลบรถ</div>
+    </div>
+
+    <!-- Screen 4: Earnings Dashboard -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar">
+            <span>9:41</span>
+            <span>100%</span>
+          </div>
+
+          <div class="header">
+            <div class="header-title">รายได้</div>
+            <div class="header-icon">📅</div>
+          </div>
+
+          <div class="content content-padded">
+            <!-- Wallet Balance -->
+            <div class="wallet-balance">
+              <div class="wallet-label">ยอดเงินคงเหลือ</div>
+              <div class="wallet-amount">฿28,500.00</div>
+              <div class="wallet-actions">
+                <button class="wallet-action-btn">ถอนเงิน</button>
+              </div>
+            </div>
+
+            <!-- Period Stats -->
+            <div class="flex gap-8 mb-16">
+              <button class="chip">7 วัน</button>
+              <button class="chip active">เดือนนี้</button>
+              <button class="chip">3 เดือน</button>
+              <button class="chip">ปีนี้</button>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="stats-grid mb-16">
+              <div class="stat-card">
+                <div class="stat-value" style="color:var(--success);">฿15,200</div>
+                <div class="stat-label">รายได้เดือนนี้</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value">8</div>
+                <div class="stat-label">งานที่ทำ</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value">1,240 กม.</div>
+                <div class="stat-label">ระยะทางรวม</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value">฿12.26</div>
+                <div class="stat-label">รายได้/กม.</div>
+              </div>
+            </div>
+
+            <!-- Chart Placeholder -->
+            <div class="section-title">รายได้รายสัปดาห์</div>
+            <div class="card mb-16" style="height:140px; display:flex; align-items:flex-end; justify-content:space-around; padding-bottom:16px;">
+              <div class="text-center">
+                <div style="width:28px; height:50px; background:var(--primary-light); border-radius:4px;"></div>
+                <div class="text-sm text-muted mt-4">ส.1</div>
+              </div>
+              <div class="text-center">
+                <div style="width:28px; height:70px; background:var(--primary-light); border-radius:4px;"></div>
+                <div class="text-sm text-muted mt-4">ส.2</div>
+              </div>
+              <div class="text-center">
+                <div style="width:28px; height:90px; background:var(--primary); border-radius:4px;"></div>
+                <div class="text-sm text-muted mt-4">ส.3</div>
+              </div>
+              <div class="text-center">
+                <div style="width:28px; height:40px; background:var(--primary-light); border-radius:4px;"></div>
+                <div class="text-sm text-muted mt-4">ส.4</div>
+              </div>
+            </div>
+
+            <!-- Recent Transactions -->
+            <div class="section-title">รายการล่าสุด</div>
+
+            <div class="transaction-item">
+              <div class="transaction-icon income">📥</div>
+              <div class="transaction-details">
+                <div class="transaction-title">รายได้ JOB008</div>
+                <div class="transaction-date">16 ม.ค. 69 | ผักกาดขาว 5 ตัน</div>
+              </div>
+              <div class="transaction-amount income">+฿3,497</div>
+            </div>
+
+            <div class="transaction-item">
+              <div class="transaction-icon expense">📤</div>
+              <div class="transaction-details">
+                <div class="transaction-title">ถอนเงินออกจากระบบ</div>
+                <div class="transaction-date">10 ม.ค. 69</div>
+              </div>
+              <div class="transaction-amount expense">-฿15,000</div>
+            </div>
+
+            <div class="transaction-item">
+              <div class="transaction-icon income">📥</div>
+              <div class="transaction-details">
+                <div class="transaction-title">รายได้ JOB011</div>
+                <div class="transaction-date">10 ม.ค. 69 | กะหล่ำปลี 4 ตัน</div>
+              </div>
+              <div class="transaction-amount income">+฿2,800</div>
+            </div>
+
+            <button class="btn btn-outline mt-16">ดูประวัติทั้งหมด</button>
+          </div>
+
+          <!-- Bottom Navigation -->
+          <div class="bottom-nav">
+            <div class="nav-item">
+              <span class="icon">🔍</span>
+              <span>ค้นหางาน</span>
+            </div>
+            <div class="nav-item">
+              <span class="icon">📋</span>
+              <span>งานของฉัน</span>
+            </div>
+            <div class="nav-item active">
+              <span class="icon">💰</span>
+              <span>รายได้</span>
+            </div>
+            <div class="nav-item">
+              <span class="icon">👤</span>
+              <span>โปรไฟล์</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">4. รายได้</div>
+    </div>
+
+    <!-- Screen 5: Withdraw Money -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar">
+            <span>9:41</span>
+            <span>100%</span>
+          </div>
+
+          <div class="header">
+            <div class="header-icon back-btn">←</div>
+            <div class="header-title">ถอนเงิน</div>
+            <div class="header-icon"></div>
+          </div>
+
+          <div class="content content-padded">
+            <!-- Balance Card -->
+            <div class="card mb-24" style="background:var(--gray-50);">
+              <div class="flex-between">
+                <span class="text-muted">ยอดเงินที่ถอนได้</span>
+                <span class="font-bold" style="font-size:24px; color:var(--primary);">฿28,500.00</span>
+              </div>
+            </div>
+
+            <!-- Amount Input -->
+            <div class="section-title">จำนวนเงินที่ต้องการถอน</div>
+            <div class="form-group">
+              <div class="text-center mb-8">
+                <input type="number" class="form-input" style="font-size:32px; font-weight:700; text-align:center; color:var(--primary);" value="20000">
+                <div class="text-muted">บาท</div>
+              </div>
+            </div>
+
+
+            <!-- Bank Account -->
+            <div class="section-title">โอนเข้าบัญชี</div>
+            <div class="card mb-16" style="border:2px solid var(--primary);">
+              <div class="flex gap-12">
+                <div style="width:48px; height:48px; background:var(--primary); border-radius:8px; display:flex; align-items:center; justify-content:center; color:white; font-weight:700;">
+                  K
+                </div>
+                <div style="flex:1;">
+                  <div class="font-bold">ธนาคารกสิกรไทย</div>
+                  <div class="text-sm text-muted">xxx-x-xx321-x</div>
+                  <div class="text-sm text-muted">นายสมคิด รถบรรทุก</div>
+                </div>
+                <span style="color:var(--primary);">✓</span>
+              </div>
+            </div>
+
+
+            <!-- Fee Notice -->
+            <div class="card mb-24" style="background:var(--gray-50);">
+              <div class="flex-between mb-8">
+                <span class="text-muted">จำนวนที่ถอน</span>
+                <span>฿20,000.00</span>
+              </div>
+              <div class="flex-between mb-8">
+                <span class="text-muted">ค่าธรรมเนียม</span>
+                <span>-฿30.00</span>
+              </div>
+              <div class="divider" style="margin:12px 0;"></div>
+              <div class="flex-between">
+                <span class="font-bold">ยอดที่จะได้รับ</span>
+                <span class="font-bold" style="color:var(--primary);">฿19,970.00</span>
+              </div>
+            </div>
+
+            <button class="btn btn-primary">ยืนยันถอนเงิน</button>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">5. ถอนเงิน</div>
+    </div>
+
+    <!-- Screen 6: Withdrawal Success -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar light">
+            <span>9:41</span>
+            <span>100%</span>
+          </div>
+
+          <div class="content flex-center" style="background:var(--white);">
+            <div class="text-center" style="padding:40px;">
+              <div style="width:100px; height:100px; background:#E8F5E9; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 24px; font-size:48px;">
+                ✓
+              </div>
+              <div class="page-title">ถอนเงินสำเร็จ!</div>
+              <div class="page-subtitle">เงินจะเข้าบัญชีภายใน 1-2 วันทำการ</div>
+
+              <div class="card" style="text-align:left; margin:24px 0;">
+                <div class="flex-between mb-8">
+                  <span class="text-muted">จำนวนเงิน</span>
+                  <span class="font-bold">฿20,000.00</span>
+                </div>
+                <div class="flex-between mb-8">
+                  <span class="text-muted">ค่าธรรมเนียม</span>
+                  <span>-฿30.00</span>
+                </div>
+                <div class="flex-between mb-8">
+                  <span class="text-muted">ยอดที่จะได้รับ</span>
+                  <span class="font-bold" style="color:var(--success);">฿19,970.00</span>
+                </div>
+                <div class="divider" style="margin:12px 0;"></div>
+                <div class="flex-between mb-8">
+                  <span class="text-muted">บัญชีปลายทาง</span>
+                  <span class="font-bold">กสิกรไทย xxx-x-xx321-x</span>
+                </div>
+                <div class="flex-between mb-8">
+                  <span class="text-muted">รหัสอ้างอิง</span>
+                  <span class="font-bold">WD26011701</span>
+                </div>
+                <div class="flex-between">
+                  <span class="text-muted">วันที่</span>
+                  <span class="font-bold">17 ม.ค. 69 | 09:41 น.</span>
+                </div>
+              </div>
+
+              <div class="card" style="background:#E3F2FD;">
+                <div class="flex gap-8">
+                  <span style="font-size:24px;">ℹ️</span>
+                  <div class="text-left">
+                    <div class="font-bold" style="color:var(--info);">หมายเหตุ</div>
+                    <div class="text-sm text-muted">หากไม่ได้รับเงินภายใน 3 วันทำการ กรุณาติดต่อฝ่ายบริการลูกค้า</div>
+                  </div>
+                </div>
+              </div>
+
+              <button class="btn btn-primary mt-24">กลับหน้าหลัก</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">6. ถอนเงินสำเร็จ</div>
+    </div>
+
+  </div>
+
+  <script>
+    function goTo(target) {
+      if (target.includes('.html')) {
+        window.location.href = target;
+      } else {
+        const el = document.querySelector(target);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+
+    const screens = document.querySelectorAll('.mobile-wrapper');
+
+    // Screen 1: Profile / Truck List
+    screens[0].querySelector('button[style*="primary"]').onclick = () => goTo('.mobile-wrapper:nth-child(2)'); // เพิ่มรถ
+    screens[0].querySelectorAll('.header-icon').forEach(btn => {
+      if (btn.textContent.trim() === '⋮') btn.onclick = () => goTo('.mobile-wrapper:nth-child(4)'); // เมนูจัดการรถ
+    });
+    screens[0].querySelectorAll('.truck-card .header-icon').forEach(btn => {
+      btn.onclick = () => goTo('.mobile-wrapper:nth-child(4)'); // เมนูจัดการรถ
+    });
+    screens[0].querySelectorAll('.list-item')[0].onclick = () => goTo('.mobile-wrapper:nth-child(8)'); // สถิติการทำงาน → รายได้
+    screens[0].querySelectorAll('.list-item')[2].onclick = () => goTo('01-auth.html'); // ออกจากระบบ
+    // Bottom Nav
+    screens[0].querySelectorAll('.nav-item')[0].onclick = () => goTo('06-driver-jobs.html'); // ค้นหางาน
+    screens[0].querySelectorAll('.nav-item')[1].onclick = () => goTo('07-driver-myjobs.html'); // งานของฉัน
+    screens[0].querySelectorAll('.nav-item')[3].onclick = () => goTo('.mobile-wrapper:nth-child(8)'); // รายได้
+
+    // Screen 2: Add New Truck
+    screens[1].querySelector('.back-btn').onclick = () => goTo('.mobile-wrapper:nth-child(1)');
+    screens[1].querySelector('.btn-primary').onclick = () => goTo('.mobile-wrapper:nth-child(3)'); // ถัดไป
+
+    // Screen 3: Upload Documents
+    screens[2].querySelector('.back-btn').onclick = () => goTo('.mobile-wrapper:nth-child(2)');
+    screens[2].querySelector('.btn-primary').onclick = () => goTo('.mobile-wrapper:nth-child(1)'); // ส่งเอกสาร → กลับรายการรถ
+
+    // Screen 4 (3.5): Truck Options Menu
+    screens[3].querySelector('.back-btn').onclick = () => goTo('.mobile-wrapper:nth-child(1)');
+    screens[3].querySelectorAll('.list-item')[0].onclick = () => goTo('.mobile-wrapper:nth-child(5)'); // ดูรายละเอียดรถ → View Truck
+    screens[3].querySelectorAll('.list-item')[1].onclick = () => goTo('.mobile-wrapper:nth-child(6)'); // แก้ไขข้อมูลรถ → Edit Truck
+    screens[3].querySelectorAll('.list-item')[2].onclick = () => goTo('.mobile-wrapper:nth-child(7)'); // ลบรถคันนี้ → ยืนยันลบ
+
+    // Screen 5 (3.55): View Truck Detail (NEW)
+    screens[4].querySelector('.back-btn').onclick = () => goTo('.mobile-wrapper:nth-child(4)'); // กลับเมนูจัดการรถ
+    screens[4].querySelector('.edit-btn').onclick = () => goTo('.mobile-wrapper:nth-child(6)'); // แก้ไข (header icon)
+    screens[4].querySelector('.edit-btn-bottom').onclick = () => goTo('.mobile-wrapper:nth-child(6)'); // แก้ไขข้อมูลรถ (button)
+    screens[4].querySelector('.delete-btn-bottom').onclick = () => goTo('.mobile-wrapper:nth-child(7)'); // ลบรถคันนี้
+
+    // Screen 6 (3.6): Edit Truck
+    screens[5].querySelector('.back-btn').onclick = () => goTo('.mobile-wrapper:nth-child(5)'); // กลับดูรายละเอียดรถ
+    screens[5].querySelector('.btn-primary').onclick = () => goTo('.mobile-wrapper:nth-child(5)'); // บันทึก → กลับดูรายละเอียดรถ
+    screens[5].querySelector('.btn-outline').onclick = () => goTo('.mobile-wrapper:nth-child(5)'); // ยกเลิก → กลับดูรายละเอียดรถ
+
+    // Screen 7 (3.7): Confirm Remove Truck
+    screens[6].querySelector('.back-btn').onclick = () => goTo('.mobile-wrapper:nth-child(4)'); // กลับเมนูจัดการรถ
+    screens[6].querySelector('.btn[style*="danger"]').onclick = () => goTo('.mobile-wrapper:nth-child(1)'); // ยืนยันลบ → กลับรายการรถ
+    screens[6].querySelector('.btn-outline').onclick = () => goTo('.mobile-wrapper:nth-child(4)'); // ยกเลิก → กลับเมนูจัดการรถ
+
+    // Screen 8: Earnings Dashboard
+    screens[7].querySelector('.wallet-action-btn').onclick = () => goTo('.mobile-wrapper:nth-child(9)'); // ถอนเงิน
+    screens[7].querySelector('.btn-outline').onclick = () => goTo('.mobile-wrapper:nth-child(8)'); // ดูประวัติทั้งหมด (stay)
+    // Bottom Nav
+    screens[7].querySelectorAll('.nav-item')[0].onclick = () => goTo('06-driver-jobs.html'); // ค้นหางาน
+    screens[7].querySelectorAll('.nav-item')[1].onclick = () => goTo('07-driver-myjobs.html'); // งานของฉัน
+    screens[7].querySelectorAll('.nav-item')[3].onclick = () => goTo('.mobile-wrapper:nth-child(1)'); // โปรไฟล์
+
+    // Screen 9: Withdraw
+    screens[8].querySelector('.back-btn').onclick = () => goTo('.mobile-wrapper:nth-child(8)'); // กลับรายได้
+    screens[8].querySelector('.btn-primary').onclick = () => goTo('.mobile-wrapper:nth-child(10)'); // ยืนยันถอนเงิน
+
+    // Screen 10: Withdrawal Success
+    screens[9].querySelector('.btn-primary').onclick = () => goTo('.mobile-wrapper:nth-child(8)'); // กลับหน้ารายได้
+  </script>
+</body>
+</html>

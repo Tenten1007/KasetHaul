@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KraiPai - เกษตรกร Profile Mockup</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="mockup-container">
+
+    <!-- Screen 1: เกษตรกร Profile Main -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar">
+            <span>9:41</span>
+            <span>100%</span>
+          </div>
+
+          <div class="header">
+            <div class="header-icon back-btn">←</div>
+            <div class="header-title">โปรไฟล์ของฉัน</div>
+            <div class="header-icon">⚙️</div>
+          </div>
+
+          <div class="content content-padded">
+            <!-- Profile Card -->
+            <div class="text-center mb-24">
+              <div class="avatar-lg" style="margin:0 auto 12px; background:var(--primary); color:white; font-size:32px;">
+                ส
+              </div>
+              <div style="font-size:20px; font-weight:700;">นายสมชาย ใจดี</div>
+              <div class="text-muted">เกษตรกร • แม่แจ่ม, เชียงใหม่</div>
+              <div class="flex gap-8 justify-center mt-12">
+                <span class="badge badge-success">ยืนยันตัวตนแล้ว</span>
+                <span class="badge badge-info">สมาชิกตั้งแต่ 2567</span>
+              </div>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="stats-grid mb-16">
+              <div class="stat-card">
+                <div class="stat-value" style="color:var(--warning);">⭐ 4.7</div>
+                <div class="stat-label">คะแนนรีวิว</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value">23</div>
+                <div class="stat-label">งานทั้งหมด</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value" style="color:var(--success);">95%</div>
+                <div class="stat-label">สำเร็จ</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value">12</div>
+                <div class="stat-label">รีวิวที่ได้รับ</div>
+              </div>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="section-title">ข้อมูลติดต่อ</div>
+            <div class="card mb-16">
+              <div class="flex gap-12 mb-12">
+                <span style="font-size:20px;">📱</span>
+                <div>
+                  <div class="text-sm text-muted">เบอร์โทรศัพท์</div>
+                  <div class="font-bold">081-234-5678</div>
+                </div>
+              </div>
+              <div class="flex gap-12 mb-12">
+                <span style="font-size:20px;">📍</span>
+                <div>
+                  <div class="text-sm text-muted">ที่อยู่หลัก</div>
+                  <div class="font-bold">123 หมู่ 5 ต.ช่างเคิ่ง อ.แม่แจ่ม</div>
+                </div>
+              </div>
+              <div class="flex gap-12">
+                <span style="font-size:20px;">🌾</span>
+                <div>
+                  <div class="text-sm text-muted">ประเภทสินค้าหลัก</div>
+                  <div class="font-bold">กะหล่ำปลี, ข้าวโพด, ผักกาด</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Recent Reviews -->
+            <div class="flex-between mb-8">
+              <div class="section-title" style="margin:0;">รีวิวล่าสุด</div>
+              <button class="btn-link">ดูทั้งหมด</button>
+            </div>
+
+            <div class="card mb-8">
+              <div class="flex gap-12 mb-8">
+                <div class="avatar-sm" style="background:var(--secondary); color:white;">ว</div>
+                <div style="flex:1;">
+                  <div class="flex-between">
+                    <span class="font-bold">นายวิชัย หกล้อเชียงใหม่</span>
+                    <span class="text-warning">⭐ 5.0</span>
+                  </div>
+                  <div class="text-sm text-muted">15 ม.ค. 69</div>
+                </div>
+              </div>
+              <div class="text-sm">"ลูกค้าดีมาก จัดเตรียมสินค้าพร้อมให้โหลด ชำระเงินตรงเวลา แนะนำครับ"</div>
+            </div>
+
+            <div class="card mb-16">
+              <div class="flex gap-12 mb-8">
+                <div class="avatar-sm" style="background:var(--primary); color:white;">ส</div>
+                <div style="flex:1;">
+                  <div class="flex-between">
+                    <span class="font-bold">นายสมคิด รถบรรทุก</span>
+                    <span class="text-warning">⭐ 4.5</span>
+                  </div>
+                  <div class="text-sm text-muted">10 ม.ค. 69</div>
+                </div>
+              </div>
+              <div class="text-sm">"ลูกค้าสุภาพ สินค้าจัดเรียงดี ช่วยโหลดด้วย ขอบคุณครับ"</div>
+            </div>
+
+            <!-- Action Buttons -->
+            <button class="btn btn-primary w-full mb-8">แก้ไขโปรไฟล์</button>
+            <button class="btn btn-outline w-full">ดูสถิติการใช้งาน</button>
+          </div>
+
+          <!-- Bottom Navigation -->
+          <div class="bottom-nav">
+            <div class="nav-item">
+              <span class="icon">📦</span>
+              <span>งานของฉัน</span>
+            </div>
+            <div class="nav-item">
+              <span class="icon">➕</span>
+              <span>โพสต์งาน</span>
+            </div>
+            <div class="nav-item">
+              <span class="icon">💰</span>
+              <span>กระเป๋าเงิน</span>
+            </div>
+            <div class="nav-item active">
+              <span class="icon">👤</span>
+              <span>โปรไฟล์</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">1. โปรไฟล์ เกษตรกร หลัก</div>
+    </div>
+
+    <!-- Screen 2: Edit Profile -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar">
+            <span>9:41</span>
+            <span>100%</span>
+          </div>
+
+          <div class="header">
+            <div class="header-icon back-btn">←</div>
+            <div class="header-title">แก้ไขโปรไฟล์</div>
+            <div class="header-icon"></div>
+          </div>
+
+          <div class="content content-padded">
+            <!-- Profile Photo -->
+            <div class="text-center mb-24">
+              <div class="avatar-lg" style="margin:0 auto 12px; background:var(--primary); color:white; font-size:32px; position:relative;">
+                ส
+                <div style="position:absolute; bottom:-4px; right:-4px; width:28px; height:28px; background:var(--white); border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+                  📷
+                </div>
+              </div>
+              <button class="btn-link">เปลี่ยนรูปโปรไฟล์</button>
+            </div>
+
+            <!-- ที่อยู่ Cascading Dropdown -->
+            <div class="form-group">
+              <label class="form-label">รายละเอียดที่อยู่</label>
+              <input type="text" class="form-input" placeholder="บ้านเลขที่ หมู่ ซอย ถนน..." value="123 หมู่ 5">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">จังหวัด</label>
+              <select class="form-input" id="profile-province">
+                <option value="">เลือกจังหวัด</option>
+                <option value="50" selected>เชียงใหม่</option>
+                <option value="57">เชียงราย</option>
+                <option value="52">ลำปาง</option>
+                <option value="51">ลำพูน</option>
+                <option value="10">กรุงเทพมหานคร</option>
+                <!-- โหลดครบ 77 จังหวัดจาก Thailand Address Database API -->
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">อำเภอ</label>
+              <select class="form-input" id="profile-district">
+                <option value="">เลือกอำเภอ</option>
+                <option value="5006" selected>แม่แจ่ม</option>
+                <option value="5001">เมืองเชียงใหม่</option>
+                <option value="5007">ฮอด</option>
+                <option value="5018">จอมทอง</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">ตำบล</label>
+              <select class="form-input" id="profile-subdistrict">
+                <option value="">เลือกตำบล</option>
+                <option value="500601" selected>ช่างเคิ่ง</option>
+                <option value="500602">ท่าผา</option>
+                <option value="500603">บ้านทับ</option>
+                <option value="500604">แม่ศึก</option>
+                <option value="500605">ปางหินฝน</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">รหัสไปรษณีย์</label>
+              <input type="text" class="form-input" placeholder="XXXXX" value="50270" maxlength="5">
+            </div>
+
+            <!-- ข้อมูลส่วนตัว -->
+            <div class="form-group">
+              <label class="form-label">คำนำหน้า</label>
+              <select class="form-input">
+                <option value="นาย" selected>นาย</option>
+                <option value="นาง">นาง</option>
+                <option value="นางสาว">นางสาว</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">ชื่อ</label>
+              <input type="text" class="form-input" value="สมชาย">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">นามสกุล</label>
+              <input type="text" class="form-input" value="ใจดี">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">เบอร์โทรศัพท์</label>
+              <input type="tel" class="form-input" value="081-234-5678">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">ประเภทสินค้าหลัก</label>
+              <div class="flex gap-8" style="flex-wrap:wrap;">
+                <span class="chip active">กะหล่ำปลี</span>
+                <span class="chip active">ข้าวโพด</span>
+                <span class="chip active">ผักกาด</span>
+                <span class="chip">สตรอว์เบอร์รี่</span>
+                <span class="chip">มะเขือเทศ</span>
+                <span class="chip">+ เพิ่ม</span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">เกี่ยวกับตัวเอง (ไม่บังคับ)</label>
+              <textarea class="form-input" rows="3" style="resize:none;" placeholder="เล่าเกี่ยวกับธุรกิจเกษตรของคุณ...">เกษตรกรปลูกผักบนดอยแม่แจ่มมากว่า 10 ปี มีพื้นที่ปลูกกะหล่ำปลีและข้าวโพด รวม 15 ไร่</textarea>
+            </div>
+
+            <button class="btn btn-primary w-full mt-16">บันทึกการเปลี่ยนแปลง</button>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">2. แก้ไขโปรไฟล์</div>
+    </div>
+
+    <!-- Screen 3: Edit Profile Success -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar">
+            <span>9:41</span>
+            <span>100%</span>
+          </div>
+
+          <div class="content" style="display:flex; flex-direction:column; align-items:center; justify-content:center; height:calc(100% - 32px); text-align:center; padding:20px;">
+            <div style="font-size:80px; margin-bottom:24px;">✅</div>
+            <div style="font-size:24px; font-weight:700; margin-bottom:8px;">อัปเดตโปรไฟล์สำเร็จ!</div>
+            <div class="text-muted mb-24">ข้อมูลโปรไฟล์ของคุณได้รับการอัปเดตแล้ว</div>
+            <button class="btn btn-primary">กลับหน้าโปรไฟล์</button>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">3. อัปเดตโปรไฟล์สำเร็จ</div>
+    </div>
+
+    <!-- Screen 4: All Reviews Received -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar">
+            <span>9:41</span>
+            <span>100%</span>
+          </div>
+
+          <div class="header">
+            <div class="header-icon back-btn">←</div>
+            <div class="header-title">รีวิวที่ได้รับ</div>
+            <div class="header-icon"></div>
+          </div>
+
+          <!-- Rating Summary -->
+          <div style="padding:20px; background:var(--white); border-bottom:1px solid var(--gray-200);">
+            <div class="flex gap-16">
+              <div class="text-center">
+                <div style="font-size:48px; font-weight:700; color:var(--warning);">4.7</div>
+                <div class="text-warning" style="font-size:18px;">⭐⭐⭐⭐⭐</div>
+                <div class="text-sm text-muted">12 รีวิว</div>
+              </div>
+              <div style="flex:1;">
+                <div class="flex gap-8 mb-4" style="align-items:center;">
+                  <span class="text-sm" style="width:20px;">5</span>
+                  <div style="flex:1; height:8px; background:var(--gray-200); border-radius:4px; overflow:hidden;">
+                    <div style="width:75%; height:100%; background:var(--warning);"></div>
+                  </div>
+                  <span class="text-sm text-muted" style="width:24px;">9</span>
+                </div>
+                <div class="flex gap-8 mb-4" style="align-items:center;">
+                  <span class="text-sm" style="width:20px;">4</span>
+                  <div style="flex:1; height:8px; background:var(--gray-200); border-radius:4px; overflow:hidden;">
+                    <div style="width:16%; height:100%; background:var(--warning);"></div>
+                  </div>
+                  <span class="text-sm text-muted" style="width:24px;">2</span>
+                </div>
+                <div class="flex gap-8 mb-4" style="align-items:center;">
+                  <span class="text-sm" style="width:20px;">3</span>
+                  <div style="flex:1; height:8px; background:var(--gray-200); border-radius:4px; overflow:hidden;">
+                    <div style="width:8%; height:100%; background:var(--warning);"></div>
+                  </div>
+                  <span class="text-sm text-muted" style="width:24px;">1</span>
+                </div>
+                <div class="flex gap-8 mb-4" style="align-items:center;">
+                  <span class="text-sm" style="width:20px;">2</span>
+                  <div style="flex:1; height:8px; background:var(--gray-200); border-radius:4px; overflow:hidden;">
+                    <div style="width:0%; height:100%; background:var(--warning);"></div>
+                  </div>
+                  <span class="text-sm text-muted" style="width:24px;">0</span>
+                </div>
+                <div class="flex gap-8" style="align-items:center;">
+                  <span class="text-sm" style="width:20px;">1</span>
+                  <div style="flex:1; height:8px; background:var(--gray-200); border-radius:4px; overflow:hidden;">
+                    <div style="width:0%; height:100%; background:var(--warning);"></div>
+                  </div>
+                  <span class="text-sm text-muted" style="width:24px;">0</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Filter -->
+          <div style="padding:12px 20px; background:var(--gray-50); border-bottom:1px solid var(--gray-200);">
+            <div class="flex gap-8">
+              <button class="chip active">ทั้งหมด</button>
+              <button class="chip">5 ดาว</button>
+              <button class="chip">4 ดาว</button>
+              <button class="chip">3 ดาว</button>
+            </div>
+          </div>
+
+          <div class="content">
+            <!-- Review Items -->
+            <div class="card mb-8" style="margin:12px 20px;">
+              <div class="flex gap-12 mb-8">
+                <div class="avatar-sm" style="background:var(--secondary); color:white;">ว</div>
+                <div style="flex:1;">
+                  <div class="flex-between">
+                    <span class="font-bold">นายวิชัย หกล้อเชียงใหม่</span>
+                    <span class="text-warning">⭐ 5.0</span>
+                  </div>
+                  <div class="text-sm text-muted">15 ม.ค. 69 • งาน: ขนส่งกะหล่ำปลี 4 ตัน</div>
+                </div>
+              </div>
+              <div class="text-sm">"ลูกค้าดีมาก จัดเตรียมสินค้าพร้อมให้โหลด ชำระเงินตรงเวลา แนะนำครับ"</div>
+            </div>
+
+            <div class="card mb-8" style="margin:0 20px 8px;">
+              <div class="flex gap-12 mb-8">
+                <div class="avatar-sm" style="background:var(--primary); color:white;">ส</div>
+                <div style="flex:1;">
+                  <div class="flex-between">
+                    <span class="font-bold">นายสมคิด รถบรรทุก</span>
+                    <span class="text-warning">⭐ 4.5</span>
+                  </div>
+                  <div class="text-sm text-muted">10 ม.ค. 69 • งาน: ขนส่งข้าวโพด 3 ตัน</div>
+                </div>
+              </div>
+              <div class="text-sm">"ลูกค้าสุภาพ สินค้าจัดเรียงดี ช่วยโหลดด้วย ขอบคุณครับ"</div>
+            </div>
+
+            <div class="card mb-8" style="margin:0 20px 8px;">
+              <div class="flex gap-12 mb-8">
+                <div class="avatar-sm" style="background:var(--info); color:white;">ป</div>
+                <div style="flex:1;">
+                  <div class="flex-between">
+                    <span class="font-bold">นายประเสริฐ หกล้อ</span>
+                    <span class="text-warning">⭐ 5.0</span>
+                  </div>
+                  <div class="text-sm text-muted">5 ม.ค. 69 • งาน: ขนส่งผักกาดขาว 2 ตัน</div>
+                </div>
+              </div>
+              <div class="text-sm">"ลูกค้าใจดี สินค้าเตรียมพร้อม จุดรับสินค้าหาง่าย จ่ายเงินไว ขอบคุณครับ"</div>
+            </div>
+
+            <div class="card mb-8" style="margin:0 20px 8px;">
+              <div class="flex gap-12 mb-8">
+                <div class="avatar-sm" style="background:var(--success); color:white;">ม</div>
+                <div style="flex:1;">
+                  <div class="flex-between">
+                    <span class="font-bold">นายมานพ รถเล็ก</span>
+                    <span class="text-warning">⭐ 5.0</span>
+                  </div>
+                  <div class="text-sm text-muted">28 ธ.ค. 68 • งาน: ขนส่งสตรอว์เบอร์รี่ 500 กก.</div>
+                </div>
+              </div>
+              <div class="text-sm">"ลูกค้าเตรียมสินค้าดี แพ็คมาเรียบร้อย ทำงานด้วยสบายใจครับ"</div>
+            </div>
+
+            <div class="card mb-8" style="margin:0 20px 8px;">
+              <div class="flex gap-12 mb-8">
+                <div class="avatar-sm" style="background:var(--warning); color:white;">น</div>
+                <div style="flex:1;">
+                  <div class="flex-between">
+                    <span class="font-bold">นายนิรันดร์ ขนส่งดอย</span>
+                    <span class="text-warning">⭐ 4.0</span>
+                  </div>
+                  <div class="text-sm text-muted">20 ธ.ค. 68 • งาน: ขนส่งกะหล่ำปลี 5 ตัน</div>
+                </div>
+              </div>
+              <div class="text-sm">"ลูกค้าดี แต่จุดรับสินค้าอยู่ในซอย ทางแคบนิดหน่อย โดยรวมโอเคครับ"</div>
+            </div>
+
+            <div class="card mb-8" style="margin:0 20px 8px;">
+              <div class="flex gap-12 mb-8">
+                <div class="avatar-sm" style="background:var(--secondary); color:white;">ว</div>
+                <div style="flex:1;">
+                  <div class="flex-between">
+                    <span class="font-bold">นายวิชัย หกล้อเชียงใหม่</span>
+                    <span class="text-warning">⭐ 5.0</span>
+                  </div>
+                  <div class="text-sm text-muted">15 ธ.ค. 68 • งาน: ขนส่งมะเขือเทศ 2 ตัน</div>
+                </div>
+              </div>
+              <div class="text-sm">"ลูกค้าประจำ ทำงานด้วยง่าย แนะนำครับ"</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">4. รีวิวที่ได้รับทั้งหมด</div>
+    </div>
+
+    <!-- Screen 5: Settings -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar">
+            <span>9:41</span>
+            <span>100%</span>
+          </div>
+
+          <div class="header">
+            <div class="header-icon back-btn">←</div>
+            <div class="header-title">ตั้งค่า</div>
+            <div class="header-icon"></div>
+          </div>
+
+          <div class="content">
+            <div class="section-title" style="padding: 20px 20px 8px;">บัญชี</div>
+            <div class="list-item">
+              <span style="font-size:20px;">📱</span>
+              <div class="list-item-content">
+                <div class="list-item-title">เปลี่ยนเบอร์โทรศัพท์</div>
+              </div>
+              <span>›</span>
+            </div>
+            <div class="list-item">
+              <span style="font-size:20px;">🔔</span>
+              <div class="list-item-content">
+                <div class="list-item-title">การแจ้งเตือน</div>
+              </div>
+              <div style="width:40px; height:24px; background:var(--success); border-radius:12px; position:relative;">
+                <div style="width:20px; height:20px; background:white; border-radius:50%; position:absolute; top:2px; right:2px;"></div>
+              </div>
+            </div>
+            <div class="list-item">
+              <span style="font-size:20px;">🌐</span>
+              <div class="list-item-content">
+                <div class="list-item-title">ภาษา</div>
+                <div class="list-item-subtitle">ไทย</div>
+              </div>
+              <span>›</span>
+            </div>
+
+            <div class="section-title" style="padding: 20px 20px 8px;">ทั่วไป</div>
+            <div class="list-item">
+              <span style="font-size:20px;">❓</span>
+              <div class="list-item-content">
+                <div class="list-item-title">ศูนย์ช่วยเหลือ</div>
+              </div>
+              <span>›</span>
+            </div>
+            <div class="list-item">
+              <span style="font-size:20px;">📄</span>
+              <div class="list-item-content">
+                <div class="list-item-title">ข้อกำหนดและเงื่อนไข</div>
+              </div>
+              <span>›</span>
+            </div>
+
+            <div class="list-item mt-24 logout-btn" style="border-top:1px solid var(--gray-200); cursor: pointer;">
+              <span style="font-size:20px;">🚪</span>
+              <div class="list-item-content">
+                <div class="list-item-title" style="color:var(--danger);">ออกจากระบบ</div>
+              </div>
+              <span>›</span>
+            </div>
+            
+            <div class="text-center text-muted text-sm mt-24 mb-24">
+              KraiPai v1.0.0
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">5. ตั้งค่า</div>
+    </div>
+
+  </div>
+
+  <script>
+    function goTo(target) {
+      if (target.includes('.html')) {
+        window.location.href = target;
+      } else {
+        const el = document.querySelector(target);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+
+    const screens = document.querySelectorAll('.mobile-wrapper');
+
+    // Screen 1: เกษตรกร Profile Main
+    screens[0].querySelector('.back-btn').onclick = () => goTo('02-client-jobs.html');
+    screens[0].querySelector('.btn-link').onclick = () => goTo('.mobile-wrapper:nth-child(4)'); // ดูรีวิวทั้งหมด
+    screens[0].querySelector('.header-icon:last-child').onclick = () => goTo('.mobile-wrapper:nth-child(5)'); // ตั้งค่า (Gear Icon)
+    screens[0].querySelector('.btn-primary').onclick = () => goTo('.mobile-wrapper:nth-child(2)'); // แก้ไขโปรไฟล์
+    screens[0].querySelector('.btn-outline').onclick = () => goTo('05-client-wallet.html#stats'); // สถิติ
+    // Bottom Nav
+    screens[0].querySelectorAll('.nav-item')[0].onclick = () => goTo('02-client-jobs.html');
+    screens[0].querySelectorAll('.nav-item')[1].onclick = () => goTo('02-client-jobs.html#post');
+    screens[0].querySelectorAll('.nav-item')[2].onclick = () => goTo('05-client-wallet.html');
+
+    // Screen 2: Edit Profile
+    screens[1].querySelector('.back-btn').onclick = () => goTo('.mobile-wrapper:nth-child(1)');
+    screens[1].querySelector('.btn-primary').onclick = () => goTo('.mobile-wrapper:nth-child(3)'); // บันทึก
+
+    // Screen 3: Edit Success
+    screens[2].querySelector('.btn-primary').onclick = () => goTo('.mobile-wrapper:nth-child(1)'); // กลับโปรไฟล์
+
+    // Screen 4: All Reviews
+    screens[3].querySelector('.back-btn').onclick = () => goTo('.mobile-wrapper:nth-child(1)');
+
+    // Screen 5: Settings
+    screens[4].querySelector('.back-btn').onclick = () => goTo('.mobile-wrapper:nth-child(1)'); // กลับหน้าโปรไฟล์
+    screens[4].querySelector('.logout-btn').onclick = () => goTo('01-auth.html'); // ออกจากระบบ
+
+    // ============================================================
+    // Cascading Address Dropdown (จังหวัด → อำเภอ → ตำบล)
+    // ข้อมูลจริงจะโหลดจาก Thailand Address Database API
+    // https://github.com/thailand-geography-data/thailand-geography-json
+    // ============================================================
+
+    const addressData = {
+      provinces: {
+        '50': { name: 'เชียงใหม่', districts: ['5001','5006','5007','5018'] },
+        '57': { name: 'เชียงราย', districts: ['5701'] },
+        '52': { name: 'ลำปาง', districts: ['5201'] },
+        '51': { name: 'ลำพูน', districts: ['5101'] },
+        '10': { name: 'กรุงเทพมหานคร', districts: ['1001'] }
+      },
+      districts: {
+        '5001': { name: 'เมืองเชียงใหม่', subdistricts: ['500101','500102'] },
+        '5006': { name: 'แม่แจ่ม', subdistricts: ['500601','500602','500603','500604','500605'] },
+        '5007': { name: 'ฮอด', subdistricts: ['500701'] },
+        '5018': { name: 'จอมทอง', subdistricts: ['501801'] },
+        '5701': { name: 'เมืองเชียงราย', subdistricts: ['570101'] },
+        '5201': { name: 'เมืองลำปาง', subdistricts: ['520101'] },
+        '5101': { name: 'เมืองลำพูน', subdistricts: ['510101'] },
+        '1001': { name: 'พระนคร', subdistricts: ['100101'] }
+      },
+      subdistricts: {
+        '500101': 'ศรีภูมิ', '500102': 'พระสิงห์',
+        '500601': 'ช่างเคิ่ง', '500602': 'ท่าผา', '500603': 'บ้านทับ', '500604': 'แม่ศึก', '500605': 'ปางหินฝน',
+        '500701': 'หางดง', '501801': 'บ้านหลวง',
+        '570101': 'เวียง', '520101': 'เวียงเหนือ', '510101': 'ในเมือง',
+        '100101': 'พระบรมมหาราชวัง'
+      }
+    };
+
+    function setupCascadingAddress(prefix) {
+      const provinceSelect = document.getElementById(prefix + '-province');
+      const districtSelect = document.getElementById(prefix + '-district');
+      const subdistrictSelect = document.getElementById(prefix + '-subdistrict');
+      if (!provinceSelect || !districtSelect || !subdistrictSelect) return;
+
+      provinceSelect.addEventListener('change', function() {
+        const provinceId = this.value;
+        districtSelect.innerHTML = '<option value="">เลือกอำเภอ</option>';
+        subdistrictSelect.innerHTML = '<option value="">เลือกตำบล</option>';
+        if (provinceId && addressData.provinces[provinceId]) {
+          addressData.provinces[provinceId].districts.forEach(dId => {
+            const d = addressData.districts[dId];
+            if (d) { const opt = document.createElement('option'); opt.value = dId; opt.textContent = d.name; districtSelect.appendChild(opt); }
+          });
+        }
+      });
+
+      districtSelect.addEventListener('change', function() {
+        const districtId = this.value;
+        subdistrictSelect.innerHTML = '<option value="">เลือกตำบล</option>';
+        if (districtId && addressData.districts[districtId]) {
+          addressData.districts[districtId].subdistricts.forEach(sId => {
+            const name = addressData.subdistricts[sId];
+            if (name) { const opt = document.createElement('option'); opt.value = sId; opt.textContent = name; subdistrictSelect.appendChild(opt); }
+          });
+        }
+      });
+    }
+
+    setupCascadingAddress('profile');
+  </script>
+</body>
+</html>

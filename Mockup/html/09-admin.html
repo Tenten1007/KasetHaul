@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KraiPai - Admin Mockup</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="mockup-container">
+
+    <!-- Screen 0: Admin Login -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar light">
+            <span>9:41</span>
+            <span>100%</span>
+          </div>
+
+          <div class="content flex-center" style="background:var(--white);">
+            <div style="width:100%; padding:40px 24px;">
+              <!-- Logo -->
+              <div class="text-center mb-24">
+                <div style="width:80px; height:80px; background:linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); border-radius:20px; display:flex; align-items:center; justify-content:center; margin:0 auto 16px; font-size:36px; color:white;">
+                  🛡️
+                </div>
+                <div style="font-size:24px; font-weight:700; color:var(--primary);">KraiPai</div>
+                <div class="text-muted">Admin Dashboard</div>
+              </div>
+
+              <!-- Login Form -->
+              <div class="form-group">
+                <label class="form-label">ชื่อผู้ใช้งาน</label>
+                <input type="text" class="form-input" placeholder="username" value="admin">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">รหัสผ่าน</label>
+                <input type="password" class="form-input" placeholder="••••••••" value="••••••••">
+              </div>
+
+              <button class="btn btn-primary w-full mt-16">เข้าสู่ระบบ</button>
+
+              <!-- Footer -->
+              <div class="text-center text-muted text-sm mt-24">
+                KraiPai Admin v1.0.0<br>
+                สงวนสิทธิ์เฉพาะผู้ดูแลระบบ
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">0. Admin Login</div>
+    </div>
+
+    <!-- Screen 1: Admin Dashboard -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar">
+            <span>9:41</span>
+            <span>100%</span>
+          </div>
+
+          <div class="header">
+            <div class="header-title">แอดมินแดชบอร์ด</div>
+            <div class="header-icon">🔔</div>
+          </div>
+
+          <div class="content content-padded">
+            <!-- Welcome Card -->
+            <div class="card mb-16" style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color:white;">
+              <div class="flex gap-12">
+                <div class="avatar" style="background:rgba(255,255,255,0.2); width:50px; height:50px; font-size:24px;">👤</div>
+                <div>
+                  <div style="opacity:0.9; font-size:13px;">สวัสดี</div>
+                  <div style="font-size:18px; font-weight:600;">แอดมินระบบ</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stats Overview -->
+            <div class="stats-grid mb-16">
+              <div class="stat-card" style="border-left:4px solid var(--warning);">
+                <div class="stat-value" style="color:var(--warning);">5</div>
+                <div class="stat-label">รอตรวจสอบรถ</div>
+              </div>
+              <div class="stat-card" style="border-left:4px solid var(--info);">
+                <div class="stat-value" style="color:var(--info);">21</div>
+                <div class="stat-label">ผู้ใช้ทั้งหมด</div>
+              </div>
+              <div class="stat-card" style="border-left:4px solid var(--success);">
+                <div class="stat-value" style="color:var(--success);">12</div>
+                <div class="stat-label">รถที่ตรวจสอบแล้ว</div>
+              </div>
+              <div class="stat-card" style="border-left:4px solid var(--primary);">
+                <div class="stat-value" style="color:var(--primary);">156</div>
+                <div class="stat-label">งานทั้งหมด</div>
+              </div>
+            </div>
+
+            <!-- Pending Approvals -->
+            <div class="section-title">รอตรวจสอบ</div>
+            <div class="card mb-12" style="border-left:4px solid var(--warning);">
+              <div class="flex-between mb-8">
+                <span class="badge badge-warning">รอตรวจสอบรถ</span>
+                <span class="text-sm text-muted">2 ชม.ที่แล้ว</span>
+              </div>
+              <div class="font-bold">HINO 500 6 ล้อ</div>
+              <div class="text-sm text-muted">โดย: นายสมคิด รถบรรทุก</div>
+              <button class="btn btn-primary btn-sm mt-12">ตรวจสอบ</button>
+            </div>
+
+            <div class="card mb-12" style="border-left:4px solid var(--warning);">
+              <div class="flex-between mb-8">
+                <span class="badge badge-warning">รอตรวจสอบรถ</span>
+                <span class="text-sm text-muted">5 ชม.ที่แล้ว</span>
+              </div>
+              <div class="font-bold">ISUZU NMR รถกระบะบรรทุก</div>
+              <div class="text-sm text-muted">โดย: นายประเสริฐ หกล้อ</div>
+              <button class="btn btn-primary btn-sm mt-12">ตรวจสอบ</button>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="section-title mt-24">จัดการระบบ</div>
+            <div class="list-item" style="border-radius:12px 12px 0 0;">
+              <span style="font-size:20px;">🚛</span>
+              <div class="list-item-content">
+                <div class="list-item-title">จัดการรถ</div>
+                <div class="list-item-subtitle">ดูรถทั้งหมด / ตรวจสอบรถใหม่</div>
+              </div>
+              <span>›</span>
+            </div>
+            <div class="list-item">
+              <span style="font-size:20px;">📊</span>
+              <div class="list-item-content">
+                <div class="list-item-title">รายงาน</div>
+                <div class="list-item-subtitle">สถิติและรายงานต่างๆ</div>
+              </div>
+              <span>›</span>
+            </div>
+            <div class="list-item" style="border-radius:0 0 12px 12px;">
+              <span style="font-size:20px;">⚙️</span>
+              <div class="list-item-content">
+                <div class="list-item-title">ตั้งค่าระบบ</div>
+                <div class="list-item-subtitle">ค่าธรรมเนียม / ประเภทรถ</div>
+              </div>
+              <span>›</span>
+            </div>
+
+          </div>
+
+          <!-- Bottom Navigation -->
+          <div class="bottom-nav">
+            <div class="nav-item active">
+              <span class="icon">🏠</span>
+              <span>หน้าหลัก</span>
+            </div>
+            <div class="nav-item">
+              <span class="icon">🚛</span>
+              <span>รถ</span>
+            </div>
+            <div class="nav-item">
+              <span class="icon">📊</span>
+              <span>รายงาน</span>
+            </div>
+            <div class="nav-item">
+              <span class="icon">⚙️</span>
+              <span>ตั้งค่า</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">1. Admin Dashboard</div>
+    </div>
+
+    <!-- Screen 2: Truck List -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar">
+            <span>9:41</span>
+            <span>100%</span>
+          </div>
+
+          <div class="header">
+            <div class="header-title">จัดการรถ</div>
+            <div class="header-icon">🔍</div>
+          </div>
+
+          <!-- Tabs -->
+          <div class="tabs">
+            <div class="tab">ทั้งหมด (12)</div>
+            <div class="tab active">รอตรวจสอบ (5)</div>
+            <div class="tab">ตรวจสอบแล้ว</div>
+            <div class="tab">ปฏิเสธ</div>
+          </div>
+
+          <div class="content content-padded">
+            <!-- Pending Truck 1 -->
+            <div class="truck-card" style="border:2px solid var(--warning);">
+              <div class="truck-image">🚛</div>
+              <div class="truck-info" style="flex:1;">
+                <div class="flex-between">
+                  <div class="truck-name">HINO 500 6 ล้อ</div>
+                  <span class="badge badge-warning">รอตรวจสอบ</span>
+                </div>
+                <div class="truck-plate">ทะเบียน: 82-9999 เชียงใหม่</div>
+                <div class="text-sm text-muted">โดย: นายสมคิด รถบรรทุก</div>
+                <div class="text-sm text-muted">ส่งเมื่อ: 17 ม.ค. 69 | 10:30</div>
+              </div>
+            </div>
+
+            <div class="truck-card" style="border:2px solid var(--warning);">
+              <div class="truck-image">🚚</div>
+              <div class="truck-info" style="flex:1;">
+                <div class="flex-between">
+                  <div class="truck-name">ISUZU NMR รถกระบะบรรทุก</div>
+                  <span class="badge badge-warning">รอตรวจสอบ</span>
+                </div>
+                <div class="truck-plate">ทะเบียน: กค-1234 เชียงใหม่</div>
+                <div class="text-sm text-muted">โดย: นายประเสริฐ หกล้อ</div>
+                <div class="text-sm text-muted">ส่งเมื่อ: 17 ม.ค. 69 | 08:00</div>
+              </div>
+            </div>
+
+            <div class="truck-card" style="border:2px solid var(--warning);">
+              <div class="truck-image">❄️</div>
+              <div class="truck-info" style="flex:1;">
+                <div class="flex-between">
+                  <div class="truck-name">ISUZU FRR ห้องเย็น</div>
+                  <span class="badge badge-warning">รอตรวจสอบ</span>
+                </div>
+                <div class="truck-plate">ทะเบียน: 85-5555 เชียงใหม่</div>
+                <div class="text-sm text-muted">โดย: นายสมพงษ์ ห้องเย็น</div>
+                <div class="text-sm text-muted">ส่งเมื่อ: 16 ม.ค. 69 | 14:00</div>
+              </div>
+            </div>
+
+            <div class="truck-card" style="border:2px solid var(--warning);">
+              <div class="truck-image">🚛</div>
+              <div class="truck-info" style="flex:1;">
+                <div class="flex-between">
+                  <div class="truck-name">FUSO 10 ล้อ</div>
+                  <span class="badge badge-warning">รอตรวจสอบ</span>
+                </div>
+                <div class="truck-plate">ทะเบียน: 88-8888 เชียงใหม่</div>
+                <div class="text-sm text-muted">โดย: นายอนันต์ สิบล้อ</div>
+                <div class="text-sm text-muted">ส่งเมื่อ: 16 ม.ค. 69 | 09:00</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Bottom Navigation -->
+          <div class="bottom-nav">
+            <div class="nav-item">
+              <span class="icon">🏠</span>
+              <span>หน้าหลัก</span>
+            </div>
+            <div class="nav-item active">
+              <span class="icon">🚛</span>
+              <span>รถ</span>
+            </div>
+            <div class="nav-item">
+              <span class="icon">📊</span>
+              <span>รายงาน</span>
+            </div>
+            <div class="nav-item">
+              <span class="icon">⚙️</span>
+              <span>ตั้งค่า</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">2. รายการรถรอตรวจสอบ</div>
+    </div>
+
+    <!-- Screen 3: View Truck Detail (UC 3.1.37) -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar">
+            <span>9:41</span>
+            <span>100%</span>
+          </div>
+
+          <div class="header">
+            <div class="header-icon back-btn">←</div>
+            <div class="header-title">รายละเอียดรถ</div>
+            <div class="header-icon"></div>
+          </div>
+
+          <div class="content content-padded" style="padding-bottom:100px;">
+            <!-- Status Banner -->
+            <div class="card mb-16" style="background:#FFF3E0; border-left:4px solid var(--warning); padding:12px 16px;">
+              <div class="flex gap-8" style="align-items:center;">
+                <span style="font-size:20px;">⏳</span>
+                <div>
+                  <div class="font-bold" style="color:#E65100;">รอการตรวจสอบ</div>
+                  <div class="text-sm text-muted">ส่งมาเมื่อ 17 ม.ค. 69 | 10:30 น.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Owner Info -->
+            <div class="section-title">ข้อมูลเจ้าของ</div>
+            <div class="card mb-16">
+              <div class="flex gap-12">
+                <div class="avatar-sm" style="background:var(--primary); color:white;">ส</div>
+                <div style="flex:1;">
+                  <div class="font-bold">นายสมคิด รถบรรทุก</div>
+                  <div class="text-sm text-muted">089-123-4567</div>
+                  <div class="flex gap-8 mt-4">
+                    <span class="badge badge-success" style="font-size:11px;">ยืนยันตัวตนแล้ว</span>
+                    <span class="text-sm text-muted">สมาชิก 2 ปี | 156 งาน</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Truck Info -->
+            <div class="section-title">ข้อมูลรถ</div>
+            <div class="card mb-16">
+              <div class="flex-between mb-10">
+                <span class="text-muted">ประเภท</span>
+                <span class="font-bold">รถบรรทุก 6 ล้อ</span>
+              </div>
+              <div class="divider" style="margin:0 0 10px;"></div>
+              <div class="flex-between mb-10">
+                <span class="text-muted">ยี่ห้อ / รุ่น</span>
+                <span class="font-bold">HINO 500</span>
+              </div>
+              <div class="divider" style="margin:0 0 10px;"></div>
+              <div class="flex-between mb-10">
+                <span class="text-muted">ทะเบียน</span>
+                <span class="font-bold">82-9999 เชียงใหม่</span>
+              </div>
+              <div class="divider" style="margin:0 0 10px;"></div>
+              <div class="flex-between mb-10">
+                <span class="text-muted">น้ำหนักบรรทุกสูงสุด</span>
+                <span class="font-bold">10 ตัน</span>
+              </div>
+              <div class="divider" style="margin:0 0 10px;"></div>
+              <div class="flex-between">
+                <span class="text-muted">คุณสมบัติเพิ่มเติม</span>
+                <span class="font-bold">มีผ้าใบคลุม</span>
+              </div>
+            </div>
+
+            <!-- Truck Photos -->
+            <div class="section-title">รูปถ่ายรถ</div>
+            <div class="flex gap-8 mb-16">
+              <div style="flex:1; height:80px; background:var(--gray-200); border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:28px; cursor:pointer;">📷</div>
+              <div style="flex:1; height:80px; background:var(--gray-200); border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:28px; cursor:pointer;">📷</div>
+              <div style="flex:1; height:80px; background:var(--gray-200); border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:28px; cursor:pointer;">📷</div>
+            </div>
+
+            <!-- Documents -->
+            <div class="section-title">เอกสาร</div>
+            <div class="card mb-8" style="border:2px solid var(--success);">
+              <div class="flex gap-12" style="align-items:center;">
+                <div style="width:48px; height:48px; background:var(--gray-100); border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:22px;">📄</div>
+                <div style="flex:1;">
+                  <div class="font-bold" style="font-size:14px;">สำเนาทะเบียนรถ (พ.ร.บ.)</div>
+                  <div class="text-sm text-muted">truck_reg.jpg</div>
+                </div>
+                <button style="background:var(--info); color:white; border:none; padding:6px 12px; border-radius:8px; font-size:12px;">ดู</button>
+              </div>
+            </div>
+            <div class="card mb-24" style="border:2px solid var(--success);">
+              <div class="flex gap-12" style="align-items:center;">
+                <div style="width:48px; height:48px; background:var(--gray-100); border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:22px;">📄</div>
+                <div style="flex:1;">
+                  <div class="font-bold" style="font-size:14px;">ประกันภัยรถ</div>
+                  <div class="text-sm text-muted">insurance.jpg</div>
+                </div>
+                <button style="background:var(--info); color:white; border:none; padding:6px 12px; border-radius:8px; font-size:12px;">ดู</button>
+              </div>
+            </div>
+
+            <!-- CTA: only shown for pending trucks -->
+            <button class="btn btn-primary review-btn">ตรวจสอบรถนี้</button>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">3. รายละเอียดรถ (Admin)</div>
+    </div>
+
+    <!-- Screen 4: Truck Review / Approve Truck (UC 3.1.38) -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar">
+            <span>9:41</span>
+            <span>100%</span>
+          </div>
+
+          <div class="header">
+            <div class="header-icon back-btn">←</div>
+            <div class="header-title">ตรวจสอบรถ</div>
+            <div class="header-icon"></div>
+          </div>
+
+          <div class="content content-padded">
+            <!-- Owner Info -->
+            <div class="card mb-16">
+              <div class="section-title" style="margin-bottom:8px;">ข้อมูลเจ้าของ</div>
+              <div class="flex gap-12">
+                <div class="avatar-sm" style="background:var(--primary); color:white;">ส</div>
+                <div style="flex:1;">
+                  <div class="font-bold">นายสมคิด รถบรรทุก</div>
+                  <div class="text-sm text-muted">089-123-4567</div>
+                  <div class="text-sm text-muted">สมาชิกมา 2 ปี | 156 งานสำเร็จ</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Truck Info -->
+            <div class="card mb-16">
+              <div class="section-title" style="margin-bottom:8px;">ข้อมูลรถ</div>
+              <div class="flex-between mb-8">
+                <span class="text-muted">ประเภท</span>
+                <span class="font-bold">รถบรรทุก 6 ล้อ</span>
+              </div>
+              <div class="flex-between mb-8">
+                <span class="text-muted">ยี่ห้อ / รุ่น</span>
+                <span class="font-bold">HINO 500</span>
+              </div>
+              <div class="flex-between mb-8">
+                <span class="text-muted">ทะเบียน</span>
+                <span class="font-bold">82-9999 เชียงใหม่</span>
+              </div>
+              <div class="flex-between mb-8">
+                <span class="text-muted">น้ำหนักบรรทุก</span>
+                <span class="font-bold">10 ตัน</span>
+              </div>
+              <div class="flex-between">
+                <span class="text-muted">คุณสมบัติ</span>
+                <span class="font-bold">มีผ้าใบคลุม</span>
+              </div>
+            </div>
+
+            <!-- Documents -->
+            <div class="section-title">เอกสาร</div>
+            <div class="card mb-8">
+              <div class="flex gap-12">
+                <div style="width:60px; height:60px; background:var(--gray-200); border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:24px;">📄</div>
+                <div style="flex:1;">
+                  <div class="font-bold">สำเนาทะเบียนรถ</div>
+                  <div class="text-sm text-muted">truck_reg.jpg</div>
+                </div>
+                <button style="background:var(--info); color:white; border:none; padding:8px 12px; border-radius:8px; font-size:13px;">ดู</button>
+              </div>
+            </div>
+
+            <div class="card mb-16">
+              <div class="flex gap-12">
+                <div style="width:60px; height:60px; background:var(--gray-200); border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:24px;">📄</div>
+                <div style="flex:1;">
+                  <div class="font-bold">ประกันภัยรถ</div>
+                  <div class="text-sm text-muted">insurance.jpg</div>
+                </div>
+                <button style="background:var(--info); color:white; border:none; padding:8px 12px; border-radius:8px; font-size:13px;">ดู</button>
+              </div>
+            </div>
+
+            <!-- Truck Photos -->
+            <div class="section-title">รูปถ่ายรถ</div>
+            <div class="flex gap-8 mb-24">
+              <div style="flex:1; height:80px; background:var(--gray-200); border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:32px;">📷</div>
+              <div style="flex:1; height:80px; background:var(--gray-200); border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:32px;">📷</div>
+              <div style="flex:1; height:80px; background:var(--gray-200); border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:32px;">📷</div>
+            </div>
+
+            <!-- Actions -->
+            <div class="flex gap-16">
+              <button class="btn btn-danger" style="flex:1;">ปฏิเสธ</button>
+              <button class="btn btn-primary" style="flex:1;">อนุมัติ</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">4. ตรวจสอบรถ</div>
+    </div>
+
+    <!-- Screen 5: Approve Confirmation -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar">
+            <span>9:41</span>
+            <span>100%</span>
+          </div>
+
+          <div class="header">
+            <div class="header-icon back-btn">←</div>
+            <div class="header-title">ยืนยันการตรวจสอบ</div>
+            <div class="header-icon"></div>
+          </div>
+
+          <div class="content content-padded">
+            <div class="text-center mb-24">
+              <div style="width:80px; height:80px; background:#E8F5E9; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto; font-size:40px;">
+                ✓
+              </div>
+              <div class="page-title" style="margin-top:16px; font-size:20px;">ยืนยันตรวจสอบรถ?</div>
+            </div>
+
+            <div class="card mb-16">
+              <div class="flex gap-12 mb-12">
+                <div style="font-size:32px;">🚛</div>
+                <div>
+                  <div class="font-bold">HINO 500 6 ล้อ</div>
+                  <div class="text-sm text-muted">ทะเบียน: 82-9999 เชียงใหม่</div>
+                  <div class="text-sm text-muted">เจ้าของ: นายสมคิด รถบรรทุก</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Checklist -->
+            <div class="section-title">รายการตรวจสอบ</div>
+            <div class="card mb-24">
+              <div class="flex gap-8 mb-12">
+                <span style="color:var(--success);">✓</span>
+                <span>เอกสารทะเบียนรถถูกต้อง</span>
+              </div>
+              <div class="flex gap-8 mb-12">
+                <span style="color:var(--success);">✓</span>
+                <span>ประกันภัยยังไม่หมดอายุ</span>
+              </div>
+              <div class="flex gap-8 mb-12">
+                <span style="color:var(--success);">✓</span>
+                <span>รูปถ่ายรถชัดเจน</span>
+              </div>
+              <div class="flex gap-8">
+                <span style="color:var(--success);">✓</span>
+                <span>ข้อมูลรถตรงกับเอกสาร</span>
+              </div>
+            </div>
+
+            <!-- Note -->
+            <div class="section-title">หมายเหตุถึงเจ้าของรถ (ไม่บังคับ)</div>
+            <div class="form-group">
+              <textarea class="form-input form-textarea" placeholder="เช่น รถพร้อมใช้งาน / มีข้อแนะนำอื่นๆ"></textarea>
+            </div>
+
+            <div class="flex gap-16 mt-24">
+              <button class="btn btn-outline" style="flex:1;">ยกเลิก</button>
+              <button class="btn btn-primary" style="flex:1;">ยืนยันตรวจสอบ</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">5. ยืนยันตรวจสอบ</div>
+    </div>
+
+    <!-- Screen 6: Reject Confirmation -->
+    <div class="mobile-wrapper">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar">
+            <span>9:41</span>
+            <span>100%</span>
+          </div>
+
+          <div class="header">
+            <div class="header-icon back-btn">←</div>
+            <div class="header-title">ปฏิเสธการตรวจสอบ</div>
+            <div class="header-icon"></div>
+          </div>
+
+          <div class="content content-padded">
+            <div class="text-center mb-24">
+              <div style="width:80px; height:80px; background:#FFEBEE; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto; font-size:40px;">
+                ✕
+              </div>
+              <div class="page-title" style="margin-top:16px; font-size:20px;">ปฏิเสธการตรวจสอบ?</div>
+            </div>
+
+            <div class="card mb-16">
+              <div class="flex gap-12 mb-12">
+                <div style="font-size:32px;">🚛</div>
+                <div>
+                  <div class="font-bold">FUSO 10 ล้อ</div>
+                  <div class="text-sm text-muted">ทะเบียน: 88-8888 เชียงใหม่</div>
+                  <div class="text-sm text-muted">เจ้าของ: นายอนันต์ สิบล้อ</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Reject Reason -->
+            <div class="section-title">เหตุผลที่ปฏิเสธ (จำเป็น)</div>
+            <div class="flex gap-8 mb-16" style="flex-wrap:wrap;">
+              <button class="chip active">เอกสารไม่ถูกต้อง</button>
+              <button class="chip">รูปไม่ชัดเจน</button>
+              <button class="chip">ประกันหมดอายุ</button>
+              <button class="chip">ข้อมูลไม่ตรงกัน</button>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">รายละเอียดเพิ่มเติม</label>
+              <textarea class="form-input form-textarea" placeholder="อธิบายเหตุผลที่ปฏิเสธ เพื่อให้เจ้าของรถแก้ไขได้">ประกันภัยรถหมดอายุแล้ว กรุณาต่ออายุประกันและส่งเอกสารใหม่</textarea>
+            </div>
+
+            <div class="card mb-24" style="background:#FFF3E0;">
+              <div class="flex gap-8">
+                <span style="font-size:20px;">ℹ️</span>
+                <div class="text-sm">
+                  <div class="font-bold" style="color:#E65100;">หมายเหตุ</div>
+                  <div class="text-muted">เจ้าของรถจะได้รับการแจ้งเตือน และสามารถส่งเอกสารใหม่ได้</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex gap-16">
+              <button class="btn btn-outline" style="flex:1;">ยกเลิก</button>
+              <button class="btn btn-danger" style="flex:1;">ยืนยันปฏิเสธ</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-label">6. ปฏิเสธการตรวจสอบ</div>
+    </div>
+
+  </div>
+
+  <script>
+    function goTo(target) {
+      if (target.includes('.html')) {
+        window.location.href = target;
+      } else {
+        const el = document.querySelector(target);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+
+    const screens = document.querySelectorAll('.mobile-wrapper');
+
+    // Screen 0: Admin Login
+    screens[0].querySelector('.btn-primary').onclick = () => goTo('.mobile-wrapper:nth-child(2)'); // เข้าสู่ระบบ → Dashboard
+
+    // Screen 1: Admin Dashboard
+    screens[1].querySelectorAll('.card.mb-12')[0].querySelector('.btn-primary').onclick = () => goTo('.mobile-wrapper:nth-child(4)'); // ตรวจสอบ → View Truck Detail
+    screens[1].querySelectorAll('.card.mb-12')[1].querySelector('.btn-primary').onclick = () => goTo('.mobile-wrapper:nth-child(4)'); // ตรวจสอบ → View Truck Detail
+    screens[1].querySelectorAll('.list-item')[0].onclick = () => goTo('.mobile-wrapper:nth-child(3)'); // จัดการรถ → Truck List
+    // Bottom Nav
+    screens[1].querySelectorAll('.nav-item')[1].onclick = () => goTo('.mobile-wrapper:nth-child(3)'); // รถ → Truck List
+
+    // Screen 2: Truck List
+    screens[2].querySelectorAll('.truck-card').forEach(card => {
+      card.onclick = () => goTo('.mobile-wrapper:nth-child(4)'); // คลิกรถ → View Truck Detail
+    });
+    // Bottom Nav
+    screens[2].querySelectorAll('.nav-item')[0].onclick = () => goTo('.mobile-wrapper:nth-child(2)'); // หน้าหลัก
+
+    // Screen 3: View Truck Detail (UC 3.1.37) (NEW)
+    screens[3].querySelector('.back-btn').onclick = () => goTo('.mobile-wrapper:nth-child(3)'); // กลับ Truck List
+    screens[3].querySelector('.review-btn').onclick = () => goTo('.mobile-wrapper:nth-child(5)'); // ตรวจสอบรถนี้ → Review
+
+    // Screen 4: Truck Review / Approve Truck (UC 3.1.38) (was Screen 3)
+    screens[4].querySelector('.back-btn').onclick = () => goTo('.mobile-wrapper:nth-child(4)'); // กลับ View Truck Detail
+    screens[4].querySelector('.btn-danger').onclick = () => goTo('.mobile-wrapper:nth-child(7)'); // ปฏิเสธ → Reject Confirm
+    screens[4].querySelector('.btn-primary').onclick = () => goTo('.mobile-wrapper:nth-child(6)'); // อนุมัติ → Approve Confirm
+
+    // Screen 5: Approve Confirmation (was Screen 4)
+    screens[5].querySelector('.back-btn').onclick = () => goTo('.mobile-wrapper:nth-child(5)'); // กลับ Review
+    screens[5].querySelector('.btn-outline').onclick = () => goTo('.mobile-wrapper:nth-child(5)'); // ยกเลิก → กลับ Review
+    screens[5].querySelector('.btn-primary').onclick = () => goTo('.mobile-wrapper:nth-child(3)'); // ยืนยัน → กลับ Truck List
+
+    // Screen 6: Reject Confirmation (was Screen 5)
+    screens[6].querySelector('.back-btn').onclick = () => goTo('.mobile-wrapper:nth-child(5)'); // กลับ Review
+    screens[6].querySelector('.btn-outline').onclick = () => goTo('.mobile-wrapper:nth-child(5)'); // ยกเลิก → กลับ Review
+    screens[6].querySelector('.btn-danger').onclick = () => goTo('.mobile-wrapper:nth-child(3)'); // ยืนยันปฏิเสธ → กลับ Truck List
+  </script>
+</body>
+</html>
